@@ -1,6 +1,6 @@
 # NAA-Measurment-Carrier-System
 
-This project contains the hardware and software solution of a carrier system for network attached accelerators (NAA). It is meant to be placed inside a server-rack and replace the commom cpu-based carrier systems for hardware accelerators. It was developed in the context of a master theis at the Fraunhofer Institue HHI in the ESG group.
+This project includes the hardware and software solution of a carrier system for network attached accelerators (NAA). It is intended to be placed in a server rack and replace the common CPU-based carrier systems for hardware accelerators. It was developed as part of a master thesis at the Fraunhofer Institute HHI in the ESG group.
 
 ## Table of Contents
 
