@@ -1,0 +1,140 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S -15400 15250 11750 9700
+U 61876025
+F0 "PCIe2_INA226" 404
+F1 "PCIe2_INA226.sch" 50
+$EndSheet
+Wire Notes Line
+	-19500 -500 -19500 36450
+Wire Notes Line
+	-19500 36450 -950 36450
+Wire Notes Line
+	-950 -400 -19450 -400
+Wire Notes Line
+	-19450 -400 -19450 -350
+Wire Notes Line
+	-950 36450 -950 -400
+$Sheet
+S -15250 4650 11700 8600
+U 618A2E14
+F0 "12V_Supp_INA226" 404
+F1 "12V_Supp_INA226.sch" 50
+$EndSheet
+$Sheet
+S -15700 26200 11750 8500
+U 61863742
+F0 "PCIe1_INA226" 404
+F1 "PCIe1_INA226.sch" 50
+$EndSheet
+Text Notes -19400 -650 0    50   ~ 0
+INA226
+Text Notes -19750 -750 0    602  ~ 0
+INA226 Measurement IC's\n
+$Sheet
+S 950  12500 16450 11300
+U 618E02D3
+F0 "PCIe Slots" 405
+F1 "PCIe_Slots.sch" 405
+$EndSheet
+Text Notes 0    -50  0    404  ~ 0
+Input\n
+Wire Wire Line
+	2950 1750 2750 1750
+Text GLabel 2750 1750 0    50   Input ~ 0
+AGND
+Text GLabel 2700 1950 0    50   Input ~ 0
+12V
+Wire Wire Line
+	2950 2050 2850 2050
+Wire Wire Line
+	2850 2050 2850 1950
+Wire Wire Line
+	2850 1850 2950 1850
+Wire Wire Line
+	2950 1950 2850 1950
+Connection ~ 2850 1950
+Wire Wire Line
+	2850 1950 2850 1850
+Wire Wire Line
+	2850 1950 2700 1950
+Wire Wire Line
+	2850 2150 2950 2150
+Text GLabel 2850 2150 0    50   Input ~ 0
+3V3_PCIe
+Text GLabel 2750 2250 0    50   Input ~ 0
+AGND
+Wire Wire Line
+	2950 2250 2750 2250
+Wire Wire Line
+	3950 1750 4100 1750
+Text GLabel 4100 1750 2    50   Input ~ 0
+DGND
+Text GLabel 4100 1850 2    50   Input ~ 0
+3V3_VCC
+Wire Wire Line
+	4100 1850 3950 1850
+$Comp
+L power:VCC #PWR0101
+U 1 1 618A53EF
+P 4950 1150
+F 0 "#PWR0101" H 4950 1000 50  0001 C CNN
+F 1 "VCC" H 4965 1323 50  0000 C CNN
+F 2 "" H 4950 1150 50  0001 C CNN
+F 3 "" H 4950 1150 50  0001 C CNN
+	1    4950 1150
+	1    0    0    -1  
+$EndComp
+Text GLabel 4950 1300 3    50   Input ~ 0
+3V3_VCC
+Wire Wire Line
+	4950 1150 4950 1300
+$Comp
+L 284121:284121 Power_CON1
+U 1 1 61895D1F
+P 2950 1750
+F 0 "Power_CON1" H 3450 2015 50  0000 C CNN
+F 1 "284121" H 3450 1924 50  0000 C CNN
+F 2 "284121" H 3800 1850 50  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/625/DC0000345-1381458.pdf" H 3800 1750 50  0001 L CNN
+F 4 "Headers & Wire Housings 8P R/A MALE SMT BLK 2.54MM SNGL ROW" H 3800 1650 50  0001 L CNN "Description"
+F 5 "5.05" H 3800 1550 50  0001 L CNN "Height"
+F 6 "ERNI" H 3800 1450 50  0001 L CNN "Manufacturer_Name"
+F 7 "284121" H 3800 1350 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "305-284121" H 3800 1250 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/ERNI/284121?qs=DK05bRAVOD7swjvVgHOVQw%3D%3D" H 3800 1150 50  0001 L CNN "Mouser Price/Stock"
+F 10 "284121" H 3800 1050 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/284121/erni-electronics" H 3800 950 50  0001 L CNN "Arrow Price/Stock"
+	1    2950 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L IX60G-B-10P:IX60G-B-10P J1
+U 1 1 618BCE01
+P 6750 2100
+F 0 "J1" H 6750 2667 50  0000 C CNN
+F 1 "IX60G-B-10P" H 6750 2576 50  0000 C CNN
+F 2 "HIROSE_IX60G-B-10P" H 6750 2100 50  0001 L BNN
+F 3 "" H 6750 2100 50  0001 L BNN
+F 4 "6.1 mm" H 6750 2100 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 5 "Hirose" H 6750 2100 50  0001 L BNN "MF"
+F 6 "20200430" H 6750 2100 50  0001 L BNN "PARTREV"
+F 7 "Manufacturer Recommendations" H 6750 2100 50  0001 L BNN "STANDARD"
+	1    6750 2100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

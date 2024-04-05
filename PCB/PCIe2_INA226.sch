@@ -1,0 +1,1090 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_Shunt R?
+U 1 1 6187B262
+P 2000 1300
+AR Path="/6187B262" Ref="R?"  Part="1" 
+AR Path="/6183E367/6187B262" Ref="R?"  Part="1" 
+AR Path="/6183E367/61876025/6187B262" Ref="R1"  Part="1" 
+AR Path="/618BA1D7/6187B262" Ref="R1"  Part="1" 
+F 0 "R1" V 1775 1300 50  0000 C CNN
+F 1 "10mR" V 1866 1300 50  0000 C CNN
+F 2 "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.66mm" V 1930 1300 50  0001 C CNN
+F 3 "~" H 2000 1300 50  0001 C CNN
+	1    2000 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Shunt R?
+U 1 1 6187B268
+P 2000 2900
+AR Path="/6187B268" Ref="R?"  Part="1" 
+AR Path="/6183E367/6187B268" Ref="R?"  Part="1" 
+AR Path="/6183E367/61876025/6187B268" Ref="R2"  Part="1" 
+AR Path="/618BA1D7/6187B268" Ref="R2"  Part="1" 
+F 0 "R2" V 1775 2900 50  0000 C CNN
+F 1 "25mR" V 1866 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.66mm" V 1930 2900 50  0001 C CNN
+F 3 "~" H 2000 2900 50  0001 C CNN
+	1    2000 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Shunt R?
+U 1 1 6187B26E
+P 2000 4550
+AR Path="/6187B26E" Ref="R?"  Part="1" 
+AR Path="/6183E367/6187B26E" Ref="R?"  Part="1" 
+AR Path="/6183E367/61876025/6187B26E" Ref="R3"  Part="1" 
+AR Path="/618BA1D7/6187B26E" Ref="R3"  Part="1" 
+F 0 "R3" V 1775 4550 50  0000 C CNN
+F 1 "25mR" V 1866 4550 50  0000 C CNN
+F 2 "Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.66mm" V 1930 4550 50  0001 C CNN
+F 3 "~" H 2000 4550 50  0001 C CNN
+	1    2000 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L m_pex_sensor-rescue:INA226-Analog_ADC U?
+U 1 1 6187B274
+P 3800 1400
+AR Path="/6187B274" Ref="U?"  Part="1" 
+AR Path="/6183E367/6187B274" Ref="U?"  Part="1" 
+AR Path="/6183E367/61876025/6187B274" Ref="U1"  Part="1" 
+AR Path="/618BA1D7/6187B274" Ref="U1"  Part="1" 
+F 0 "U1" H 3550 1950 50  0000 C CNN
+F 1 "INA226" H 3550 1850 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 3850 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina226.pdf" H 4150 1300 50  0001 C CNN
+	1    3800 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L m_pex_sensor-rescue:INA226-Analog_ADC U?
+U 1 1 6187B27A
+P 3800 3050
+AR Path="/6187B27A" Ref="U?"  Part="1" 
+AR Path="/6183E367/6187B27A" Ref="U?"  Part="1" 
+AR Path="/6183E367/61876025/6187B27A" Ref="U2"  Part="1" 
+AR Path="/618BA1D7/6187B27A" Ref="U2"  Part="1" 
+F 0 "U2" H 3550 3600 50  0000 C CNN
+F 1 "INA226" H 3550 3500 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 3850 3150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina226.pdf" H 4150 2950 50  0001 C CNN
+	1    3800 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L m_pex_sensor-rescue:INA226-Analog_ADC U?
+U 1 1 6187B280
+P 3800 4700
+AR Path="/6187B280" Ref="U?"  Part="1" 
+AR Path="/6183E367/6187B280" Ref="U?"  Part="1" 
+AR Path="/6183E367/61876025/6187B280" Ref="U3"  Part="1" 
+AR Path="/618BA1D7/6187B280" Ref="U3"  Part="1" 
+F 0 "U3" H 3550 5250 50  0000 C CNN
+F 1 "INA226" H 3550 5150 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 3850 4800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina226.pdf" H 4150 4600 50  0001 C CNN
+	1    3800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 6187B28C
+P 3800 800
+AR Path="/6187B28C" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/6187B28C" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61876025/6187B28C" Ref="#PWR0102"  Part="1" 
+AR Path="/618BA1D7/6187B28C" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 3800 650 50  0001 C CNN
+F 1 "VCC" H 3817 973 50  0000 C CNN
+F 2 "" H 3800 800 50  0001 C CNN
+F 3 "" H 3800 800 50  0001 C CNN
+	1    3800 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6187B292
+P 4100 850
+AR Path="/6187B292" Ref="C?"  Part="1" 
+AR Path="/6183E367/6187B292" Ref="C?"  Part="1" 
+AR Path="/6183E367/61876025/6187B292" Ref="C1"  Part="1" 
+AR Path="/618BA1D7/6187B292" Ref="C1"  Part="1" 
+F 0 "C1" V 3848 850 50  0000 C CNN
+F 1 "100nF" V 3939 850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4138 700 50  0001 C CNN
+F 3 "~" H 4100 850 50  0001 C CNN
+	1    4100 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6187B298
+P 4100 2500
+AR Path="/6187B298" Ref="C?"  Part="1" 
+AR Path="/6183E367/6187B298" Ref="C?"  Part="1" 
+AR Path="/6183E367/61876025/6187B298" Ref="C2"  Part="1" 
+AR Path="/618BA1D7/6187B298" Ref="C2"  Part="1" 
+F 0 "C2" V 3848 2500 50  0000 C CNN
+F 1 "100nF" V 3939 2500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4138 2350 50  0001 C CNN
+F 3 "~" H 4100 2500 50  0001 C CNN
+	1    4100 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6187B29E
+P 4100 4150
+AR Path="/6187B29E" Ref="C?"  Part="1" 
+AR Path="/6183E367/6187B29E" Ref="C?"  Part="1" 
+AR Path="/6183E367/61876025/6187B29E" Ref="C3"  Part="1" 
+AR Path="/618BA1D7/6187B29E" Ref="C3"  Part="1" 
+F 0 "C3" V 3848 4150 50  0000 C CNN
+F 1 "100nF" V 3939 4150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4138 4000 50  0001 C CNN
+F 3 "~" H 4100 4150 50  0001 C CNN
+	1    4100 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 6187B2A4
+P 5850 1300
+AR Path="/6187B2A4" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/6187B2A4" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61876025/6187B2A4" Ref="#PWR0103"  Part="1" 
+AR Path="/618BA1D7/6187B2A4" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 5850 1150 50  0001 C CNN
+F 1 "VCC" H 5867 1473 50  0000 C CNN
+F 2 "" H 5850 1300 50  0001 C CNN
+F 3 "" H 5850 1300 50  0001 C CNN
+	1    5850 1300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5850 1400
+Wire Wire Line
+	5850 1400 5850 1300
+$Comp
+L power:GNDA #PWR?
+U 1 1 6187B2AC
+P 3800 1950
+AR Path="/6187B2AC" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/6187B2AC" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61876025/6187B2AC" Ref="#PWR0104"  Part="1" 
+AR Path="/618BA1D7/6187B2AC" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 3800 1700 50  0001 C CNN
+F 1 "GNDA" H 3804 1795 50  0000 C CNN
+F 2 "" H 3800 1950 50  0001 C CNN
+F 3 "" H 3800 1950 50  0001 C CNN
+	1    3800 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 6187B2B2
+P 3800 3600
+AR Path="/6187B2B2" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/6187B2B2" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61876025/6187B2B2" Ref="#PWR0105"  Part="1" 
+AR Path="/618BA1D7/6187B2B2" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 3800 3350 50  0001 C CNN
+F 1 "GNDA" H 3804 3445 50  0000 C CNN
+F 2 "" H 3800 3600 50  0001 C CNN
+F 3 "" H 3800 3600 50  0001 C CNN
+	1    3800 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 800  3800 850 
+Wire Wire Line
+	3950 850  3800 850 
+Connection ~ 3800 850 
+Wire Wire Line
+	3800 850  3800 900 
+Wire Wire Line
+	3800 1900 3800 1950
+Wire Wire Line
+	4350 850  4250 850 
+$Comp
+L power:VCC #PWR?
+U 1 1 6187B2C4
+P 3800 2450
+AR Path="/6187B2C4" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/6187B2C4" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61876025/6187B2C4" Ref="#PWR0107"  Part="1" 
+AR Path="/618BA1D7/6187B2C4" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 3800 2300 50  0001 C CNN
+F 1 "VCC" H 3817 2623 50  0000 C CNN
+F 2 "" H 3800 2450 50  0001 C CNN
+F 3 "" H 3800 2450 50  0001 C CNN
+	1    3800 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2450 3800 2500
+Wire Wire Line
+	3950 2500 3800 2500
+Connection ~ 3800 2500
+Wire Wire Line
+	3800 2500 3800 2550
+$Comp
+L power:GNDA #PWR?
+U 1 1 6187B2CE
+P 4350 2500
+AR Path="/6187B2CE" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/6187B2CE" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61876025/6187B2CE" Ref="#PWR0108"  Part="1" 
+AR Path="/618BA1D7/6187B2CE" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 4350 2250 50  0001 C CNN
+F 1 "GNDA" H 4354 2345 50  0000 C CNN
+F 2 "" H 4350 2500 50  0001 C CNN
+F 3 "" H 4350 2500 50  0001 C CNN
+	1    4350 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 2500 4350 2500
+Wire Wire Line
+	3800 3550 3800 3600
+$Comp
+L power:VCC #PWR?
+U 1 1 6187B2D6
+P 3800 4100
+AR Path="/6187B2D6" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/6187B2D6" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61876025/6187B2D6" Ref="#PWR0109"  Part="1" 
+AR Path="/618BA1D7/6187B2D6" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 3800 3950 50  0001 C CNN
+F 1 "VCC" H 3817 4273 50  0000 C CNN
+F 2 "" H 3800 4100 50  0001 C CNN
+F 3 "" H 3800 4100 50  0001 C CNN
+	1    3800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 6187B2DC
+P 4350 4150
+AR Path="/6187B2DC" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/6187B2DC" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61876025/6187B2DC" Ref="#PWR0110"  Part="1" 
+AR Path="/618BA1D7/6187B2DC" Ref="#PWR0110"  Part="1" 
+F 0 "#PWR0110" H 4350 3900 50  0001 C CNN
+F 1 "GNDA" H 4354 3995 50  0000 C CNN
+F 2 "" H 4350 4150 50  0001 C CNN
+F 3 "" H 4350 4150 50  0001 C CNN
+	1    4350 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3800 4100 3800 4150
+Wire Wire Line
+	3950 4150 3800 4150
+Connection ~ 3800 4150
+Wire Wire Line
+	3800 4150 3800 4200
+Wire Wire Line
+	4250 4150 4350 4150
+$Comp
+L power:GNDA #PWR?
+U 1 1 6187B2E7
+P 3800 5250
+AR Path="/6187B2E7" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/6187B2E7" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61876025/6187B2E7" Ref="#PWR0111"  Part="1" 
+AR Path="/618BA1D7/6187B2E7" Ref="#PWR0111"  Part="1" 
+F 0 "#PWR0111" H 3800 5000 50  0001 C CNN
+F 1 "GNDA" H 3804 5095 50  0000 C CNN
+F 2 "" H 3800 5250 50  0001 C CNN
+F 3 "" H 3800 5250 50  0001 C CNN
+	1    3800 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 5200 3800 5250
+Wire Wire Line
+	3400 1500 2100 1500
+Wire Wire Line
+	2100 1500 2100 1450
+Wire Wire Line
+	1900 1600 1900 1450
+Wire Wire Line
+	3400 1100 3300 1100
+Wire Wire Line
+	4200 1500 4650 1500
+Wire Wire Line
+	4750 1400 4200 1400
+Wire Wire Line
+	4750 4700 4200 4700
+Wire Wire Line
+	4650 4800 4200 4800
+Wire Wire Line
+	3400 3150 2100 3150
+Wire Wire Line
+	2100 3150 2100 3050
+Wire Wire Line
+	1900 3250 1900 3050
+Wire Wire Line
+	3400 2750 3300 2750
+Wire Wire Line
+	3400 4800 2100 4800
+Wire Wire Line
+	2100 4800 2100 4700
+Wire Wire Line
+	1900 4900 1900 4700
+Wire Wire Line
+	3400 4400 3300 4400
+Text Notes 1950 1750 0    50   ~ 0
+12V
+Text Notes 1950 3400 0    50   ~ 0
+3.3A (aux)
+Text Notes 1950 5050 0    50   ~ 0
+3.3V
+Wire Wire Line
+	4200 3050 4750 3050
+Wire Wire Line
+	4200 3150 4650 3150
+Connection ~ 4650 3150
+Wire Wire Line
+	4650 3150 4650 4800
+Wire Wire Line
+	2200 1300 2300 1300
+Wire Wire Line
+	2300 1300 2300 1000
+Wire Wire Line
+	2300 1000 1350 1000
+Wire Wire Line
+	1800 1300 1700 1300
+Wire Wire Line
+	1700 1300 1700 1100
+Wire Wire Line
+	1700 1100 1350 1100
+Wire Wire Line
+	2200 2900 2300 2900
+Wire Wire Line
+	2300 2900 2300 2600
+Wire Wire Line
+	1800 2900 1700 2900
+Wire Wire Line
+	2200 4550 2300 4550
+Wire Wire Line
+	2300 4550 2300 4250
+Wire Wire Line
+	2300 4250 1350 4250
+Wire Wire Line
+	1800 4550 1700 4550
+Wire Wire Line
+	1700 4550 1700 4350
+Wire Wire Line
+	1700 4350 1350 4350
+Wire Wire Line
+	1900 1600 3400 1600
+Wire Wire Line
+	3300 1100 3300 900 
+Wire Wire Line
+	3300 900  1700 900 
+Wire Wire Line
+	1700 900  1700 1100
+Connection ~ 1700 1100
+Wire Wire Line
+	3300 2750 3300 2500
+Wire Wire Line
+	3300 2500 1700 2500
+Wire Wire Line
+	3300 4400 3300 4150
+Wire Wire Line
+	3300 4150 1700 4150
+Wire Wire Line
+	1700 4150 1700 4350
+Connection ~ 1700 4350
+Wire Wire Line
+	1900 3250 3400 3250
+Wire Wire Line
+	1900 4900 3400 4900
+Text Label 4450 1500 0    50   ~ 0
+SCL
+Text Label 4450 1400 0    50   ~ 0
+SDA
+Text Label 4450 3050 0    50   ~ 0
+SDA
+Text Label 4450 4700 0    50   ~ 0
+SDA
+Wire Wire Line
+	5850 1900 5850 1400
+Connection ~ 4750 3050
+Wire Wire Line
+	4750 3050 4750 4700
+Wire Wire Line
+	4650 1500 4650 1700
+Wire Wire Line
+	4750 1400 4750 1500
+Connection ~ 4750 1500
+Wire Wire Line
+	4750 1500 4750 3050
+Wire Wire Line
+	4750 1500 5050 1500
+Connection ~ 4650 1700
+Wire Wire Line
+	4650 1700 4650 3150
+$Comp
+L Device:R R?
+U 1 1 6187B39B
+P 5050 1650
+AR Path="/6187B39B" Ref="R?"  Part="1" 
+AR Path="/6183E367/6187B39B" Ref="R?"  Part="1" 
+AR Path="/6183E367/61876025/6187B39B" Ref="R4"  Part="1" 
+AR Path="/618BA1D7/6187B39B" Ref="R4"  Part="1" 
+F 0 "R4" H 5120 1696 50  0000 L CNN
+F 1 "4.7k" H 5120 1605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 1650 50  0001 C CNN
+F 3 "~" H 5050 1650 50  0001 C CNN
+	1    5050 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6187B3A1
+P 5400 1550
+AR Path="/6187B3A1" Ref="R?"  Part="1" 
+AR Path="/6183E367/6187B3A1" Ref="R?"  Part="1" 
+AR Path="/6183E367/61876025/6187B3A1" Ref="R5"  Part="1" 
+AR Path="/618BA1D7/6187B3A1" Ref="R5"  Part="1" 
+F 0 "R5" H 5470 1596 50  0000 L CNN
+F 1 "4.7k" H 5470 1505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5330 1550 50  0001 C CNN
+F 3 "~" H 5400 1550 50  0001 C CNN
+	1    5400 1550
+	1    0    0    -1  
+$EndComp
+Connection ~ 5050 1500
+Wire Wire Line
+	5400 1700 4650 1700
+Wire Wire Line
+	5050 1900 5050 1800
+Wire Wire Line
+	5050 1500 6450 1500
+Wire Wire Line
+	5400 1400 5850 1400
+Text GLabel 1350 1000 0    50   Input ~ 0
+PCIe2_12V_OUT
+Wire Wire Line
+	1700 2500 1700 2700
+Wire Wire Line
+	1700 2900 1700 2700
+Connection ~ 1700 2700
+Wire Wire Line
+	1700 2700 1350 2700
+Wire Wire Line
+	2300 2600 1350 2600
+Text GLabel 1400 2600 0    50   Input ~ 0
+PCIe2_3AUX_OUT
+Text GLabel 1350 4250 0    50   Input ~ 0
+PCIe2_3V3_OUT
+Wire Wire Line
+	5050 1900 5850 1900
+Wire Wire Line
+	5400 1700 6450 1700
+Connection ~ 5400 1700
+Text GLabel 6450 1500 2    50   Input ~ 0
+PCIe2_SDA
+Text GLabel 6450 1700 2    50   Input ~ 0
+PCIe2_SCL
+Text GLabel 1350 1100 0    50   Input ~ 0
+12V
+Text GLabel 1350 2700 0    50   Input ~ 0
+3V3_PCIe
+Text GLabel 1350 4350 0    50   Input ~ 0
+3V3_PCIe
+$Comp
+L power:GNDA #PWR?
+U 1 1 61C98E64
+P 4350 850
+AR Path="/61C98E64" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/61C98E64" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/61C98E64" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/61C98E64" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/61C98E64" Ref="#PWR0141"  Part="1" 
+F 0 "#PWR0141" H 4350 600 50  0001 C CNN
+F 1 "GNDA" H 4354 695 50  0000 C CNN
+F 2 "" H 4350 850 50  0001 C CNN
+F 3 "" H 4350 850 50  0001 C CNN
+	1    4350 850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP33
+U 1 1 62A5C816
+P 10050 1150
+F 0 "JP33" H 10050 1355 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 10050 1264 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 10050 1150 50  0001 C CNN
+F 3 "~" H 10050 1150 50  0001 C CNN
+	1    10050 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP34
+U 1 1 62A5C81C
+P 10050 1500
+F 0 "JP34" H 10050 1705 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 10050 1614 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 10050 1500 50  0001 C CNN
+F 3 "~" H 10050 1500 50  0001 C CNN
+	1    10050 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP35
+U 1 1 62A5C822
+P 10050 1850
+F 0 "JP35" H 10050 2055 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 10050 1964 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 10050 1850 50  0001 C CNN
+F 3 "~" H 10050 1850 50  0001 C CNN
+	1    10050 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 1500 9900 1850
+Wire Wire Line
+	9900 1150 9900 1300
+Connection ~ 9900 1500
+Connection ~ 9900 1300
+Wire Wire Line
+	9900 1300 9900 1500
+$Comp
+L power:GNDA #PWR?
+U 1 1 62A5C835
+P 10200 1150
+AR Path="/62A5C835" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A5C835" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A5C835" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A5C835" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A5C835" Ref="#PWR0113"  Part="1" 
+F 0 "#PWR0113" H 10200 900 50  0001 C CNN
+F 1 "GNDA" H 10204 995 50  0000 C CNN
+F 2 "" H 10200 1150 50  0001 C CNN
+F 3 "" H 10200 1150 50  0001 C CNN
+	1    10200 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 62A5C83B
+P 10250 1500
+AR Path="/62A5C83B" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A5C83B" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A5C83B" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A5C83B" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A5C83B" Ref="#PWR0114"  Part="1" 
+F 0 "#PWR0114" H 10250 1350 50  0001 C CNN
+F 1 "VCC" H 10267 1673 50  0000 C CNN
+F 2 "" H 10250 1500 50  0001 C CNN
+F 3 "" H 10250 1500 50  0001 C CNN
+	1    10250 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10250 1500 10200 1500
+$Comp
+L Jumper:SolderJumper_2_Open JP25
+U 1 1 62A5C844
+P 8900 1700
+F 0 "JP25" H 8900 1905 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 8900 1814 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 8900 1700 50  0001 C CNN
+F 3 "~" H 8900 1700 50  0001 C CNN
+	1    8900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP26
+U 1 1 62A5C84A
+P 8900 2050
+F 0 "JP26" H 8900 2255 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 8900 2164 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 8900 2050 50  0001 C CNN
+F 3 "~" H 8900 2050 50  0001 C CNN
+	1    8900 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP27
+U 1 1 62A5C850
+P 8900 2400
+F 0 "JP27" H 8900 2605 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 8900 2514 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 8900 2400 50  0001 C CNN
+F 3 "~" H 8900 2400 50  0001 C CNN
+	1    8900 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2050 8750 2400
+Connection ~ 8750 2050
+$Comp
+L power:GNDA #PWR?
+U 1 1 62A5C860
+P 9050 1700
+AR Path="/62A5C860" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A5C860" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A5C860" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A5C860" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A5C860" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 9050 1450 50  0001 C CNN
+F 1 "GNDA" H 9054 1545 50  0000 C CNN
+F 2 "" H 9050 1700 50  0001 C CNN
+F 3 "" H 9050 1700 50  0001 C CNN
+	1    9050 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 62A5C866
+P 9100 2050
+AR Path="/62A5C866" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A5C866" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A5C866" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A5C866" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A5C866" Ref="#PWR0118"  Part="1" 
+F 0 "#PWR0118" H 9100 1900 50  0001 C CNN
+F 1 "VCC" H 9117 2223 50  0000 C CNN
+F 2 "" H 9100 2050 50  0001 C CNN
+F 3 "" H 9100 2050 50  0001 C CNN
+	1    9100 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9100 2050 9050 2050
+Wire Wire Line
+	8750 1700 8750 2050
+Wire Wire Line
+	8400 1400 8400 2050
+Wire Wire Line
+	8400 2050 8750 2050
+Wire Notes Line
+	11000 800  11000 3000
+Wire Notes Line
+	11000 3000 8250 3000
+Wire Notes Line
+	8250 3000 8250 800 
+Wire Notes Line
+	8250 800  11000 800 
+Text Notes 8250 800  0    50   ~ 0
+I2C Address Selection\n
+Text Label 8350 1300 0    50   ~ 0
+A1_pcie2_12V
+Text Label 8350 1400 0    50   ~ 0
+A0_pcie2_12V
+Wire Wire Line
+	6500 1300 9900 1300
+$Comp
+L Jumper:SolderJumper_2_Open JP37
+U 1 1 62A625EA
+P 10050 3700
+F 0 "JP37" H 10050 3905 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 10050 3814 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 10050 3700 50  0001 C CNN
+F 3 "~" H 10050 3700 50  0001 C CNN
+	1    10050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP38
+U 1 1 62A625F0
+P 10050 4050
+F 0 "JP38" H 10050 4255 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 10050 4164 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 10050 4050 50  0001 C CNN
+F 3 "~" H 10050 4050 50  0001 C CNN
+	1    10050 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP39
+U 1 1 62A625F6
+P 10050 4400
+F 0 "JP39" H 10050 4605 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 10050 4514 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 10050 4400 50  0001 C CNN
+F 3 "~" H 10050 4400 50  0001 C CNN
+	1    10050 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 4050 9900 4400
+Wire Wire Line
+	9900 3700 9900 3850
+Connection ~ 9900 4050
+Connection ~ 9900 3850
+Wire Wire Line
+	9900 3850 9900 4050
+$Comp
+L power:GNDA #PWR?
+U 1 1 62A62609
+P 10200 3700
+AR Path="/62A62609" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A62609" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A62609" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A62609" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A62609" Ref="#PWR0126"  Part="1" 
+F 0 "#PWR0126" H 10200 3450 50  0001 C CNN
+F 1 "GNDA" H 10204 3545 50  0000 C CNN
+F 2 "" H 10200 3700 50  0001 C CNN
+F 3 "" H 10200 3700 50  0001 C CNN
+	1    10200 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 62A6260F
+P 10250 4050
+AR Path="/62A6260F" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A6260F" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A6260F" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A6260F" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A6260F" Ref="#PWR0158"  Part="1" 
+F 0 "#PWR0158" H 10250 3900 50  0001 C CNN
+F 1 "VCC" H 10267 4223 50  0000 C CNN
+F 2 "" H 10250 4050 50  0001 C CNN
+F 3 "" H 10250 4050 50  0001 C CNN
+	1    10250 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10250 4050 10200 4050
+$Comp
+L Jumper:SolderJumper_2_Open JP29
+U 1 1 62A62618
+P 8900 4250
+F 0 "JP29" H 8900 4455 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 8900 4364 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 8900 4250 50  0001 C CNN
+F 3 "~" H 8900 4250 50  0001 C CNN
+	1    8900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP30
+U 1 1 62A6261E
+P 8900 4600
+F 0 "JP30" H 8900 4805 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 8900 4714 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 8900 4600 50  0001 C CNN
+F 3 "~" H 8900 4600 50  0001 C CNN
+	1    8900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP31
+U 1 1 62A62624
+P 8900 4950
+F 0 "JP31" H 8900 5155 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 8900 5064 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 8900 4950 50  0001 C CNN
+F 3 "~" H 8900 4950 50  0001 C CNN
+	1    8900 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4600 8750 4950
+Connection ~ 8750 4600
+$Comp
+L power:GNDA #PWR?
+U 1 1 62A62634
+P 9050 4250
+AR Path="/62A62634" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A62634" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A62634" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A62634" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A62634" Ref="#PWR0159"  Part="1" 
+F 0 "#PWR0159" H 9050 4000 50  0001 C CNN
+F 1 "GNDA" H 9054 4095 50  0000 C CNN
+F 2 "" H 9050 4250 50  0001 C CNN
+F 3 "" H 9050 4250 50  0001 C CNN
+	1    9050 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 62A6263A
+P 9100 4600
+AR Path="/62A6263A" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A6263A" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A6263A" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A6263A" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A6263A" Ref="#PWR0160"  Part="1" 
+F 0 "#PWR0160" H 9100 4450 50  0001 C CNN
+F 1 "VCC" H 9117 4773 50  0000 C CNN
+F 2 "" H 9100 4600 50  0001 C CNN
+F 3 "" H 9100 4600 50  0001 C CNN
+	1    9100 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9100 4600 9050 4600
+Wire Wire Line
+	8750 4250 8750 4600
+Wire Wire Line
+	8400 3950 8400 4600
+Wire Wire Line
+	8400 4600 8750 4600
+Wire Notes Line
+	11000 3350 11000 5550
+Wire Notes Line
+	11000 5550 8250 5550
+Wire Notes Line
+	8250 5550 8250 3350
+Wire Notes Line
+	8250 3350 11000 3350
+Text Notes 8250 3350 0    50   ~ 0
+I2C Address Selection\n
+Text Label 8350 3850 0    50   ~ 0
+A1_pcie2_3V3AUX
+Text Label 8350 3950 0    50   ~ 0
+A0_pcie2_3V3AUX
+Wire Wire Line
+	6500 3850 9900 3850
+$Comp
+L Jumper:SolderJumper_2_Open JP21
+U 1 1 62A6D858
+P 5900 5750
+F 0 "JP21" H 5900 5955 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5900 5864 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5900 5750 50  0001 C CNN
+F 3 "~" H 5900 5750 50  0001 C CNN
+	1    5900 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP22
+U 1 1 62A6D85E
+P 5900 6100
+F 0 "JP22" H 5900 6305 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5900 6214 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5900 6100 50  0001 C CNN
+F 3 "~" H 5900 6100 50  0001 C CNN
+	1    5900 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP23
+U 1 1 62A6D864
+P 5900 6450
+F 0 "JP23" H 5900 6655 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5900 6564 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5900 6450 50  0001 C CNN
+F 3 "~" H 5900 6450 50  0001 C CNN
+	1    5900 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 6100 5750 6450
+Wire Wire Line
+	5750 5750 5750 5900
+Connection ~ 5750 6100
+Connection ~ 5750 5900
+Wire Wire Line
+	5750 5900 5750 6100
+$Comp
+L power:GNDA #PWR?
+U 1 1 62A6D877
+P 6050 5750
+AR Path="/62A6D877" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A6D877" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A6D877" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A6D877" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A6D877" Ref="#PWR0161"  Part="1" 
+F 0 "#PWR0161" H 6050 5500 50  0001 C CNN
+F 1 "GNDA" H 6054 5595 50  0000 C CNN
+F 2 "" H 6050 5750 50  0001 C CNN
+F 3 "" H 6050 5750 50  0001 C CNN
+	1    6050 5750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 62A6D87D
+P 6100 6100
+AR Path="/62A6D87D" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A6D87D" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A6D87D" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A6D87D" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A6D87D" Ref="#PWR0162"  Part="1" 
+F 0 "#PWR0162" H 6100 5950 50  0001 C CNN
+F 1 "VCC" H 6117 6273 50  0000 C CNN
+F 2 "" H 6100 6100 50  0001 C CNN
+F 3 "" H 6100 6100 50  0001 C CNN
+	1    6100 6100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 6100 6050 6100
+$Comp
+L Jumper:SolderJumper_2_Open JP17
+U 1 1 62A6D886
+P 4750 6300
+F 0 "JP17" H 4750 6505 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 4750 6414 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4750 6300 50  0001 C CNN
+F 3 "~" H 4750 6300 50  0001 C CNN
+	1    4750 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP18
+U 1 1 62A6D88C
+P 4750 6650
+F 0 "JP18" H 4750 6855 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 4750 6764 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4750 6650 50  0001 C CNN
+F 3 "~" H 4750 6650 50  0001 C CNN
+	1    4750 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP19
+U 1 1 62A6D892
+P 4750 7000
+F 0 "JP19" H 4750 7205 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 4750 7114 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4750 7000 50  0001 C CNN
+F 3 "~" H 4750 7000 50  0001 C CNN
+	1    4750 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 6650 4600 7000
+Connection ~ 4600 6650
+$Comp
+L power:GNDA #PWR?
+U 1 1 62A6D8A2
+P 4900 6300
+AR Path="/62A6D8A2" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A6D8A2" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A6D8A2" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A6D8A2" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A6D8A2" Ref="#PWR0163"  Part="1" 
+F 0 "#PWR0163" H 4900 6050 50  0001 C CNN
+F 1 "GNDA" H 4904 6145 50  0000 C CNN
+F 2 "" H 4900 6300 50  0001 C CNN
+F 3 "" H 4900 6300 50  0001 C CNN
+	1    4900 6300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 62A6D8A8
+P 4950 6650
+AR Path="/62A6D8A8" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/62A6D8A8" Ref="#PWR?"  Part="1" 
+AR Path="/6183E367/618A2E14/62A6D8A8" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1DE/62A6D8A8" Ref="#PWR?"  Part="1" 
+AR Path="/618BA1D7/62A6D8A8" Ref="#PWR0164"  Part="1" 
+F 0 "#PWR0164" H 4950 6500 50  0001 C CNN
+F 1 "VCC" H 4967 6823 50  0000 C CNN
+F 2 "" H 4950 6650 50  0001 C CNN
+F 3 "" H 4950 6650 50  0001 C CNN
+	1    4950 6650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 6650 4900 6650
+Wire Wire Line
+	4600 6300 4600 6650
+Wire Wire Line
+	4250 6000 4250 6650
+Wire Wire Line
+	4250 6650 4600 6650
+Wire Notes Line
+	6850 5400 6850 7600
+Wire Notes Line
+	6850 7600 4100 7600
+Wire Notes Line
+	4100 5400 6850 5400
+Text Notes 4100 5400 0    50   ~ 0
+I2C Address Selection\n
+Text Label 4200 5900 0    50   ~ 0
+A1__pcie2_3V3
+Text Label 4200 6000 0    50   ~ 0
+A0_pcie2_3V3
+Wire Wire Line
+	4200 1100 5650 1100
+Wire Wire Line
+	5650 1100 5650 900 
+Wire Wire Line
+	5650 900  6500 900 
+Wire Wire Line
+	6500 900  6500 1300
+Wire Wire Line
+	4200 1200 5750 1200
+Wire Wire Line
+	5750 1200 5750 1000
+Wire Wire Line
+	5750 1000 6400 1000
+Wire Wire Line
+	6400 1000 6400 1400
+Wire Wire Line
+	6400 1400 8400 1400
+Wire Wire Line
+	4200 2750 6500 2750
+Wire Wire Line
+	6500 2750 6500 3850
+Wire Wire Line
+	4200 2850 6400 2850
+Wire Wire Line
+	6400 2850 6400 3950
+Wire Wire Line
+	6400 3950 8400 3950
+Wire Wire Line
+	4200 4500 4300 4500
+Wire Wire Line
+	4300 4500 4300 5700
+Wire Wire Line
+	4300 5700 3950 5700
+Wire Wire Line
+	3950 5700 3950 6000
+Wire Wire Line
+	3950 6000 4250 6000
+Wire Wire Line
+	4200 4400 4400 4400
+Wire Wire Line
+	4400 4400 4400 5800
+Wire Wire Line
+	4400 5800 4050 5800
+Wire Wire Line
+	4050 5800 4050 5900
+Wire Wire Line
+	4050 5900 5750 5900
+Text GLabel 9050 2400 2    50   Input ~ 0
+PCIe2_SDA
+Text GLabel 10200 1850 2    50   Input ~ 0
+PCIe2_SDA
+Text GLabel 9050 4950 2    50   Input ~ 0
+PCIe2_SDA
+Text GLabel 10200 4400 2    50   Input ~ 0
+PCIe2_SDA
+Text GLabel 4900 7000 2    50   Input ~ 0
+PCIe2_SDA
+Text GLabel 6050 6450 2    50   Input ~ 0
+PCIe2_SDA
+Wire Notes Line
+	4100 7600 4100 5400
+$EndSCHEMATC

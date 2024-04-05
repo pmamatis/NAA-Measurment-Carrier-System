@@ -1,0 +1,6757 @@
+(export 
+  (version D) 
+  (design 
+    (source "/media/paul/LINUX_MEM/Fraunhofer/GIT Repos/nna-fpga-power-measurement-system/PCB/PCIe-Power-Measurement-Board/PCIe-Power-Measurement-Board.sch") 
+    (date "Mo 17 Jan 2022 15:47:01 CET") 
+    (tool "Eeschema 5.1.10-88a1d61d58~90~ubuntu20.04.1") 
+    (sheet 
+      (number 1) 
+      (name /) 
+      (tstamps /) 
+      (title_block 
+        (title) 
+        (company) 
+        (rev) 
+        (date) 
+        (source PCIe-Power-Measurement-Board.sch) 
+        (comment 
+          (number 1) 
+          (value "")) 
+        (comment 
+          (number 2) 
+          (value "")) 
+        (comment 
+          (number 3) 
+          (value "")) 
+        (comment 
+          (number 4) 
+          (value "")))) 
+    (sheet 
+      (number 2) 
+      (name /sheet618BA1D2/) 
+      (tstamps /618BA1D7/) 
+      (title_block 
+        (title) 
+        (company) 
+        (rev) 
+        (date) 
+        (source PCIe2_INA226.sch) 
+        (comment 
+          (number 1) 
+          (value "")) 
+        (comment 
+          (number 2) 
+          (value "")) 
+        (comment 
+          (number 3) 
+          (value "")) 
+        (comment 
+          (number 4) 
+          (value "")))) 
+    (sheet 
+      (number 3) 
+      (name /sheet618BA1D3/) 
+      (tstamps /618BA1DE/) 
+      (title_block 
+        (title) 
+        (company) 
+        (rev) 
+        (date) 
+        (source 12V_Supp_INA226.sch) 
+        (comment 
+          (number 1) 
+          (value "")) 
+        (comment 
+          (number 2) 
+          (value "")) 
+        (comment 
+          (number 3) 
+          (value "")) 
+        (comment 
+          (number 4) 
+          (value "")))) 
+    (sheet 
+      (number 4) 
+      (name /sheet618BA1D4/) 
+      (tstamps /618BA1E0/) 
+      (title_block 
+        (title) 
+        (company) 
+        (rev) 
+        (date) 
+        (source PCIe1_INA226.sch) 
+        (comment 
+          (number 1) 
+          (value "")) 
+        (comment 
+          (number 2) 
+          (value "")) 
+        (comment 
+          (number 3) 
+          (value "")) 
+        (comment 
+          (number 4) 
+          (value "")))) 
+    (sheet 
+      (number 5) 
+      (name /PCIe_Slots/) 
+      (tstamps /618BA1E4/) 
+      (title_block 
+        (title) 
+        (company) 
+        (rev) 
+        (date) 
+        (source PCIe_Slots.sch) 
+        (comment 
+          (number 1) 
+          (value "")) 
+        (comment 
+          (number 2) 
+          (value "")) 
+        (comment 
+          (number 3) 
+          (value "")) 
+        (comment 
+          (number 4) 
+          (value "")))) 
+    (sheet 
+      (number 6) 
+      (name "/STM32 F745/") 
+      (tstamps /618FDF23/) 
+      (title_block 
+        (title) 
+        (company) 
+        (rev) 
+        (date) 
+        (source "STM32 F745_VET6.sch") 
+        (comment 
+          (number 1) 
+          (value "")) 
+        (comment 
+          (number 2) 
+          (value "")) 
+        (comment 
+          (number 3) 
+          (value "")) 
+        (comment 
+          (number 4) 
+          (value "")))) 
+    (sheet 
+      (number 7) 
+      (name "/Ethernet / PHY/") 
+      (tstamps /61B3F2E9/) 
+      (title_block 
+        (title) 
+        (company) 
+        (rev) 
+        (date) 
+        (source Ethernet.sch) 
+        (comment 
+          (number 1) 
+          (value "")) 
+        (comment 
+          (number 2) 
+          (value "")) 
+        (comment 
+          (number 3) 
+          (value "")) 
+        (comment 
+          (number 4) 
+          (value ""))))) 
+  (components 
+    (comp 
+      (ref H1) 
+      (value MountingHole) 
+      (footprint MountingHole:MountingHole_3.5mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Mechanical) 
+        (part MountingHole) 
+        (description "Mounting Hole without connection")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5CA46FDA)) 
+    (comp 
+      (ref H2) 
+      (value MountingHole) 
+      (footprint MountingHole:MountingHole_3.5mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Mechanical) 
+        (part MountingHole) 
+        (description "Mounting Hole without connection")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5CA470F2)) 
+    (comp 
+      (ref H3) 
+      (value MountingHole) 
+      (footprint MountingHole:MountingHole_3.5mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Mechanical) 
+        (part MountingHole) 
+        (description "Mounting Hole without connection")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5CA4712C)) 
+    (comp 
+      (ref IX60G-B-10P1) 
+      (value IX60G-B-10P) 
+      (footprint HIROSE_IX60G-B-10P) 
+      (fields 
+        (field 
+          (name MAXIMUM_PACKAGE_HEIGHT) "6.1 mm") 
+        (field 
+          (name MF) Hirose) 
+        (field 
+          (name PARTREV) 20200430) 
+        (field 
+          (name STANDARD) "Manufacturer Recommendations")) 
+      (libsource 
+        (lib IX60G-B-10P) 
+        (part IX60G-B-10P) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 618BA217)) 
+    (comp 
+      (ref ATX-SUPP_8Pol_1) 
+      (value 430450800) 
+      (footprint MOLEX_8POL_ATXSUPP:430450800) 
+      (libsource 
+        (lib 2021-11-08_20-10-21) 
+        (part 430450800) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 618BA21D)) 
+    (comp 
+      (ref ATX-SUPP_8Pol_2) 
+      (value 430450800) 
+      (footprint MOLEX_8POL_ATXSUPP:430450800) 
+      (libsource 
+        (lib 2021-11-08_20-10-21) 
+        (part 430450800) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 618BA223)) 
+    (comp 
+      (ref H4) 
+      (value MountingHole) 
+      (footprint MountingHole:MountingHole_3.5mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Mechanical) 
+        (part MountingHole) 
+        (description "Mounting Hole without connection")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 61A5C235)) 
+    (comp 
+      (ref H5) 
+      (value MountingHole) 
+      (footprint MountingHole:MountingHole_3.5mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Mechanical) 
+        (part MountingHole) 
+        (description "Mounting Hole without connection")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 61A5C23B)) 
+    (comp 
+      (ref H6) 
+      (value MountingHole) 
+      (footprint MountingHole:MountingHole_3.5mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Mechanical) 
+        (part MountingHole) 
+        (description "Mounting Hole without connection")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 61A5C241)) 
+    (comp 
+      (ref J2) 
+      (value XT60PW-M) 
+      (footprint AMASS_XT60PW-M) 
+      (fields 
+        (field 
+          (name MANUFACTURER) AMASS) 
+        (field 
+          (name MAXIMUM_PACKAGE_HEIGHT) "8.4 mm") 
+        (field 
+          (name PARTREV) V1.2) 
+        (field 
+          (name STANDARD) "Manufacturer recommendations")) 
+      (libsource 
+        (lib XT60PW-M) 
+        (part XT60PW-M) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 61B02E0D)) 
+    (comp 
+      (ref J_VDD1) 
+      (value Conn_01x02_Male) 
+      (footprint Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Horizontal) 
+      (datasheet ~) 
+      (libsource 
+        (lib Connector) 
+        (part Conn_01x02_Male) 
+        (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 61C50831)) 
+    (comp 
+      (ref J3) 
+      (value XT60PW-M) 
+      (footprint AMASS_XT60PW-M) 
+      (fields 
+        (field 
+          (name MANUFACTURER) AMASS) 
+        (field 
+          (name MAXIMUM_PACKAGE_HEIGHT) "8.4 mm") 
+        (field 
+          (name PARTREV) V1.2) 
+        (field 
+          (name STANDARD) "Manufacturer recommendations")) 
+      (libsource 
+        (lib XT60PW-M) 
+        (part XT60PW-M) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 61B03E53)) 
+    (comp 
+      (ref R1) 
+      (value 10mR) 
+      (footprint Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.66mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Shunt) 
+        (description "Shunt resistor")) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B262)) 
+    (comp 
+      (ref R2) 
+      (value 25mR) 
+      (footprint Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.66mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Shunt) 
+        (description "Shunt resistor")) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B268)) 
+    (comp 
+      (ref R3) 
+      (value 25mR) 
+      (footprint Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.66mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Shunt) 
+        (description "Shunt resistor")) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B26E)) 
+    (comp 
+      (ref U1) 
+      (value INA226) 
+      (footprint Package_SO:MSOP-10_3x3mm_P0.5mm) 
+      (datasheet http://www.ti.com/lit/ds/symlink/ina226.pdf) 
+      (libsource 
+        (lib m_pex_sensor-rescue) 
+        (part INA226-Analog_ADC) 
+        (description "")) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B274)) 
+    (comp 
+      (ref U2) 
+      (value INA226) 
+      (footprint Package_SO:MSOP-10_3x3mm_P0.5mm) 
+      (datasheet http://www.ti.com/lit/ds/symlink/ina226.pdf) 
+      (libsource 
+        (lib m_pex_sensor-rescue) 
+        (part INA226-Analog_ADC) 
+        (description "")) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B27A)) 
+    (comp 
+      (ref U3) 
+      (value INA226) 
+      (footprint Package_SO:MSOP-10_3x3mm_P0.5mm) 
+      (datasheet http://www.ti.com/lit/ds/symlink/ina226.pdf) 
+      (libsource 
+        (lib m_pex_sensor-rescue) 
+        (part INA226-Analog_ADC) 
+        (description "")) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B280)) 
+    (comp 
+      (ref C1) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B292)) 
+    (comp 
+      (ref C2) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B298)) 
+    (comp 
+      (ref C3) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B29E)) 
+    (comp 
+      (ref R4) 
+      (value 4.7k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B39B)) 
+    (comp 
+      (ref R5) 
+      (value 4.7k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /sheet618BA1D2/) 
+        (tstamps /618BA1D7/)) 
+      (tstamp 6187B3A1)) 
+    (comp 
+      (ref R6) 
+      (value 5mR) 
+      (footprint SHUNT_RES_FCSL150R010FER:FCSL150R005FER) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Small) 
+        (description "Resistor, small symbol")) 
+      (sheetpath 
+        (names /sheet618BA1D3/) 
+        (tstamps /618BA1DE/)) 
+      (tstamp 618B1C48)) 
+    (comp 
+      (ref U4) 
+      (value INA226) 
+      (footprint Package_SO:MSOP-10_3x3mm_P0.5mm) 
+      (datasheet http://www.ti.com/lit/ds/symlink/ina226.pdf) 
+      (libsource 
+        (lib m_pex_sensor-rescue) 
+        (part INA226-Analog_ADC) 
+        (description "")) 
+      (sheetpath 
+        (names /sheet618BA1D3/) 
+        (tstamps /618BA1DE/)) 
+      (tstamp 618B1C5A)) 
+    (comp 
+      (ref U5) 
+      (value INA226) 
+      (footprint Package_SO:MSOP-10_3x3mm_P0.5mm) 
+      (datasheet http://www.ti.com/lit/ds/symlink/ina226.pdf) 
+      (libsource 
+        (lib m_pex_sensor-rescue) 
+        (part INA226-Analog_ADC) 
+        (description "")) 
+      (sheetpath 
+        (names /sheet618BA1D3/) 
+        (tstamps /618BA1DE/)) 
+      (tstamp 618B1C60)) 
+    (comp 
+      (ref C4) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /sheet618BA1D3/) 
+        (tstamps /618BA1DE/)) 
+      (tstamp 618B1C78)) 
+    (comp 
+      (ref C5) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /sheet618BA1D3/) 
+        (tstamps /618BA1DE/)) 
+      (tstamp 618B1C7E)) 
+    (comp 
+      (ref R8) 
+      (value 4.7k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /sheet618BA1D3/) 
+        (tstamps /618BA1DE/)) 
+      (tstamp 618B1D81)) 
+    (comp 
+      (ref R9) 
+      (value 4.7k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /sheet618BA1D3/) 
+        (tstamps /618BA1DE/)) 
+      (tstamp 618B1D87)) 
+    (comp 
+      (ref R7) 
+      (value 5mR) 
+      (footprint SHUNT_RES_FCSL150R010FER:FCSL150R005FER) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Small) 
+        (description "Resistor, small symbol")) 
+      (sheetpath 
+        (names /sheet618BA1D3/) 
+        (tstamps /618BA1DE/)) 
+      (tstamp 619DE044)) 
+    (comp 
+      (ref R10) 
+      (value 10mR) 
+      (footprint Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.66mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Shunt) 
+        (description "Shunt resistor")) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618700B8)) 
+    (comp 
+      (ref R11) 
+      (value 25mR) 
+      (footprint Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.66mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Shunt) 
+        (description "Shunt resistor")) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618700BE)) 
+    (comp 
+      (ref R12) 
+      (value 25mR) 
+      (footprint Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T2.66mm) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R_Shunt) 
+        (description "Shunt resistor")) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618700C4)) 
+    (comp 
+      (ref U6) 
+      (value INA226) 
+      (footprint Package_SO:MSOP-10_3x3mm_P0.5mm) 
+      (datasheet http://www.ti.com/lit/ds/symlink/ina226.pdf) 
+      (libsource 
+        (lib m_pex_sensor-rescue) 
+        (part INA226-Analog_ADC) 
+        (description "")) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618700CA)) 
+    (comp 
+      (ref U7) 
+      (value INA226) 
+      (footprint Package_SO:MSOP-10_3x3mm_P0.5mm) 
+      (datasheet http://www.ti.com/lit/ds/symlink/ina226.pdf) 
+      (libsource 
+        (lib m_pex_sensor-rescue) 
+        (part INA226-Analog_ADC) 
+        (description "")) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618700D0)) 
+    (comp 
+      (ref U8) 
+      (value INA226) 
+      (footprint Package_SO:MSOP-10_3x3mm_P0.5mm) 
+      (datasheet http://www.ti.com/lit/ds/symlink/ina226.pdf) 
+      (libsource 
+        (lib m_pex_sensor-rescue) 
+        (part INA226-Analog_ADC) 
+        (description "")) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618700D6)) 
+    (comp 
+      (ref C6) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618700E8)) 
+    (comp 
+      (ref C7) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618700EE)) 
+    (comp 
+      (ref C8) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618700F4)) 
+    (comp 
+      (ref R13) 
+      (value 4.7k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618701F1)) 
+    (comp 
+      (ref R14) 
+      (value 4.7k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /sheet618BA1D4/) 
+        (tstamps /618BA1E0/)) 
+      (tstamp 618701F7)) 
+    (comp 
+      (ref R20) 
+      (value 4k7) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15E0E)) 
+    (comp 
+      (ref R19) 
+      (value 1k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15E14)) 
+    (comp 
+      (ref R18) 
+      (value 1k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15E1A)) 
+    (comp 
+      (ref D6) 
+      (value LED) 
+      (footprint LED_SMD:LED_0805_2012Metric_Castellated) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15E20)) 
+    (comp 
+      (ref D5) 
+      (value LED) 
+      (footprint LED_SMD:LED_0805_2012Metric_Castellated) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15E26)) 
+    (comp 
+      (ref D4) 
+      (value LED) 
+      (footprint LED_SMD:LED_0805_2012Metric_Castellated) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15E2C)) 
+    (comp 
+      (ref PCIe1) 
+      (value PCIe_164) 
+      (footprint Connector_PCIE:PCIE-164-02-F-D-TH) 
+      (libsource 
+        (lib Sequencer) 
+        (part PCIe_164) 
+        (description "")) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15E72)) 
+    (comp 
+      (ref R17) 
+      (value 4k7) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15EAC)) 
+    (comp 
+      (ref R16) 
+      (value 1k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15EB2)) 
+    (comp 
+      (ref R15) 
+      (value 1k) 
+      (footprint Resistor_SMD:R_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15EB8)) 
+    (comp 
+      (ref D3) 
+      (value LED) 
+      (footprint LED_SMD:LED_0805_2012Metric_Castellated) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15EBE)) 
+    (comp 
+      (ref D2) 
+      (value LED) 
+      (footprint LED_SMD:LED_0805_2012Metric_Castellated) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15EC4)) 
+    (comp 
+      (ref D1) 
+      (value LED) 
+      (footprint LED_SMD:LED_0805_2012Metric_Castellated) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15ECA)) 
+    (comp 
+      (ref PCIe2) 
+      (value PCIe_164) 
+      (footprint Connector_PCIE:PCIE-164-02-F-D-TH) 
+      (libsource 
+        (lib Sequencer) 
+        (part PCIe_164) 
+        (description "")) 
+      (sheetpath 
+        (names /PCIe_Slots/) 
+        (tstamps /618BA1E4/)) 
+      (tstamp 61C15F10)) 
+    (comp 
+      (ref J41) 
+      (value ARM_SWD_10) 
+      (footprint Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD) 
+      (datasheet http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf) 
+      (libsource 
+        (lib Connector) 
+        (part Conn_ARM_JTAG_SWD_10) 
+        (description "Cortex Debug Connector, standard ARM Cortex-M SWD and JTAG interface")) 
+      (sheetpath 
+        (names "/STM32 F745/") 
+        (tstamps /618FDF23/)) 
+      (tstamp 5D95FDB4)) 
+    (comp 
+      (ref µC1) 
+      (value STM32F745VET6) 
+      (footprint QFP50P1600X1600X160-100N) 
+      (fields 
+        (field 
+          (name MANUFACTURER) STMicroelectronics) 
+        (field 
+          (name PARTREV) 4) 
+        (field 
+          (name STANDARD) IPC-7351B)) 
+      (libsource 
+        (lib STM32F745VET6) 
+        (part STM32F745VET6) 
+        (description "")) 
+      (sheetpath 
+        (names "/STM32 F745/") 
+        (tstamps /618FDF23/)) 
+      (tstamp 61903B4D)) 
+    (comp 
+      (ref C9) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/STM32 F745/") 
+        (tstamps /618FDF23/)) 
+      (tstamp 61D9F192)) 
+    (comp 
+      (ref C10) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/STM32 F745/") 
+        (tstamps /618FDF23/)) 
+      (tstamp 61D9FDF0)) 
+    (comp 
+      (ref C11) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/STM32 F745/") 
+        (tstamps /618FDF23/)) 
+      (tstamp 61DA02EB)) 
+    (comp 
+      (ref C12) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/STM32 F745/") 
+        (tstamps /618FDF23/)) 
+      (tstamp 61DA06EE)) 
+    (comp 
+      (ref C13) 
+      (value 100nF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/STM32 F745/") 
+        (tstamps /618FDF23/)) 
+      (tstamp 61DA0B85)) 
+    (comp 
+      (ref T0) 
+      (value H1102NLT) 
+      (footprint XFMR_H1102NLT) 
+      (fields 
+        (field 
+          (name MANUFACTURER) "Pulse Electronics") 
+        (field 
+          (name PARTREV) NA) 
+        (field 
+          (name STNADARD) "Manufacturer Recommendation")) 
+      (libsource 
+        (lib H1102NLT) 
+        (part H1102NLT) 
+        (description "")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61B4561B)) 
+    (comp 
+      (ref R_T1) 
+      (value 75) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61B6058E)) 
+    (comp 
+      (ref R_T2) 
+      (value 75) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61B630A8)) 
+    (comp 
+      (ref R_T3) 
+      (value 75) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61B6356F)) 
+    (comp 
+      (ref R_T4) 
+      (value 75) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61B638BA)) 
+    (comp 
+      (ref C15) 
+      (value 10nF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61B76914)) 
+    (comp 
+      (ref C16) 
+      (value 10nF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61B76DD9)) 
+    (comp 
+      (ref C14) 
+      (value "10nF 2kV") 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61B82059)) 
+    (comp 
+      (ref U9) 
+      (value LAN8742A-CZ-TR) 
+      (footprint SQFN24_4X4MC_MCH) 
+      (libsource 
+        (lib LAN8742A-CZ-TR) 
+        (part LAN8742A-CZ-TR) 
+        (description "")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61E5D03C)) 
+    (comp 
+      (ref R_T5) 
+      (value 50) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61E6AA2F)) 
+    (comp 
+      (ref R_T6) 
+      (value 50) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61E7908D)) 
+    (comp 
+      (ref R_T7) 
+      (value 50) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61E7981F)) 
+    (comp 
+      (ref R_T8) 
+      (value 50) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61E79F47)) 
+    (comp 
+      (ref R22) 
+      (value 12K1) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61E94548)) 
+    (comp 
+      (ref R21) 
+      (value 10k) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61ED263E)) 
+    (comp 
+      (ref U10) 
+      (value USBLC6-4SC6) 
+      (footprint Package_TO_SOT_SMD:SOT-23-6) 
+      (datasheet https://www.st.com/resource/en/datasheet/usblc6-4.pdf) 
+      (libsource 
+        (lib Power_Protection) 
+        (part USBLC6-4SC6) 
+        (description "Very low capacitance ESD protection diode, 4 data-line, SOT-23-6")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61EF0BBD)) 
+    (comp 
+      (ref C19) 
+      (value "100nF ") 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61F1A7C5)) 
+    (comp 
+      (ref L1) 
+      (value BEAD) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part L) 
+        (description Inductor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61F4E702)) 
+    (comp 
+      (ref C20) 
+      (value "100nF ") 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61FB2E2A)) 
+    (comp 
+      (ref C23) 
+      (value "100nF ") 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61FB2E30)) 
+    (comp 
+      (ref C18) 
+      (value "10uF ") 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 61FF0322)) 
+    (comp 
+      (ref C22) 
+      (value 470pF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 6201E5BB)) 
+    (comp 
+      (ref C17) 
+      (value "100nF ") 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 6203E2E8)) 
+    (comp 
+      (ref C21) 
+      (value "1uF ") 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 62048324)) 
+    (comp 
+      (ref R23) 
+      (value 33) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 6206E0B6)) 
+    (comp 
+      (ref R24) 
+      (value 33) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 6206F0A3)) 
+    (comp 
+      (ref R25) 
+      (value 33) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 6209D8D3)) 
+    (comp 
+      (ref R26) 
+      (value 10k) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 620AA351)) 
+    (comp 
+      (ref R27) 
+      (value 10k) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 620AB2F9)) 
+    (comp 
+      (ref R28) 
+      (value 10k) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 620AC20C)) 
+    (comp 
+      (ref R29) 
+      (value 1k5) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names "/Ethernet / PHY/") 
+        (tstamps /61B3F2E9/)) 
+      (tstamp 6218E26B))) 
+  (libparts 
+    (libpart 
+      (lib 2021-11-08_20-10-21) 
+      (part 430450800) 
+      (footprints 
+        (fp CON_430450800_MOL)) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) 430450800) 
+        (field 
+          (name Footprint) CON_430450800_MOL)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name 1) 
+          (type unspc)) 
+        (pin 
+          (num 2) 
+          (name 2) 
+          (type unspc)) 
+        (pin 
+          (num 3) 
+          (name 3) 
+          (type unspc)) 
+        (pin 
+          (num 4) 
+          (name 4) 
+          (type unspc)) 
+        (pin 
+          (num 5) 
+          (name 5) 
+          (type unspc)) 
+        (pin 
+          (num 6) 
+          (name 6) 
+          (type unspc)) 
+        (pin 
+          (num 7) 
+          (name 7) 
+          (type unspc)) 
+        (pin 
+          (num 8) 
+          (name 8) 
+          (type unspc)))) 
+    (libpart 
+      (lib Connector) 
+      (part Conn_01x02_Male) 
+      (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)") 
+      (docs ~) 
+      (footprints 
+        (fp Connector*:*_1x??_*)) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) Conn_01x02_Male)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name Pin_1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name Pin_2) 
+          (type passive)))) 
+    (libpart 
+      (lib Connector) 
+      (part Conn_ARM_JTAG_SWD_10) 
+      (description "Cortex Debug Connector, standard ARM Cortex-M SWD and JTAG interface") 
+      (docs http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf) 
+      (footprints 
+        (fp PinHeader?2x05?P1.27mm*)) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) Conn_ARM_JTAG_SWD_10)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name VTref) 
+          (type power_in)) 
+        (pin 
+          (num 2) 
+          (name SWDIO/TMS) 
+          (type BiDi)) 
+        (pin 
+          (num 3) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num 4) 
+          (name SWDCLK/TCK) 
+          (type output)) 
+        (pin 
+          (num 5) 
+          (name GND) 
+          (type passive)) 
+        (pin 
+          (num 6) 
+          (name SWO/TDO) 
+          (type input)) 
+        (pin 
+          (num 7) 
+          (name KEY) 
+          (type NotConnected)) 
+        (pin 
+          (num 8) 
+          (name NC/TDI) 
+          (type output)) 
+        (pin 
+          (num 9) 
+          (name GNDDetect) 
+          (type passive)) 
+        (pin 
+          (num 10) 
+          (name ~RESET~) 
+          (type openCol)))) 
+    (libpart 
+      (lib Device) 
+      (part C) 
+      (description "Unpolarized capacitor") 
+      (docs ~) 
+      (footprints 
+        (fp C_*)) 
+      (fields 
+        (field 
+          (name Reference) C) 
+        (field 
+          (name Value) C)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part L) 
+      (description Inductor) 
+      (docs ~) 
+      (footprints 
+        (fp Choke_*) 
+        (fp *Coil*) 
+        (fp Inductor_*) 
+        (fp L_*)) 
+      (fields 
+        (field 
+          (name Reference) L) 
+        (field 
+          (name Value) L)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name 1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name 2) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part LED) 
+      (description "Light emitting diode") 
+      (docs ~) 
+      (footprints 
+        (fp LED*) 
+        (fp LED_SMD:*) 
+        (fp LED_THT:*)) 
+      (fields 
+        (field 
+          (name Reference) D) 
+        (field 
+          (name Value) LED)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name K) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name A) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part R) 
+      (description Resistor) 
+      (docs ~) 
+      (footprints 
+        (fp R_*)) 
+      (fields 
+        (field 
+          (name Reference) R) 
+        (field 
+          (name Value) R)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part R_Shunt) 
+      (description "Shunt resistor") 
+      (docs ~) 
+      (footprints 
+        (fp R_*Shunt*)) 
+      (fields 
+        (field 
+          (name Reference) R) 
+        (field 
+          (name Value) R_Shunt)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name 1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name 2) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name 3) 
+          (type passive)) 
+        (pin 
+          (num 4) 
+          (name 4) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part R_Small) 
+      (description "Resistor, small symbol") 
+      (docs ~) 
+      (footprints 
+        (fp R_*)) 
+      (fields 
+        (field 
+          (name Reference) R) 
+        (field 
+          (name Value) R_Small)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib H1102NLT) 
+      (part H1102NLT) 
+      (fields 
+        (field 
+          (name Reference) T) 
+        (field 
+          (name Value) H1102NLT) 
+        (field 
+          (name Footprint) XFMR_H1102NLT) 
+        (field 
+          (name STNADARD) "Manufacturer Recommendation") 
+        (field 
+          (name MANUFACTURER) "Pulse Electronics") 
+        (field 
+          (name PARTREV) NA)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 6) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 7) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 8) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 9) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 10) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 11) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 14) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 15) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 16) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib IX60G-B-10P) 
+      (part IX60G-B-10P) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) IX60G-B-10P) 
+        (field 
+          (name Footprint) HIROSE_IX60G-B-10P) 
+        (field 
+          (name MAXIMUM_PACKAGE_HEIGHT) "6.1 mm") 
+        (field 
+          (name MF) Hirose) 
+        (field 
+          (name PARTREV) 20200430) 
+        (field 
+          (name STANDARD) "Manufacturer Recommendations")) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name 1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name 2) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name 3) 
+          (type passive)) 
+        (pin 
+          (num 4) 
+          (name 4) 
+          (type passive)) 
+        (pin 
+          (num 5) 
+          (name 5) 
+          (type passive)) 
+        (pin 
+          (num 6) 
+          (name 6) 
+          (type passive)) 
+        (pin 
+          (num 7) 
+          (name 7) 
+          (type passive)) 
+        (pin 
+          (num 8) 
+          (name 8) 
+          (type passive)) 
+        (pin 
+          (num 9) 
+          (name 9) 
+          (type passive)) 
+        (pin 
+          (num 10) 
+          (name 10) 
+          (type passive)) 
+        (pin 
+          (num S1) 
+          (name SHIELD) 
+          (type passive)) 
+        (pin 
+          (num S2) 
+          (name SHIELD) 
+          (type passive)) 
+        (pin 
+          (num S3) 
+          (name SHIELD) 
+          (type passive)) 
+        (pin 
+          (num S4) 
+          (name SHIELD) 
+          (type passive)))) 
+    (libpart 
+      (lib LAN8742A-CZ-TR) 
+      (part LAN8742A-CZ-TR) 
+      (footprints 
+        (fp SQFN24_4X4MC_MCH) 
+        (fp SQFN24_4X4MC_MCH-M) 
+        (fp SQFN24_4X4MC_MCH-L)) 
+      (fields 
+        (field 
+          (name Reference) U) 
+        (field 
+          (name Value) LAN8742A-CZ-TR) 
+        (field 
+          (name Footprint) SQFN24_4X4MC_MCH)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name VDD2A) 
+          (type power_in)) 
+        (pin 
+          (num 2) 
+          (name LED2/NINT/NPME/*NINTSEL) 
+          (type BiDi)) 
+        (pin 
+          (num 3) 
+          (name LED1/NINT/NPME/*REGOFF) 
+          (type BiDi)) 
+        (pin 
+          (num 4) 
+          (name XTAL2) 
+          (type output)) 
+        (pin 
+          (num 5) 
+          (name XTAL1/CLKIN) 
+          (type input)) 
+        (pin 
+          (num 6) 
+          (name VDDCR) 
+          (type power_in)) 
+        (pin 
+          (num 7) 
+          (name RXD1/*MODE1) 
+          (type BiDi)) 
+        (pin 
+          (num 8) 
+          (name RXD0/*MODE0) 
+          (type BiDi)) 
+        (pin 
+          (num 9) 
+          (name VDDIO) 
+          (type power_in)) 
+        (pin 
+          (num 10) 
+          (name RXER/*PHYAD0) 
+          (type BiDi)) 
+        (pin 
+          (num 11) 
+          (name CRS_DV/*MODE2) 
+          (type BiDi)) 
+        (pin 
+          (num 12) 
+          (name MDIO) 
+          (type BiDi)) 
+        (pin 
+          (num 13) 
+          (name MDC) 
+          (type input)) 
+        (pin 
+          (num 14) 
+          (name NINT/REFCLKO) 
+          (type output)) 
+        (pin 
+          (num 15) 
+          (name NRST) 
+          (type input)) 
+        (pin 
+          (num 16) 
+          (name TXEN) 
+          (type input)) 
+        (pin 
+          (num 17) 
+          (name TXD0) 
+          (type input)) 
+        (pin 
+          (num 18) 
+          (name TXD1) 
+          (type input)) 
+        (pin 
+          (num 19) 
+          (name VDD1A) 
+          (type power_in)) 
+        (pin 
+          (num 20) 
+          (name TXN) 
+          (type BiDi)) 
+        (pin 
+          (num 21) 
+          (name TXP) 
+          (type BiDi)) 
+        (pin 
+          (num 22) 
+          (name RXN) 
+          (type BiDi)) 
+        (pin 
+          (num 23) 
+          (name RXP) 
+          (type BiDi)) 
+        (pin 
+          (num 24) 
+          (name RBIAS) 
+          (type input)) 
+        (pin 
+          (num 25) 
+          (name GND_EPAD) 
+          (type unspc)))) 
+    (libpart 
+      (lib Mechanical) 
+      (part MountingHole) 
+      (description "Mounting Hole without connection") 
+      (docs ~) 
+      (footprints 
+        (fp MountingHole*)) 
+      (fields 
+        (field 
+          (name Reference) H) 
+        (field 
+          (name Value) MountingHole))) 
+    (libpart 
+      (lib Power_Protection) 
+      (part USBLC6-4SC6) 
+      (description "Very low capacitance ESD protection diode, 4 data-line, SOT-23-6") 
+      (docs https://www.st.com/resource/en/datasheet/usblc6-4.pdf) 
+      (footprints 
+        (fp SOT?23*)) 
+      (fields 
+        (field 
+          (name Reference) U) 
+        (field 
+          (name Value) USBLC6-4SC6) 
+        (field 
+          (name Footprint) Package_TO_SOT_SMD:SOT-23-6)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name I/O1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name GND) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name I/O2) 
+          (type passive)) 
+        (pin 
+          (num 4) 
+          (name I/O3) 
+          (type passive)) 
+        (pin 
+          (num 5) 
+          (name VBUS) 
+          (type passive)) 
+        (pin 
+          (num 6) 
+          (name I/O4) 
+          (type passive)))) 
+    (libpart 
+      (lib STM32F745VET6) 
+      (part STM32F745VET6) 
+      (fields 
+        (field 
+          (name Reference) U) 
+        (field 
+          (name Value) STM32F745VET6) 
+        (field 
+          (name Footprint) QFP50P1600X1600X160-100N) 
+        (field 
+          (name PARTREV) 4) 
+        (field 
+          (name MANUFACTURER) STMicroelectronics) 
+        (field 
+          (name STANDARD) IPC-7351B)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name PE2) 
+          (type BiDi)) 
+        (pin 
+          (num 2) 
+          (name PE3) 
+          (type BiDi)) 
+        (pin 
+          (num 3) 
+          (name PE4) 
+          (type BiDi)) 
+        (pin 
+          (num 4) 
+          (name PE5) 
+          (type BiDi)) 
+        (pin 
+          (num 5) 
+          (name PE6) 
+          (type BiDi)) 
+        (pin 
+          (num 6) 
+          (name VBAT) 
+          (type power_in)) 
+        (pin 
+          (num 7) 
+          (name PC13/ANTI_TAMP) 
+          (type BiDi)) 
+        (pin 
+          (num 8) 
+          (name PC14/OSC32_IN) 
+          (type BiDi)) 
+        (pin 
+          (num 9) 
+          (name PC15/OSC32_OUT) 
+          (type BiDi)) 
+        (pin 
+          (num 10) 
+          (name VSS) 
+          (type power_in)) 
+        (pin 
+          (num 11) 
+          (name VDD) 
+          (type power_in)) 
+        (pin 
+          (num 12) 
+          (name PH0/OSC_IN) 
+          (type BiDi)) 
+        (pin 
+          (num 13) 
+          (name PH1-OSC_OUT) 
+          (type BiDi)) 
+        (pin 
+          (num 14) 
+          (name ~NRST) 
+          (type BiDi)) 
+        (pin 
+          (num 15) 
+          (name PC0) 
+          (type BiDi)) 
+        (pin 
+          (num 16) 
+          (name PC1) 
+          (type BiDi)) 
+        (pin 
+          (num 17) 
+          (name PC2) 
+          (type BiDi)) 
+        (pin 
+          (num 18) 
+          (name PC3) 
+          (type BiDi)) 
+        (pin 
+          (num 19) 
+          (name VSSA) 
+          (type power_in)) 
+        (pin 
+          (num 20) 
+          (name VREF+) 
+          (type power_in)) 
+        (pin 
+          (num 21) 
+          (name VDDA) 
+          (type power_in)) 
+        (pin 
+          (num 22) 
+          (name PA0/WKUP) 
+          (type BiDi)) 
+        (pin 
+          (num 23) 
+          (name PA1) 
+          (type BiDi)) 
+        (pin 
+          (num 24) 
+          (name PA2) 
+          (type BiDi)) 
+        (pin 
+          (num 25) 
+          (name PA3) 
+          (type BiDi)) 
+        (pin 
+          (num 26) 
+          (name VSS) 
+          (type power_in)) 
+        (pin 
+          (num 27) 
+          (name VDD) 
+          (type power_in)) 
+        (pin 
+          (num 28) 
+          (name PA4) 
+          (type BiDi)) 
+        (pin 
+          (num 29) 
+          (name PA5) 
+          (type BiDi)) 
+        (pin 
+          (num 30) 
+          (name PA6) 
+          (type BiDi)) 
+        (pin 
+          (num 31) 
+          (name PA7) 
+          (type BiDi)) 
+        (pin 
+          (num 32) 
+          (name PC4) 
+          (type BiDi)) 
+        (pin 
+          (num 33) 
+          (name PC5) 
+          (type BiDi)) 
+        (pin 
+          (num 34) 
+          (name PB0) 
+          (type BiDi)) 
+        (pin 
+          (num 35) 
+          (name PB1) 
+          (type BiDi)) 
+        (pin 
+          (num 36) 
+          (name PB2) 
+          (type BiDi)) 
+        (pin 
+          (num 37) 
+          (name PE7) 
+          (type BiDi)) 
+        (pin 
+          (num 38) 
+          (name PE8) 
+          (type BiDi)) 
+        (pin 
+          (num 39) 
+          (name PE9) 
+          (type BiDi)) 
+        (pin 
+          (num 40) 
+          (name PE10) 
+          (type BiDi)) 
+        (pin 
+          (num 41) 
+          (name PE11) 
+          (type BiDi)) 
+        (pin 
+          (num 42) 
+          (name PE12) 
+          (type BiDi)) 
+        (pin 
+          (num 43) 
+          (name PE13) 
+          (type BiDi)) 
+        (pin 
+          (num 44) 
+          (name PE14) 
+          (type BiDi)) 
+        (pin 
+          (num 45) 
+          (name PE15) 
+          (type BiDi)) 
+        (pin 
+          (num 46) 
+          (name PB10) 
+          (type BiDi)) 
+        (pin 
+          (num 47) 
+          (name PB11) 
+          (type BiDi)) 
+        (pin 
+          (num 48) 
+          (name VCAP1) 
+          (type power_in)) 
+        (pin 
+          (num 49) 
+          (name VSS) 
+          (type power_in)) 
+        (pin 
+          (num 50) 
+          (name VDD) 
+          (type power_in)) 
+        (pin 
+          (num 51) 
+          (name PB12) 
+          (type BiDi)) 
+        (pin 
+          (num 52) 
+          (name PB13) 
+          (type BiDi)) 
+        (pin 
+          (num 53) 
+          (name PB14) 
+          (type BiDi)) 
+        (pin 
+          (num 54) 
+          (name PB15) 
+          (type BiDi)) 
+        (pin 
+          (num 55) 
+          (name PD8) 
+          (type BiDi)) 
+        (pin 
+          (num 56) 
+          (name PD9) 
+          (type BiDi)) 
+        (pin 
+          (num 57) 
+          (name PD10) 
+          (type BiDi)) 
+        (pin 
+          (num 58) 
+          (name PD11) 
+          (type BiDi)) 
+        (pin 
+          (num 59) 
+          (name PD12) 
+          (type BiDi)) 
+        (pin 
+          (num 60) 
+          (name PD13) 
+          (type BiDi)) 
+        (pin 
+          (num 61) 
+          (name PD14) 
+          (type BiDi)) 
+        (pin 
+          (num 62) 
+          (name PD15) 
+          (type BiDi)) 
+        (pin 
+          (num 63) 
+          (name PC6) 
+          (type BiDi)) 
+        (pin 
+          (num 64) 
+          (name PC7) 
+          (type BiDi)) 
+        (pin 
+          (num 65) 
+          (name PC8) 
+          (type BiDi)) 
+        (pin 
+          (num 66) 
+          (name PC9) 
+          (type BiDi)) 
+        (pin 
+          (num 67) 
+          (name PA8) 
+          (type BiDi)) 
+        (pin 
+          (num 68) 
+          (name PA9) 
+          (type BiDi)) 
+        (pin 
+          (num 69) 
+          (name PA10) 
+          (type BiDi)) 
+        (pin 
+          (num 70) 
+          (name PA11) 
+          (type BiDi)) 
+        (pin 
+          (num 71) 
+          (name PA12) 
+          (type BiDi)) 
+        (pin 
+          (num 72) 
+          (name PA13) 
+          (type BiDi)) 
+        (pin 
+          (num 73) 
+          (name VCAP2) 
+          (type power_in)) 
+        (pin 
+          (num 74) 
+          (name VSS) 
+          (type power_in)) 
+        (pin 
+          (num 75) 
+          (name VDD) 
+          (type power_in)) 
+        (pin 
+          (num 76) 
+          (name PA14) 
+          (type BiDi)) 
+        (pin 
+          (num 77) 
+          (name PA15) 
+          (type BiDi)) 
+        (pin 
+          (num 78) 
+          (name PC10) 
+          (type BiDi)) 
+        (pin 
+          (num 79) 
+          (name PC11) 
+          (type BiDi)) 
+        (pin 
+          (num 80) 
+          (name PC12) 
+          (type BiDi)) 
+        (pin 
+          (num 81) 
+          (name PD0) 
+          (type BiDi)) 
+        (pin 
+          (num 82) 
+          (name PD1) 
+          (type BiDi)) 
+        (pin 
+          (num 83) 
+          (name PD2) 
+          (type BiDi)) 
+        (pin 
+          (num 84) 
+          (name PD3) 
+          (type BiDi)) 
+        (pin 
+          (num 85) 
+          (name PD4) 
+          (type BiDi)) 
+        (pin 
+          (num 86) 
+          (name PD5) 
+          (type BiDi)) 
+        (pin 
+          (num 87) 
+          (name PD6) 
+          (type BiDi)) 
+        (pin 
+          (num 88) 
+          (name PD7) 
+          (type BiDi)) 
+        (pin 
+          (num 89) 
+          (name PB3) 
+          (type BiDi)) 
+        (pin 
+          (num 90) 
+          (name PB4) 
+          (type BiDi)) 
+        (pin 
+          (num 91) 
+          (name PB5) 
+          (type BiDi)) 
+        (pin 
+          (num 92) 
+          (name PB6) 
+          (type BiDi)) 
+        (pin 
+          (num 93) 
+          (name PB7) 
+          (type BiDi)) 
+        (pin 
+          (num 94) 
+          (name BOOT0) 
+          (type input)) 
+        (pin 
+          (num 95) 
+          (name PB8) 
+          (type BiDi)) 
+        (pin 
+          (num 96) 
+          (name PB9) 
+          (type BiDi)) 
+        (pin 
+          (num 97) 
+          (name PE0) 
+          (type BiDi)) 
+        (pin 
+          (num 98) 
+          (name PE1) 
+          (type BiDi)) 
+        (pin 
+          (num 99) 
+          (name VSS) 
+          (type power_in)) 
+        (pin 
+          (num 100) 
+          (name VDD) 
+          (type power_in)))) 
+    (libpart 
+      (lib Sequencer) 
+      (part PCIe_164) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) PCIe_164)) 
+      (pins 
+        (pin 
+          (num A1) 
+          (name ~PRSNT1) 
+          (type input)) 
+        (pin 
+          (num A2) 
+          (name +12V) 
+          (type power_in)) 
+        (pin 
+          (num A3) 
+          (name +12V) 
+          (type power_in)) 
+        (pin 
+          (num A4) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A5) 
+          (name JTAG_TCK) 
+          (type BiDi)) 
+        (pin 
+          (num A6) 
+          (name JTAG_TDI) 
+          (type BiDi)) 
+        (pin 
+          (num A7) 
+          (name JTAG_TDO) 
+          (type BiDi)) 
+        (pin 
+          (num A8) 
+          (name JTAG_TMS) 
+          (type BiDi)) 
+        (pin 
+          (num A9) 
+          (name +3.3V) 
+          (type power_in)) 
+        (pin 
+          (num A10) 
+          (name +3.3V) 
+          (type power_in)) 
+        (pin 
+          (num A11) 
+          (name ~PERST) 
+          (type BiDi)) 
+        (pin 
+          (num A12) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A13) 
+          (name REFCLK+) 
+          (type BiDi)) 
+        (pin 
+          (num A14) 
+          (name REFCLK-) 
+          (type BiDi)) 
+        (pin 
+          (num A15) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A16) 
+          (name PERp0) 
+          (type BiDi)) 
+        (pin 
+          (num A17) 
+          (name PERn0) 
+          (type BiDi)) 
+        (pin 
+          (num A18) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A19) 
+          (name RSVD) 
+          (type NotConnected)) 
+        (pin 
+          (num A20) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A21) 
+          (name PERp1) 
+          (type BiDi)) 
+        (pin 
+          (num A22) 
+          (name PERn1) 
+          (type BiDi)) 
+        (pin 
+          (num A23) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A24) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A25) 
+          (name PERp2) 
+          (type BiDi)) 
+        (pin 
+          (num A26) 
+          (name PERn2) 
+          (type BiDi)) 
+        (pin 
+          (num A27) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A28) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A29) 
+          (name PERp3) 
+          (type BiDi)) 
+        (pin 
+          (num A30) 
+          (name PERn3) 
+          (type BiDi)) 
+        (pin 
+          (num A31) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A32) 
+          (name RSVD) 
+          (type NotConnected)) 
+        (pin 
+          (num A33) 
+          (name RSVD) 
+          (type NotConnected)) 
+        (pin 
+          (num A34) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A35) 
+          (name PERp4) 
+          (type BiDi)) 
+        (pin 
+          (num A36) 
+          (name PERn4) 
+          (type BiDi)) 
+        (pin 
+          (num A37) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A38) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A39) 
+          (name PERp5) 
+          (type BiDi)) 
+        (pin 
+          (num A40) 
+          (name PERn5) 
+          (type BiDi)) 
+        (pin 
+          (num A41) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A42) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A43) 
+          (name PERp6) 
+          (type BiDi)) 
+        (pin 
+          (num A44) 
+          (name PERn6) 
+          (type BiDi)) 
+        (pin 
+          (num A45) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A46) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A47) 
+          (name PERp7) 
+          (type BiDi)) 
+        (pin 
+          (num A48) 
+          (name PERn7) 
+          (type BiDi)) 
+        (pin 
+          (num A49) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A50) 
+          (name RSVD) 
+          (type NotConnected)) 
+        (pin 
+          (num A51) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A52) 
+          (name PERp8) 
+          (type BiDi)) 
+        (pin 
+          (num A53) 
+          (name PERn8) 
+          (type BiDi)) 
+        (pin 
+          (num A54) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A55) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A56) 
+          (name PERp9) 
+          (type BiDi)) 
+        (pin 
+          (num A57) 
+          (name PERn9) 
+          (type BiDi)) 
+        (pin 
+          (num A58) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A59) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A60) 
+          (name PERp10) 
+          (type BiDi)) 
+        (pin 
+          (num A61) 
+          (name PERn10) 
+          (type BiDi)) 
+        (pin 
+          (num A62) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A63) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A64) 
+          (name PERp11) 
+          (type BiDi)) 
+        (pin 
+          (num A65) 
+          (name PERn11) 
+          (type BiDi)) 
+        (pin 
+          (num A66) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A67) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A68) 
+          (name PERp12) 
+          (type BiDi)) 
+        (pin 
+          (num A69) 
+          (name PERn12) 
+          (type BiDi)) 
+        (pin 
+          (num A70) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A71) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A72) 
+          (name PERp13) 
+          (type BiDi)) 
+        (pin 
+          (num A73) 
+          (name PERn13) 
+          (type BiDi)) 
+        (pin 
+          (num A74) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A75) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A76) 
+          (name PERp14) 
+          (type BiDi)) 
+        (pin 
+          (num A77) 
+          (name PERn14) 
+          (type BiDi)) 
+        (pin 
+          (num A78) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A79) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num A80) 
+          (name PERp15) 
+          (type BiDi)) 
+        (pin 
+          (num A81) 
+          (name PERn15) 
+          (type BiDi)) 
+        (pin 
+          (num A82) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B1) 
+          (name +12V) 
+          (type power_in)) 
+        (pin 
+          (num B2) 
+          (name +12V) 
+          (type power_in)) 
+        (pin 
+          (num B3) 
+          (name +12V) 
+          (type power_in)) 
+        (pin 
+          (num B4) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B5) 
+          (name SMCLK) 
+          (type BiDi)) 
+        (pin 
+          (num B6) 
+          (name SMDAT) 
+          (type BiDi)) 
+        (pin 
+          (num B7) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B8) 
+          (name +3.3V) 
+          (type power_in)) 
+        (pin 
+          (num B9) 
+          (name ~JTAG_TRST) 
+          (type BiDi)) 
+        (pin 
+          (num B10) 
+          (name +3.3Vaux) 
+          (type power_in)) 
+        (pin 
+          (num B11) 
+          (name ~WAKE) 
+          (type BiDi)) 
+        (pin 
+          (num B12) 
+          (name RSVD) 
+          (type NotConnected)) 
+        (pin 
+          (num B13) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B14) 
+          (name PETp0) 
+          (type BiDi)) 
+        (pin 
+          (num B15) 
+          (name PETn0) 
+          (type BiDi)) 
+        (pin 
+          (num B16) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B17) 
+          (name ~PRSNT2) 
+          (type BiDi)) 
+        (pin 
+          (num B18) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B19) 
+          (name PETp1) 
+          (type BiDi)) 
+        (pin 
+          (num B20) 
+          (name PETn1) 
+          (type BiDi)) 
+        (pin 
+          (num B21) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B22) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B23) 
+          (name PETp2) 
+          (type BiDi)) 
+        (pin 
+          (num B24) 
+          (name PETn2) 
+          (type BiDi)) 
+        (pin 
+          (num B25) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B26) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B27) 
+          (name PETp3) 
+          (type BiDi)) 
+        (pin 
+          (num B28) 
+          (name PETn3) 
+          (type BiDi)) 
+        (pin 
+          (num B29) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B30) 
+          (name RSVD) 
+          (type NotConnected)) 
+        (pin 
+          (num B31) 
+          (name ~PRNST2) 
+          (type BiDi)) 
+        (pin 
+          (num B32) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B33) 
+          (name PETp4) 
+          (type BiDi)) 
+        (pin 
+          (num B34) 
+          (name PETn4) 
+          (type BiDi)) 
+        (pin 
+          (num B35) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B36) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B37) 
+          (name PETp5) 
+          (type BiDi)) 
+        (pin 
+          (num B38) 
+          (name PETn5) 
+          (type BiDi)) 
+        (pin 
+          (num B39) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B40) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B41) 
+          (name PETp6) 
+          (type BiDi)) 
+        (pin 
+          (num B42) 
+          (name PETn6) 
+          (type BiDi)) 
+        (pin 
+          (num B43) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B44) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B45) 
+          (name PETp7) 
+          (type BiDi)) 
+        (pin 
+          (num B46) 
+          (name PETn7) 
+          (type BiDi)) 
+        (pin 
+          (num B47) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B48) 
+          (name ~PRSNT2) 
+          (type BiDi)) 
+        (pin 
+          (num B49) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B50) 
+          (name PETp8) 
+          (type BiDi)) 
+        (pin 
+          (num B51) 
+          (name PETn8) 
+          (type BiDi)) 
+        (pin 
+          (num B52) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B53) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B54) 
+          (name PETp9) 
+          (type BiDi)) 
+        (pin 
+          (num B55) 
+          (name PETn9) 
+          (type BiDi)) 
+        (pin 
+          (num B56) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B57) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B58) 
+          (name PETp10) 
+          (type BiDi)) 
+        (pin 
+          (num B59) 
+          (name PETn10) 
+          (type BiDi)) 
+        (pin 
+          (num B60) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B61) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B62) 
+          (name PETp11) 
+          (type BiDi)) 
+        (pin 
+          (num B63) 
+          (name PETn11) 
+          (type BiDi)) 
+        (pin 
+          (num B64) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B65) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B66) 
+          (name PETp12) 
+          (type BiDi)) 
+        (pin 
+          (num B67) 
+          (name PETn12) 
+          (type BiDi)) 
+        (pin 
+          (num B68) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B69) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B70) 
+          (name PETp13) 
+          (type BiDi)) 
+        (pin 
+          (num B71) 
+          (name PETn13) 
+          (type BiDi)) 
+        (pin 
+          (num B72) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B73) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B74) 
+          (name PETp14) 
+          (type BiDi)) 
+        (pin 
+          (num B75) 
+          (name PETn14) 
+          (type BiDi)) 
+        (pin 
+          (num B76) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B77) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B78) 
+          (name PETp15) 
+          (type BiDi)) 
+        (pin 
+          (num B79) 
+          (name PETn15) 
+          (type BiDi)) 
+        (pin 
+          (num B80) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num B81) 
+          (name ~PRSNT2) 
+          (type BiDi)) 
+        (pin 
+          (num B82) 
+          (name RSVD) 
+          (type NotConnected)))) 
+    (libpart 
+      (lib XT60PW-M) 
+      (part XT60PW-M) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) XT60PW-M) 
+        (field 
+          (name Footprint) AMASS_XT60PW-M) 
+        (field 
+          (name MANUFACTURER) AMASS) 
+        (field 
+          (name MAXIMUM_PACKAGE_HEIGHT) "8.4 mm") 
+        (field 
+          (name PARTREV) V1.2) 
+        (field 
+          (name STANDARD) "Manufacturer recommendations")) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name +) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name -) 
+          (type passive)))) 
+    (libpart 
+      (lib m_pex_sensor-rescue) 
+      (part INA226-Analog_ADC) 
+      (footprints 
+        (fp MSOP*3x3mm*P0.5mm*)) 
+      (fields 
+        (field 
+          (name Reference) U) 
+        (field 
+          (name Value) INA226-Analog_ADC) 
+        (field 
+          (name Footprint) Package_SO:MSOP-10_3x3mm_P0.5mm)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name A1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name A0) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name ~Alert~) 
+          (type openCol)) 
+        (pin 
+          (num 4) 
+          (name SDA) 
+          (type BiDi)) 
+        (pin 
+          (num 5) 
+          (name SCL) 
+          (type input)) 
+        (pin 
+          (num 6) 
+          (name Vs) 
+          (type power_in)) 
+        (pin 
+          (num 7) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num 8) 
+          (name Vbus) 
+          (type input)) 
+        (pin 
+          (num 9) 
+          (name Vin-) 
+          (type input)) 
+        (pin 
+          (num 10) 
+          (name Vin+) 
+          (type input))))) 
+  (libraries 
+    (library 
+      (logical 2021-11-08_20-10-21) 
+      (uri "/media/paul/LINUX_MEM/Fraunhofer/GIT Repos/nna-fpga-power-measurement-system/PCB/Libarys/MOLEX 8-Pol/2021-11-08_20-10-21.lib")) 
+    (library 
+      (logical Connector) 
+      (uri /usr/share/kicad/library/Connector.lib)) 
+    (library 
+      (logical Device) 
+      (uri /usr/share/kicad/library/Device.lib)) 
+    (library 
+      (logical H1102NLT) 
+      (uri "/media/paul/LINUX_MEM/Fraunhofer/GIT Repos/nna-fpga-power-measurement-system/PCB/Libarys/H1102NLT Ethernet Magnetics/H1102NLT.lib")) 
+    (library 
+      (logical IX60G-B-10P) 
+      (uri "/media/paul/LINUX_MEM/Fraunhofer/GIT Repos/nna-fpga-power-measurement-system/PCB/Libarys/IX-Connector/IX60G-B-10P.lib")) 
+    (library 
+      (logical LAN8742A-CZ-TR) 
+      (uri "/media/paul/LINUX_MEM/Fraunhofer/GIT Repos/nna-fpga-power-measurement-system/PCB/Libarys/LAN8742A-CZ-TR/LAN8742A-CZ-TR.lib")) 
+    (library 
+      (logical Mechanical) 
+      (uri /usr/share/kicad/library/Mechanical.lib)) 
+    (library 
+      (logical Power_Protection) 
+      (uri /usr/share/kicad/library/Power_Protection.lib)) 
+    (library 
+      (logical STM32F745VET6) 
+      (uri "/media/paul/LINUX_MEM/Fraunhofer/GIT Repos/nna-fpga-power-measurement-system/PCB/Libarys/STMF745/STM32F745VET6.lib")) 
+    (library 
+      (logical Sequencer) 
+      (uri "/media/paul/LINUX_MEM/Fraunhofer/GIT Repos/nna-fpga-power-measurement-system/PCB/Libarys/PCIe Slot/Sequencer.lib")) 
+    (library 
+      (logical XT60PW-M) 
+      (uri "/media/paul/LINUX_MEM/Fraunhofer/GIT Repos/nna-fpga-power-measurement-system/PCB/Libarys/XT60PW-M_CON/XT60PW-M_horizontal/XT60PW-M.lib")) 
+    (library 
+      (logical m_pex_sensor-rescue) 
+      (uri "/media/paul/LINUX_MEM/Fraunhofer/GIT Repos/power_meter_nucleo/PCB's/pcb_pex_sensor/m_pex_sensor-rescue.lib"))) 
+  (nets 
+    (net 
+      (code 1) 
+      (name GNDA) 
+      (node 
+        (ref U9) 
+        (pin 25)) 
+      (node 
+        (ref U10) 
+        (pin 2)) 
+      (node 
+        (ref R21) 
+        (pin 1)) 
+      (node 
+        (ref C2) 
+        (pin 1)) 
+      (node 
+        (ref R22) 
+        (pin 2)) 
+      (node 
+        (ref U8) 
+        (pin 7)) 
+      (node 
+        (ref C15) 
+        (pin 1)) 
+      (node 
+        (ref U8) 
+        (pin 2)) 
+      (node 
+        (ref U7) 
+        (pin 7)) 
+      (node 
+        (ref C10) 
+        (pin 2)) 
+      (node 
+        (ref U1) 
+        (pin 1)) 
+      (node 
+        (ref J41) 
+        (pin 3)) 
+      (node 
+        (ref J41) 
+        (pin 5)) 
+      (node 
+        (ref C18) 
+        (pin 1)) 
+      (node 
+        (ref U3) 
+        (pin 2)) 
+      (node 
+        (ref U5) 
+        (pin 2)) 
+      (node 
+        (ref U5) 
+        (pin 1)) 
+      (node 
+        (ref U4) 
+        (pin 7)) 
+      (node 
+        (ref C4) 
+        (pin 1)) 
+      (node 
+        (ref C23) 
+        (pin 2)) 
+      (node 
+        (ref C14) 
+        (pin 2)) 
+      (node 
+        (ref U2) 
+        (pin 7)) 
+      (node 
+        (ref C5) 
+        (pin 1)) 
+      (node 
+        (ref C20) 
+        (pin 1)) 
+      (node 
+        (ref C22) 
+        (pin 2)) 
+      (node 
+        (ref C1) 
+        (pin 1)) 
+      (node 
+        (ref C17) 
+        (pin 1)) 
+      (node 
+        (ref C21) 
+        (pin 1)) 
+      (node 
+        (ref U1) 
+        (pin 2)) 
+      (node 
+        (ref C19) 
+        (pin 2)) 
+      (node 
+        (ref U3) 
+        (pin 7)) 
+      (node 
+        (ref C16) 
+        (pin 2)) 
+      (node 
+        (ref U5) 
+        (pin 7)) 
+      (node 
+        (ref µC1) 
+        (pin 74)) 
+      (node 
+        (ref µC1) 
+        (pin 26)) 
+      (node 
+        (ref µC1) 
+        (pin 10)) 
+      (node 
+        (ref µC1) 
+        (pin 49)) 
+      (node 
+        (ref C12) 
+        (pin 2)) 
+      (node 
+        (ref C13) 
+        (pin 2)) 
+      (node 
+        (ref J_VDD1) 
+        (pin 1)) 
+      (node 
+        (ref C11) 
+        (pin 2)) 
+      (node 
+        (ref C3) 
+        (pin 1)) 
+      (node 
+        (ref µC1) 
+        (pin 99)) 
+      (node 
+        (ref U7) 
+        (pin 1)) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin S4)) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin S3)) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin S2)) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin S1)) 
+      (node 
+        (ref U6) 
+        (pin 7)) 
+      (node 
+        (ref U2) 
+        (pin 1)) 
+      (node 
+        (ref U6) 
+        (pin 2)) 
+      (node 
+        (ref U6) 
+        (pin 1)) 
+      (node 
+        (ref C9) 
+        (pin 2)) 
+      (node 
+        (ref C7) 
+        (pin 1)) 
+      (node 
+        (ref U1) 
+        (pin 7)) 
+      (node 
+        (ref C6) 
+        (pin 1)) 
+      (node 
+        (ref C8) 
+        (pin 1))) 
+    (net 
+      (code 2) 
+      (name 3V3_VCC) 
+      (node 
+        (ref C5) 
+        (pin 2)) 
+      (node 
+        (ref R9) 
+        (pin 1)) 
+      (node 
+        (ref R8) 
+        (pin 2)) 
+      (node 
+        (ref R29) 
+        (pin 1)) 
+      (node 
+        (ref R27) 
+        (pin 2)) 
+      (node 
+        (ref R26) 
+        (pin 2)) 
+      (node 
+        (ref C4) 
+        (pin 2)) 
+      (node 
+        (ref R28) 
+        (pin 2)) 
+      (node 
+        (ref U5) 
+        (pin 6)) 
+      (node 
+        (ref C8) 
+        (pin 2)) 
+      (node 
+        (ref U6) 
+        (pin 6)) 
+      (node 
+        (ref C9) 
+        (pin 1)) 
+      (node 
+        (ref C7) 
+        (pin 2)) 
+      (node 
+        (ref µC1) 
+        (pin 11)) 
+      (node 
+        (ref µC1) 
+        (pin 27)) 
+      (node 
+        (ref µC1) 
+        (pin 50)) 
+      (node 
+        (ref µC1) 
+        (pin 75)) 
+      (node 
+        (ref µC1) 
+        (pin 100)) 
+      (node 
+        (ref C12) 
+        (pin 1)) 
+      (node 
+        (ref C13) 
+        (pin 1)) 
+      (node 
+        (ref C6) 
+        (pin 2)) 
+      (node 
+        (ref C17) 
+        (pin 2)) 
+      (node 
+        (ref U4) 
+        (pin 6)) 
+      (node 
+        (ref L1) 
+        (pin 1)) 
+      (node 
+        (ref U4) 
+        (pin 2)) 
+      (node 
+        (ref U4) 
+        (pin 1)) 
+      (node 
+        (ref U8) 
+        (pin 6)) 
+      (node 
+        (ref C10) 
+        (pin 1)) 
+      (node 
+        (ref U8) 
+        (pin 1)) 
+      (node 
+        (ref U7) 
+        (pin 6)) 
+      (node 
+        (ref C11) 
+        (pin 1)) 
+      (node 
+        (ref U7) 
+        (pin 2)) 
+      (node 
+        (ref J41) 
+        (pin 1)) 
+      (node 
+        (ref R14) 
+        (pin 1)) 
+      (node 
+        (ref R13) 
+        (pin 2)) 
+      (node 
+        (ref C3) 
+        (pin 2)) 
+      (node 
+        (ref U9) 
+        (pin 9)) 
+      (node 
+        (ref U1) 
+        (pin 6)) 
+      (node 
+        (ref U3) 
+        (pin 6)) 
+      (node 
+        (ref J_VDD1) 
+        (pin 2)) 
+      (node 
+        (ref C1) 
+        (pin 2)) 
+      (node 
+        (ref C2) 
+        (pin 2)) 
+      (node 
+        (ref U2) 
+        (pin 2)) 
+      (node 
+        (ref U2) 
+        (pin 6)) 
+      (node 
+        (ref R4) 
+        (pin 2)) 
+      (node 
+        (ref U3) 
+        (pin 1)) 
+      (node 
+        (ref R5) 
+        (pin 1))) 
+    (net 
+      (code 3) 
+      (name 3V3_PCIe) 
+      (node 
+        (ref U7) 
+        (pin 8)) 
+      (node 
+        (ref U8) 
+        (pin 8)) 
+      (node 
+        (ref R12) 
+        (pin 4)) 
+      (node 
+        (ref R11) 
+        (pin 4)) 
+      (node 
+        (ref U3) 
+        (pin 8)) 
+      (node 
+        (ref J3) 
+        (pin 1)) 
+      (node 
+        (ref R3) 
+        (pin 4)) 
+      (node 
+        (ref U2) 
+        (pin 8)) 
+      (node 
+        (ref R2) 
+        (pin 4))) 
+    (net 
+      (code 4) 
+      (name GNDPWR) 
+      (node 
+        (ref ATX-SUPP_8Pol_1) 
+        (pin 4)) 
+      (node 
+        (ref ATX-SUPP_8Pol_1) 
+        (pin 7)) 
+      (node 
+        (ref ATX-SUPP_8Pol_1) 
+        (pin 5)) 
+      (node 
+        (ref PCIe1) 
+        (pin A18)) 
+      (node 
+        (ref ATX-SUPP_8Pol_1) 
+        (pin 6)) 
+      (node 
+        (ref ATX-SUPP_8Pol_1) 
+        (pin 8)) 
+      (node 
+        (ref PCIe2) 
+        (pin A4)) 
+      (node 
+        (ref R16) 
+        (pin 2)) 
+      (node 
+        (ref PCIe2) 
+        (pin A15)) 
+      (node 
+        (ref PCIe2) 
+        (pin A12)) 
+      (node 
+        (ref PCIe2) 
+        (pin A18)) 
+      (node 
+        (ref R17) 
+        (pin 2)) 
+      (node 
+        (ref R15) 
+        (pin 2)) 
+      (node 
+        (ref R19) 
+        (pin 2)) 
+      (node 
+        (ref R20) 
+        (pin 2)) 
+      (node 
+        (ref ATX-SUPP_8Pol_2) 
+        (pin 8)) 
+      (node 
+        (ref ATX-SUPP_8Pol_2) 
+        (pin 7)) 
+      (node 
+        (ref ATX-SUPP_8Pol_2) 
+        (pin 5)) 
+      (node 
+        (ref ATX-SUPP_8Pol_2) 
+        (pin 6)) 
+      (node 
+        (ref ATX-SUPP_8Pol_2) 
+        (pin 4)) 
+      (node 
+        (ref PCIe1) 
+        (pin A4)) 
+      (node 
+        (ref PCIe2) 
+        (pin B7)) 
+      (node 
+        (ref J3) 
+        (pin 2)) 
+      (node 
+        (ref J2) 
+        (pin 2)) 
+      (node 
+        (ref PCIe2) 
+        (pin B16)) 
+      (node 
+        (ref PCIe2) 
+        (pin B18)) 
+      (node 
+        (ref PCIe2) 
+        (pin B13)) 
+      (node 
+        (ref PCIe1) 
+        (pin B4)) 
+      (node 
+        (ref R18) 
+        (pin 2)) 
+      (node 
+        (ref PCIe1) 
+        (pin A12)) 
+      (node 
+        (ref PCIe1) 
+        (pin A15)) 
+      (node 
+        (ref PCIe1) 
+        (pin B18)) 
+      (node 
+        (ref PCIe1) 
+        (pin B16)) 
+      (node 
+        (ref PCIe1) 
+        (pin B13)) 
+      (node 
+        (ref PCIe2) 
+        (pin B4)) 
+      (node 
+        (ref PCIe1) 
+        (pin B7))) 
+    (net 
+      (code 5) 
+      (name TX-) 
+      (node 
+        (ref T0) 
+        (pin 9)) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 2))) 
+    (net 
+      (code 7) 
+      (name TX+) 
+      (node 
+        (ref T0) 
+        (pin 11)) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 1))) 
+    (net 
+      (code 8) 
+      (name RX+) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 7)) 
+      (node 
+        (ref T0) 
+        (pin 16))) 
+    (net 
+      (code 9) 
+      (name IX_PIN9_PIN10) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 10)) 
+      (node 
+        (ref R_T3) 
+        (pin 1)) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 9))) 
+    (net 
+      (code 10) 
+      (name IX_PIN4_PIN5) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 4)) 
+      (node 
+        (ref R_T4) 
+        (pin 1)) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 5))) 
+    (net 
+      (code 11) 
+      (name 12V) 
+      (node 
+        (ref U4) 
+        (pin 8)) 
+      (node 
+        (ref U5) 
+        (pin 8)) 
+      (node 
+        (ref U4) 
+        (pin 9)) 
+      (node 
+        (ref R6) 
+        (pin 2)) 
+      (node 
+        (ref J2) 
+        (pin 1)) 
+      (node 
+        (ref U5) 
+        (pin 9)) 
+      (node 
+        (ref U6) 
+        (pin 8)) 
+      (node 
+        (ref U1) 
+        (pin 8)) 
+      (node 
+        (ref R1) 
+        (pin 4)) 
+      (node 
+        (ref R10) 
+        (pin 4)) 
+      (node 
+        (ref R7) 
+        (pin 2))) 
+    (net 
+      (code 12) 
+      (name Supp1_12V_OUT) 
+      (node 
+        (ref U4) 
+        (pin 10)) 
+      (node 
+        (ref R6) 
+        (pin 1)) 
+      (node 
+        (ref ATX-SUPP_8Pol_1) 
+        (pin 3)) 
+      (node 
+        (ref ATX-SUPP_8Pol_1) 
+        (pin 2)) 
+      (node 
+        (ref ATX-SUPP_8Pol_1) 
+        (pin 1))) 
+    (net 
+      (code 13) 
+      (name "Net-(IX60G-B-10P1-Pad8)") 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 8))) 
+    (net 
+      (code 14) 
+      (name Supp2_12V_OUT) 
+      (node 
+        (ref U5) 
+        (pin 10)) 
+      (node 
+        (ref R7) 
+        (pin 1)) 
+      (node 
+        (ref ATX-SUPP_8Pol_2) 
+        (pin 3)) 
+      (node 
+        (ref ATX-SUPP_8Pol_2) 
+        (pin 1)) 
+      (node 
+        (ref ATX-SUPP_8Pol_2) 
+        (pin 2))) 
+    (net 
+      (code 15) 
+      (name RX-) 
+      (node 
+        (ref T0) 
+        (pin 14)) 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 6))) 
+    (net 
+      (code 16) 
+      (name "Net-(IX60G-B-10P1-Pad3)") 
+      (node 
+        (ref IX60G-B-10P1) 
+        (pin 3))) 
+    (net 
+      (code 18) 
+      (name "Net-(R3-Pad3)") 
+      (node 
+        (ref U3) 
+        (pin 9)) 
+      (node 
+        (ref R3) 
+        (pin 3))) 
+    (net 
+      (code 19) 
+      (name "Net-(R3-Pad2)") 
+      (node 
+        (ref R3) 
+        (pin 2)) 
+      (node 
+        (ref U3) 
+        (pin 10))) 
+    (net 
+      (code 20) 
+      (name PCIe2_12V_OUT) 
+      (node 
+        (ref D3) 
+        (pin 2)) 
+      (node 
+        (ref PCIe2) 
+        (pin B3)) 
+      (node 
+        (ref R1) 
+        (pin 1)) 
+      (node 
+        (ref PCIe2) 
+        (pin A2)) 
+      (node 
+        (ref PCIe2) 
+        (pin A3)) 
+      (node 
+        (ref PCIe2) 
+        (pin B1)) 
+      (node 
+        (ref PCIe2) 
+        (pin B2))) 
+    (net 
+      (code 21) 
+      (name PCIe2_3V3_OUT) 
+      (node 
+        (ref R3) 
+        (pin 1)) 
+      (node 
+        (ref PCIe2) 
+        (pin A9)) 
+      (node 
+        (ref PCIe2) 
+        (pin B8)) 
+      (node 
+        (ref D1) 
+        (pin 2)) 
+      (node 
+        (ref PCIe2) 
+        (pin A10))) 
+    (net 
+      (code 22) 
+      (name PCIe2_3AUX_OUT) 
+      (node 
+        (ref D2) 
+        (pin 2)) 
+      (node 
+        (ref PCIe2) 
+        (pin B10)) 
+      (node 
+        (ref R2) 
+        (pin 1))) 
+    (net 
+      (code 23) 
+      (name "Net-(U2-Pad3)") 
+      (node 
+        (ref U2) 
+        (pin 3))) 
+    (net 
+      (code 24) 
+      (name "Net-(U3-Pad3)") 
+      (node 
+        (ref U3) 
+        (pin 3))) 
+    (net 
+      (code 25) 
+      (name "Net-(R2-Pad2)") 
+      (node 
+        (ref R2) 
+        (pin 2)) 
+      (node 
+        (ref U2) 
+        (pin 10))) 
+    (net 
+      (code 26) 
+      (name "Net-(R1-Pad3)") 
+      (node 
+        (ref U1) 
+        (pin 9)) 
+      (node 
+        (ref R1) 
+        (pin 3))) 
+    (net 
+      (code 27) 
+      (name "Net-(R2-Pad3)") 
+      (node 
+        (ref R2) 
+        (pin 3)) 
+      (node 
+        (ref U2) 
+        (pin 9))) 
+    (net 
+      (code 28) 
+      (name "Net-(R1-Pad2)") 
+      (node 
+        (ref U1) 
+        (pin 10)) 
+      (node 
+        (ref R1) 
+        (pin 2))) 
+    (net 
+      (code 29) 
+      (name "Net-(U1-Pad3)") 
+      (node 
+        (ref U1) 
+        (pin 3))) 
+    (net 
+      (code 30) 
+      (name "Net-(U4-Pad3)") 
+      (node 
+        (ref U4) 
+        (pin 3))) 
+    (net 
+      (code 31) 
+      (name "Net-(U5-Pad3)") 
+      (node 
+        (ref U5) 
+        (pin 3))) 
+    (net 
+      (code 32) 
+      (name "Net-(R11-Pad3)") 
+      (node 
+        (ref R11) 
+        (pin 3)) 
+      (node 
+        (ref U7) 
+        (pin 9))) 
+    (net 
+      (code 33) 
+      (name "Net-(R12-Pad3)") 
+      (node 
+        (ref U8) 
+        (pin 9)) 
+      (node 
+        (ref R12) 
+        (pin 3))) 
+    (net 
+      (code 34) 
+      (name "Net-(R12-Pad2)") 
+      (node 
+        (ref R12) 
+        (pin 2)) 
+      (node 
+        (ref U8) 
+        (pin 10))) 
+    (net 
+      (code 35) 
+      (name PCIe1_12V_OUT) 
+      (node 
+        (ref PCIe1) 
+        (pin A3)) 
+      (node 
+        (ref D6) 
+        (pin 2)) 
+      (node 
+        (ref PCIe1) 
+        (pin A2)) 
+      (node 
+        (ref R10) 
+        (pin 1)) 
+      (node 
+        (ref PCIe1) 
+        (pin B2)) 
+      (node 
+        (ref PCIe1) 
+        (pin B3)) 
+      (node 
+        (ref PCIe1) 
+        (pin B1))) 
+    (net 
+      (code 36) 
+      (name PCIe1_3AUX_OUT) 
+      (node 
+        (ref PCIe1) 
+        (pin B10)) 
+      (node 
+        (ref R11) 
+        (pin 1)) 
+      (node 
+        (ref D5) 
+        (pin 2))) 
+    (net 
+      (code 37) 
+      (name PCIe1_3V3_OUT) 
+      (node 
+        (ref PCIe1) 
+        (pin A9)) 
+      (node 
+        (ref PCIe1) 
+        (pin B8)) 
+      (node 
+        (ref R12) 
+        (pin 1)) 
+      (node 
+        (ref PCIe1) 
+        (pin A10)) 
+      (node 
+        (ref D4) 
+        (pin 2))) 
+    (net 
+      (code 38) 
+      (name "Net-(U7-Pad3)") 
+      (node 
+        (ref U7) 
+        (pin 3))) 
+    (net 
+      (code 39) 
+      (name "Net-(U8-Pad3)") 
+      (node 
+        (ref U8) 
+        (pin 3))) 
+    (net 
+      (code 40) 
+      (name "Net-(R11-Pad2)") 
+      (node 
+        (ref R11) 
+        (pin 2)) 
+      (node 
+        (ref U7) 
+        (pin 10))) 
+    (net 
+      (code 41) 
+      (name "Net-(R10-Pad3)") 
+      (node 
+        (ref U6) 
+        (pin 9)) 
+      (node 
+        (ref R10) 
+        (pin 3))) 
+    (net 
+      (code 42) 
+      (name "Net-(R10-Pad2)") 
+      (node 
+        (ref U6) 
+        (pin 10)) 
+      (node 
+        (ref R10) 
+        (pin 2))) 
+    (net 
+      (code 43) 
+      (name "Net-(U6-Pad3)") 
+      (node 
+        (ref U6) 
+        (pin 3))) 
+    (net 
+      (code 44) 
+      (name "Net-(PCIe2-PadA17)") 
+      (node 
+        (ref PCIe2) 
+        (pin A17))) 
+    (net 
+      (code 45) 
+      (name "Net-(PCIe2-PadA19)") 
+      (node 
+        (ref PCIe2) 
+        (pin A19))) 
+    (net 
+      (code 46) 
+      (name "Net-(PCIe2-PadA20)") 
+      (node 
+        (ref PCIe2) 
+        (pin A20))) 
+    (net 
+      (code 47) 
+      (name "Net-(PCIe2-PadA21)") 
+      (node 
+        (ref PCIe2) 
+        (pin A21))) 
+    (net 
+      (code 48) 
+      (name "Net-(PCIe2-PadA22)") 
+      (node 
+        (ref PCIe2) 
+        (pin A22))) 
+    (net 
+      (code 49) 
+      (name "Net-(PCIe2-PadA23)") 
+      (node 
+        (ref PCIe2) 
+        (pin A23))) 
+    (net 
+      (code 50) 
+      (name "Net-(PCIe2-PadA24)") 
+      (node 
+        (ref PCIe2) 
+        (pin A24))) 
+    (net 
+      (code 51) 
+      (name "Net-(PCIe2-PadA25)") 
+      (node 
+        (ref PCIe2) 
+        (pin A25))) 
+    (net 
+      (code 52) 
+      (name "Net-(PCIe2-PadA26)") 
+      (node 
+        (ref PCIe2) 
+        (pin A26))) 
+    (net 
+      (code 53) 
+      (name "Net-(PCIe2-PadA27)") 
+      (node 
+        (ref PCIe2) 
+        (pin A27))) 
+    (net 
+      (code 54) 
+      (name "Net-(PCIe2-PadA28)") 
+      (node 
+        (ref PCIe2) 
+        (pin A28))) 
+    (net 
+      (code 55) 
+      (name "Net-(PCIe2-PadA29)") 
+      (node 
+        (ref PCIe2) 
+        (pin A29))) 
+    (net 
+      (code 56) 
+      (name "Net-(PCIe2-PadA30)") 
+      (node 
+        (ref PCIe2) 
+        (pin A30))) 
+    (net 
+      (code 57) 
+      (name "Net-(PCIe2-PadA16)") 
+      (node 
+        (ref PCIe2) 
+        (pin A16))) 
+    (net 
+      (code 58) 
+      (name "Net-(PCIe2-PadA1)") 
+      (node 
+        (ref PCIe2) 
+        (pin A1))) 
+    (net 
+      (code 59) 
+      (name PCIe2_reset) 
+      (node 
+        (ref PCIe2) 
+        (pin A11))) 
+    (net 
+      (code 60) 
+      (name "Net-(PCIe2-PadA13)") 
+      (node 
+        (ref PCIe2) 
+        (pin A13))) 
+    (net 
+      (code 61) 
+      (name "Net-(PCIe2-PadA14)") 
+      (node 
+        (ref PCIe2) 
+        (pin A14))) 
+    (net 
+      (code 62) 
+      (name "Net-(PCIe2-PadA53)") 
+      (node 
+        (ref PCIe2) 
+        (pin A53))) 
+    (net 
+      (code 63) 
+      (name "Net-(PCIe2-PadA46)") 
+      (node 
+        (ref PCIe2) 
+        (pin A46))) 
+    (net 
+      (code 64) 
+      (name "Net-(PCIe2-PadA47)") 
+      (node 
+        (ref PCIe2) 
+        (pin A47))) 
+    (net 
+      (code 65) 
+      (name "Net-(PCIe2-PadA48)") 
+      (node 
+        (ref PCIe2) 
+        (pin A48))) 
+    (net 
+      (code 66) 
+      (name "Net-(PCIe2-PadA49)") 
+      (node 
+        (ref PCIe2) 
+        (pin A49))) 
+    (net 
+      (code 67) 
+      (name "Net-(PCIe2-PadA5)") 
+      (node 
+        (ref PCIe2) 
+        (pin A5))) 
+    (net 
+      (code 68) 
+      (name "Net-(PCIe2-PadA50)") 
+      (node 
+        (ref PCIe2) 
+        (pin A50))) 
+    (net 
+      (code 69) 
+      (name "Net-(PCIe2-PadA51)") 
+      (node 
+        (ref PCIe2) 
+        (pin A51))) 
+    (net 
+      (code 70) 
+      (name "Net-(PCIe2-PadA52)") 
+      (node 
+        (ref PCIe2) 
+        (pin A52))) 
+    (net 
+      (code 71) 
+      (name "Net-(PCIe2-PadA45)") 
+      (node 
+        (ref PCIe2) 
+        (pin A45))) 
+    (net 
+      (code 72) 
+      (name "Net-(PCIe2-PadA54)") 
+      (node 
+        (ref PCIe2) 
+        (pin A54))) 
+    (net 
+      (code 73) 
+      (name "Net-(PCIe2-PadA55)") 
+      (node 
+        (ref PCIe2) 
+        (pin A55))) 
+    (net 
+      (code 74) 
+      (name "Net-(PCIe2-PadA56)") 
+      (node 
+        (ref PCIe2) 
+        (pin A56))) 
+    (net 
+      (code 75) 
+      (name "Net-(PCIe2-PadA57)") 
+      (node 
+        (ref PCIe2) 
+        (pin A57))) 
+    (net 
+      (code 76) 
+      (name "Net-(PCIe2-PadA58)") 
+      (node 
+        (ref PCIe2) 
+        (pin A58))) 
+    (net 
+      (code 77) 
+      (name "Net-(PCIe2-PadA59)") 
+      (node 
+        (ref PCIe2) 
+        (pin A59))) 
+    (net 
+      (code 78) 
+      (name "Net-(PCIe2-PadA31)") 
+      (node 
+        (ref PCIe2) 
+        (pin A31))) 
+    (net 
+      (code 79) 
+      (name "Net-(PCIe2-PadA44)") 
+      (node 
+        (ref PCIe2) 
+        (pin A44))) 
+    (net 
+      (code 80) 
+      (name "Net-(PCIe2-PadA43)") 
+      (node 
+        (ref PCIe2) 
+        (pin A43))) 
+    (net 
+      (code 81) 
+      (name "Net-(PCIe2-PadA42)") 
+      (node 
+        (ref PCIe2) 
+        (pin A42))) 
+    (net 
+      (code 82) 
+      (name "Net-(PCIe2-PadA41)") 
+      (node 
+        (ref PCIe2) 
+        (pin A41))) 
+    (net 
+      (code 83) 
+      (name "Net-(PCIe2-PadA40)") 
+      (node 
+        (ref PCIe2) 
+        (pin A40))) 
+    (net 
+      (code 84) 
+      (name "Net-(PCIe2-PadA39)") 
+      (node 
+        (ref PCIe2) 
+        (pin A39))) 
+    (net 
+      (code 85) 
+      (name "Net-(PCIe2-PadA38)") 
+      (node 
+        (ref PCIe2) 
+        (pin A38))) 
+    (net 
+      (code 86) 
+      (name "Net-(PCIe2-PadA37)") 
+      (node 
+        (ref PCIe2) 
+        (pin A37))) 
+    (net 
+      (code 87) 
+      (name "Net-(PCIe2-PadA36)") 
+      (node 
+        (ref PCIe2) 
+        (pin A36))) 
+    (net 
+      (code 88) 
+      (name "Net-(PCIe2-PadA35)") 
+      (node 
+        (ref PCIe2) 
+        (pin A35))) 
+    (net 
+      (code 89) 
+      (name "Net-(PCIe2-PadA34)") 
+      (node 
+        (ref PCIe2) 
+        (pin A34))) 
+    (net 
+      (code 90) 
+      (name "Net-(PCIe2-PadA33)") 
+      (node 
+        (ref PCIe2) 
+        (pin A33))) 
+    (net 
+      (code 91) 
+      (name "Net-(PCIe2-PadA60)") 
+      (node 
+        (ref PCIe2) 
+        (pin A60))) 
+    (net 
+      (code 92) 
+      (name "Net-(PCIe2-PadA32)") 
+      (node 
+        (ref PCIe2) 
+        (pin A32))) 
+    (net 
+      (code 93) 
+      (name "Net-(D2-Pad1)") 
+      (node 
+        (ref R16) 
+        (pin 1)) 
+      (node 
+        (ref D2) 
+        (pin 1))) 
+    (net 
+      (code 94) 
+      (name "Net-(D3-Pad1)") 
+      (node 
+        (ref D3) 
+        (pin 1)) 
+      (node 
+        (ref R17) 
+        (pin 1))) 
+    (net 
+      (code 95) 
+      (name "Net-(D1-Pad1)") 
+      (node 
+        (ref D1) 
+        (pin 1)) 
+      (node 
+        (ref R15) 
+        (pin 1))) 
+    (net 
+      (code 96) 
+      (name "Net-(PCIe2-PadB14)") 
+      (node 
+        (ref PCIe2) 
+        (pin B14))) 
+    (net 
+      (code 97) 
+      (name "Net-(PCIe2-PadB9)") 
+      (node 
+        (ref PCIe2) 
+        (pin B9))) 
+    (net 
+      (code 98) 
+      (name "Net-(PCIe2-PadB11)") 
+      (node 
+        (ref PCIe2) 
+        (pin B11))) 
+    (net 
+      (code 99) 
+      (name "Net-(PCIe2-PadA8)") 
+      (node 
+        (ref PCIe2) 
+        (pin A8))) 
+    (net 
+      (code 100) 
+      (name "Net-(PCIe2-PadB6)") 
+      (node 
+        (ref PCIe2) 
+        (pin B6))) 
+    (net 
+      (code 101) 
+      (name "Net-(PCIe2-PadB5)") 
+      (node 
+        (ref PCIe2) 
+        (pin B5))) 
+    (net 
+      (code 102) 
+      (name "Net-(PCIe2-PadA6)") 
+      (node 
+        (ref PCIe2) 
+        (pin A7)) 
+      (node 
+        (ref PCIe2) 
+        (pin A6))) 
+    (net 
+      (code 103) 
+      (name "Net-(PCIe2-PadB71)") 
+      (node 
+        (ref PCIe2) 
+        (pin B71))) 
+    (net 
+      (code 104) 
+      (name "Net-(PCIe2-PadB64)") 
+      (node 
+        (ref PCIe2) 
+        (pin B64))) 
+    (net 
+      (code 105) 
+      (name "Net-(PCIe2-PadB65)") 
+      (node 
+        (ref PCIe2) 
+        (pin B65))) 
+    (net 
+      (code 106) 
+      (name "Net-(PCIe2-PadB66)") 
+      (node 
+        (ref PCIe2) 
+        (pin B66))) 
+    (net 
+      (code 107) 
+      (name "Net-(PCIe2-PadB67)") 
+      (node 
+        (ref PCIe2) 
+        (pin B67))) 
+    (net 
+      (code 108) 
+      (name "Net-(PCIe2-PadB68)") 
+      (node 
+        (ref PCIe2) 
+        (pin B68))) 
+    (net 
+      (code 109) 
+      (name "Net-(PCIe2-PadB69)") 
+      (node 
+        (ref PCIe2) 
+        (pin B69))) 
+    (net 
+      (code 110) 
+      (name "Net-(PCIe2-PadB70)") 
+      (node 
+        (ref PCIe2) 
+        (pin B70))) 
+    (net 
+      (code 111) 
+      (name "Net-(PCIe2-PadB63)") 
+      (node 
+        (ref PCIe2) 
+        (pin B63))) 
+    (net 
+      (code 112) 
+      (name "Net-(PCIe2-PadB72)") 
+      (node 
+        (ref PCIe2) 
+        (pin B72))) 
+    (net 
+      (code 113) 
+      (name "Net-(PCIe2-PadB73)") 
+      (node 
+        (ref PCIe2) 
+        (pin B73))) 
+    (net 
+      (code 114) 
+      (name "Net-(PCIe2-PadB74)") 
+      (node 
+        (ref PCIe2) 
+        (pin B74))) 
+    (net 
+      (code 115) 
+      (name "Net-(PCIe2-PadB75)") 
+      (node 
+        (ref PCIe2) 
+        (pin B75))) 
+    (net 
+      (code 116) 
+      (name "Net-(PCIe2-PadB76)") 
+      (node 
+        (ref PCIe2) 
+        (pin B76))) 
+    (net 
+      (code 117) 
+      (name "Net-(PCIe2-PadB77)") 
+      (node 
+        (ref PCIe2) 
+        (pin B77))) 
+    (net 
+      (code 118) 
+      (name "Net-(PCIe2-PadB78)") 
+      (node 
+        (ref PCIe2) 
+        (pin B78))) 
+    (net 
+      (code 119) 
+      (name "Net-(PCIe2-PadB56)") 
+      (node 
+        (ref PCIe2) 
+        (pin B56))) 
+    (net 
+      (code 120) 
+      (name "Net-(PCIe2-PadB49)") 
+      (node 
+        (ref PCIe2) 
+        (pin B49))) 
+    (net 
+      (code 121) 
+      (name "Net-(PCIe2-PadB50)") 
+      (node 
+        (ref PCIe2) 
+        (pin B50))) 
+    (net 
+      (code 122) 
+      (name "Net-(PCIe2-PadB51)") 
+      (node 
+        (ref PCIe2) 
+        (pin B51))) 
+    (net 
+      (code 123) 
+      (name "Net-(PCIe2-PadB52)") 
+      (node 
+        (ref PCIe2) 
+        (pin B52))) 
+    (net 
+      (code 124) 
+      (name "Net-(PCIe2-PadB53)") 
+      (node 
+        (ref PCIe2) 
+        (pin B53))) 
+    (net 
+      (code 125) 
+      (name "Net-(PCIe2-PadB54)") 
+      (node 
+        (ref PCIe2) 
+        (pin B54))) 
+    (net 
+      (code 126) 
+      (name "Net-(PCIe2-PadB55)") 
+      (node 
+        (ref PCIe2) 
+        (pin B55))) 
+    (net 
+      (code 127) 
+      (name "Net-(PCIe2-PadB79)") 
+      (node 
+        (ref PCIe2) 
+        (pin B79))) 
+    (net 
+      (code 128) 
+      (name "Net-(PCIe2-PadB57)") 
+      (node 
+        (ref PCIe2) 
+        (pin B57))) 
+    (net 
+      (code 129) 
+      (name "Net-(PCIe2-PadB58)") 
+      (node 
+        (ref PCIe2) 
+        (pin B58))) 
+    (net 
+      (code 130) 
+      (name "Net-(PCIe2-PadB59)") 
+      (node 
+        (ref PCIe2) 
+        (pin B59))) 
+    (net 
+      (code 131) 
+      (name "Net-(PCIe2-PadB60)") 
+      (node 
+        (ref PCIe2) 
+        (pin B60))) 
+    (net 
+      (code 132) 
+      (name "Net-(PCIe2-PadB61)") 
+      (node 
+        (ref PCIe2) 
+        (pin B61))) 
+    (net 
+      (code 133) 
+      (name "Net-(PCIe2-PadB62)") 
+      (node 
+        (ref PCIe2) 
+        (pin B62))) 
+    (net 
+      (code 134) 
+      (name PCIe1_reset) 
+      (node 
+        (ref PCIe1) 
+        (pin A11))) 
+    (net 
+      (code 135) 
+      (name "Net-(PCIe1-PadA78)") 
+      (node 
+        (ref PCIe1) 
+        (pin A78))) 
+    (net 
+      (code 136) 
+      (name "Net-(PCIe2-PadB80)") 
+      (node 
+        (ref PCIe2) 
+        (pin B80))) 
+    (net 
+      (code 137) 
+      (name "Net-(PCIe2-PadB81)") 
+      (node 
+        (ref PCIe2) 
+        (pin B81))) 
+    (net 
+      (code 138) 
+      (name "Net-(PCIe2-PadB82)") 
+      (node 
+        (ref PCIe2) 
+        (pin B82))) 
+    (net 
+      (code 139) 
+      (name "Net-(PCIe2-PadB48)") 
+      (node 
+        (ref PCIe2) 
+        (pin B48))) 
+    (net 
+      (code 140) 
+      (name "Net-(PCIe2-PadA78)") 
+      (node 
+        (ref PCIe2) 
+        (pin A78))) 
+    (net 
+      (code 141) 
+      (name "Net-(PCIe2-PadA79)") 
+      (node 
+        (ref PCIe2) 
+        (pin A79))) 
+    (net 
+      (code 142) 
+      (name "Net-(PCIe2-PadA80)") 
+      (node 
+        (ref PCIe2) 
+        (pin A80))) 
+    (net 
+      (code 143) 
+      (name "Net-(PCIe2-PadA81)") 
+      (node 
+        (ref PCIe2) 
+        (pin A81))) 
+    (net 
+      (code 144) 
+      (name "Net-(PCIe2-PadA82)") 
+      (node 
+        (ref PCIe2) 
+        (pin A82))) 
+    (net 
+      (code 145) 
+      (name "Net-(PCIe2-PadA77)") 
+      (node 
+        (ref PCIe2) 
+        (pin A77))) 
+    (net 
+      (code 146) 
+      (name "Net-(PCIe2-PadB12)") 
+      (node 
+        (ref PCIe2) 
+        (pin B12))) 
+    (net 
+      (code 147) 
+      (name "Net-(PCIe2-PadB15)") 
+      (node 
+        (ref PCIe2) 
+        (pin B15))) 
+    (net 
+      (code 148) 
+      (name "Net-(PCIe2-PadB17)") 
+      (node 
+        (ref PCIe2) 
+        (pin B17))) 
+    (net 
+      (code 149) 
+      (name "Net-(PCIe2-PadA62)") 
+      (node 
+        (ref PCIe2) 
+        (pin A62))) 
+    (net 
+      (code 150) 
+      (name "Net-(PCIe2-PadA63)") 
+      (node 
+        (ref PCIe2) 
+        (pin A63))) 
+    (net 
+      (code 151) 
+      (name "Net-(PCIe2-PadA64)") 
+      (node 
+        (ref PCIe2) 
+        (pin A64))) 
+    (net 
+      (code 152) 
+      (name "Net-(PCIe2-PadA65)") 
+      (node 
+        (ref PCIe2) 
+        (pin A65))) 
+    (net 
+      (code 153) 
+      (name "Net-(PCIe2-PadA66)") 
+      (node 
+        (ref PCIe2) 
+        (pin A66))) 
+    (net 
+      (code 154) 
+      (name "Net-(PCIe2-PadA67)") 
+      (node 
+        (ref PCIe2) 
+        (pin A67))) 
+    (net 
+      (code 155) 
+      (name "Net-(PCIe2-PadA68)") 
+      (node 
+        (ref PCIe2) 
+        (pin A68))) 
+    (net 
+      (code 156) 
+      (name "Net-(PCIe2-PadA69)") 
+      (node 
+        (ref PCIe2) 
+        (pin A69))) 
+    (net 
+      (code 157) 
+      (name "Net-(PCIe2-PadA70)") 
+      (node 
+        (ref PCIe2) 
+        (pin A70))) 
+    (net 
+      (code 158) 
+      (name "Net-(PCIe2-PadA71)") 
+      (node 
+        (ref PCIe2) 
+        (pin A71))) 
+    (net 
+      (code 159) 
+      (name "Net-(PCIe2-PadA72)") 
+      (node 
+        (ref PCIe2) 
+        (pin A72))) 
+    (net 
+      (code 160) 
+      (name "Net-(PCIe2-PadA73)") 
+      (node 
+        (ref PCIe2) 
+        (pin A73))) 
+    (net 
+      (code 161) 
+      (name "Net-(PCIe2-PadA74)") 
+      (node 
+        (ref PCIe2) 
+        (pin A74))) 
+    (net 
+      (code 162) 
+      (name "Net-(PCIe2-PadA75)") 
+      (node 
+        (ref PCIe2) 
+        (pin A75))) 
+    (net 
+      (code 163) 
+      (name "Net-(PCIe2-PadA76)") 
+      (node 
+        (ref PCIe2) 
+        (pin A76))) 
+    (net 
+      (code 164) 
+      (name "Net-(PCIe2-PadB40)") 
+      (node 
+        (ref PCIe2) 
+        (pin B40))) 
+    (net 
+      (code 165) 
+      (name "Net-(PCIe2-PadB33)") 
+      (node 
+        (ref PCIe2) 
+        (pin B33))) 
+    (net 
+      (code 166) 
+      (name "Net-(PCIe2-PadB34)") 
+      (node 
+        (ref PCIe2) 
+        (pin B34))) 
+    (net 
+      (code 167) 
+      (name "Net-(PCIe2-PadB35)") 
+      (node 
+        (ref PCIe2) 
+        (pin B35))) 
+    (net 
+      (code 168) 
+      (name "Net-(PCIe2-PadB36)") 
+      (node 
+        (ref PCIe2) 
+        (pin B36))) 
+    (net 
+      (code 169) 
+      (name "Net-(PCIe2-PadB37)") 
+      (node 
+        (ref PCIe2) 
+        (pin B37))) 
+    (net 
+      (code 170) 
+      (name "Net-(PCIe2-PadB38)") 
+      (node 
+        (ref PCIe2) 
+        (pin B38))) 
+    (net 
+      (code 171) 
+      (name "Net-(PCIe2-PadB39)") 
+      (node 
+        (ref PCIe2) 
+        (pin B39))) 
+    (net 
+      (code 172) 
+      (name "Net-(PCIe2-PadB32)") 
+      (node 
+        (ref PCIe2) 
+        (pin B32))) 
+    (net 
+      (code 173) 
+      (name "Net-(PCIe2-PadB41)") 
+      (node 
+        (ref PCIe2) 
+        (pin B41))) 
+    (net 
+      (code 174) 
+      (name "Net-(PCIe2-PadB42)") 
+      (node 
+        (ref PCIe2) 
+        (pin B42))) 
+    (net 
+      (code 175) 
+      (name "Net-(PCIe2-PadB43)") 
+      (node 
+        (ref PCIe2) 
+        (pin B43))) 
+    (net 
+      (code 176) 
+      (name "Net-(PCIe2-PadB44)") 
+      (node 
+        (ref PCIe2) 
+        (pin B44))) 
+    (net 
+      (code 177) 
+      (name "Net-(PCIe2-PadB45)") 
+      (node 
+        (ref PCIe2) 
+        (pin B45))) 
+    (net 
+      (code 178) 
+      (name "Net-(PCIe2-PadB46)") 
+      (node 
+        (ref PCIe2) 
+        (pin B46))) 
+    (net 
+      (code 179) 
+      (name "Net-(PCIe2-PadB47)") 
+      (node 
+        (ref PCIe2) 
+        (pin B47))) 
+    (net 
+      (code 180) 
+      (name "Net-(PCIe2-PadA61)") 
+      (node 
+        (ref PCIe2) 
+        (pin A61))) 
+    (net 
+      (code 181) 
+      (name "Net-(PCIe2-PadB31)") 
+      (node 
+        (ref PCIe2) 
+        (pin B31))) 
+    (net 
+      (code 182) 
+      (name "Net-(PCIe2-PadB30)") 
+      (node 
+        (ref PCIe2) 
+        (pin B30))) 
+    (net 
+      (code 183) 
+      (name "Net-(PCIe2-PadB29)") 
+      (node 
+        (ref PCIe2) 
+        (pin B29))) 
+    (net 
+      (code 184) 
+      (name "Net-(PCIe2-PadB28)") 
+      (node 
+        (ref PCIe2) 
+        (pin B28))) 
+    (net 
+      (code 185) 
+      (name "Net-(PCIe2-PadB27)") 
+      (node 
+        (ref PCIe2) 
+        (pin B27))) 
+    (net 
+      (code 186) 
+      (name "Net-(PCIe2-PadB26)") 
+      (node 
+        (ref PCIe2) 
+        (pin B26))) 
+    (net 
+      (code 187) 
+      (name "Net-(PCIe2-PadB25)") 
+      (node 
+        (ref PCIe2) 
+        (pin B25))) 
+    (net 
+      (code 188) 
+      (name "Net-(PCIe2-PadB24)") 
+      (node 
+        (ref PCIe2) 
+        (pin B24))) 
+    (net 
+      (code 189) 
+      (name "Net-(PCIe2-PadB23)") 
+      (node 
+        (ref PCIe2) 
+        (pin B23))) 
+    (net 
+      (code 190) 
+      (name "Net-(PCIe2-PadB22)") 
+      (node 
+        (ref PCIe2) 
+        (pin B22))) 
+    (net 
+      (code 191) 
+      (name "Net-(PCIe2-PadB21)") 
+      (node 
+        (ref PCIe2) 
+        (pin B21))) 
+    (net 
+      (code 192) 
+      (name "Net-(PCIe2-PadB20)") 
+      (node 
+        (ref PCIe2) 
+        (pin B20))) 
+    (net 
+      (code 193) 
+      (name "Net-(PCIe2-PadB19)") 
+      (node 
+        (ref PCIe2) 
+        (pin B19))) 
+    (net 
+      (code 194) 
+      (name "Net-(PCIe1-PadA1)") 
+      (node 
+        (ref PCIe1) 
+        (pin A1))) 
+    (net 
+      (code 195) 
+      (name "Net-(PCIe1-PadA13)") 
+      (node 
+        (ref PCIe1) 
+        (pin A13))) 
+    (net 
+      (code 196) 
+      (name "Net-(PCIe1-PadA14)") 
+      (node 
+        (ref PCIe1) 
+        (pin A14))) 
+    (net 
+      (code 197) 
+      (name "Net-(PCIe1-PadA16)") 
+      (node 
+        (ref PCIe1) 
+        (pin A16))) 
+    (net 
+      (code 198) 
+      (name "Net-(PCIe1-PadA17)") 
+      (node 
+        (ref PCIe1) 
+        (pin A17))) 
+    (net 
+      (code 199) 
+      (name "Net-(PCIe1-PadA6)") 
+      (node 
+        (ref PCIe1) 
+        (pin A6)) 
+      (node 
+        (ref PCIe1) 
+        (pin A7))) 
+    (net 
+      (code 200) 
+      (name "Net-(PCIe1-PadA41)") 
+      (node 
+        (ref PCIe1) 
+        (pin A41))) 
+    (net 
+      (code 201) 
+      (name "Net-(PCIe1-PadA34)") 
+      (node 
+        (ref PCIe1) 
+        (pin A34))) 
+    (net 
+      (code 202) 
+      (name "Net-(PCIe1-PadA35)") 
+      (node 
+        (ref PCIe1) 
+        (pin A35))) 
+    (net 
+      (code 203) 
+      (name "Net-(PCIe1-PadA36)") 
+      (node 
+        (ref PCIe1) 
+        (pin A36))) 
+    (net 
+      (code 204) 
+      (name "Net-(PCIe1-PadA37)") 
+      (node 
+        (ref PCIe1) 
+        (pin A37))) 
+    (net 
+      (code 205) 
+      (name "Net-(PCIe1-PadA38)") 
+      (node 
+        (ref PCIe1) 
+        (pin A38))) 
+    (net 
+      (code 206) 
+      (name "Net-(PCIe1-PadA39)") 
+      (node 
+        (ref PCIe1) 
+        (pin A39))) 
+    (net 
+      (code 207) 
+      (name "Net-(PCIe1-PadA40)") 
+      (node 
+        (ref PCIe1) 
+        (pin A40))) 
+    (net 
+      (code 208) 
+      (name "Net-(PCIe1-PadA33)") 
+      (node 
+        (ref PCIe1) 
+        (pin A33))) 
+    (net 
+      (code 209) 
+      (name "Net-(PCIe1-PadA42)") 
+      (node 
+        (ref PCIe1) 
+        (pin A42))) 
+    (net 
+      (code 210) 
+      (name "Net-(PCIe1-PadA43)") 
+      (node 
+        (ref PCIe1) 
+        (pin A43))) 
+    (net 
+      (code 211) 
+      (name "Net-(PCIe1-PadA44)") 
+      (node 
+        (ref PCIe1) 
+        (pin A44))) 
+    (net 
+      (code 212) 
+      (name "Net-(PCIe1-PadA45)") 
+      (node 
+        (ref PCIe1) 
+        (pin A45))) 
+    (net 
+      (code 213) 
+      (name "Net-(PCIe1-PadA46)") 
+      (node 
+        (ref PCIe1) 
+        (pin A46))) 
+    (net 
+      (code 214) 
+      (name "Net-(PCIe1-PadA47)") 
+      (node 
+        (ref PCIe1) 
+        (pin A47))) 
+    (net 
+      (code 215) 
+      (name "Net-(PCIe1-PadA48)") 
+      (node 
+        (ref PCIe1) 
+        (pin A48))) 
+    (net 
+      (code 216) 
+      (name "Net-(PCIe1-PadA26)") 
+      (node 
+        (ref PCIe1) 
+        (pin A26))) 
+    (net 
+      (code 217) 
+      (name "Net-(PCIe1-PadA19)") 
+      (node 
+        (ref PCIe1) 
+        (pin A19))) 
+    (net 
+      (code 218) 
+      (name "Net-(PCIe1-PadA20)") 
+      (node 
+        (ref PCIe1) 
+        (pin A20))) 
+    (net 
+      (code 219) 
+      (name "Net-(PCIe1-PadA21)") 
+      (node 
+        (ref PCIe1) 
+        (pin A21))) 
+    (net 
+      (code 220) 
+      (name "Net-(PCIe1-PadA22)") 
+      (node 
+        (ref PCIe1) 
+        (pin A22))) 
+    (net 
+      (code 221) 
+      (name "Net-(PCIe1-PadA23)") 
+      (node 
+        (ref PCIe1) 
+        (pin A23))) 
+    (net 
+      (code 222) 
+      (name "Net-(PCIe1-PadA24)") 
+      (node 
+        (ref PCIe1) 
+        (pin A24))) 
+    (net 
+      (code 223) 
+      (name "Net-(PCIe1-PadA25)") 
+      (node 
+        (ref PCIe1) 
+        (pin A25))) 
+    (net 
+      (code 224) 
+      (name "Net-(PCIe1-PadA27)") 
+      (node 
+        (ref PCIe1) 
+        (pin A27))) 
+    (net 
+      (code 225) 
+      (name "Net-(PCIe1-PadA28)") 
+      (node 
+        (ref PCIe1) 
+        (pin A28))) 
+    (net 
+      (code 226) 
+      (name "Net-(PCIe1-PadA29)") 
+      (node 
+        (ref PCIe1) 
+        (pin A29))) 
+    (net 
+      (code 227) 
+      (name "Net-(PCIe1-PadA30)") 
+      (node 
+        (ref PCIe1) 
+        (pin A30))) 
+    (net 
+      (code 228) 
+      (name "Net-(PCIe1-PadA31)") 
+      (node 
+        (ref PCIe1) 
+        (pin A31))) 
+    (net 
+      (code 229) 
+      (name "Net-(PCIe1-PadA32)") 
+      (node 
+        (ref PCIe1) 
+        (pin A32))) 
+    (net 
+      (code 230) 
+      (name "Net-(PCIe1-PadA5)") 
+      (node 
+        (ref PCIe1) 
+        (pin A5))) 
+    (net 
+      (code 231) 
+      (name "Net-(PCIe1-PadB6)") 
+      (node 
+        (ref PCIe1) 
+        (pin B6))) 
+    (net 
+      (code 232) 
+      (name "Net-(PCIe1-PadB5)") 
+      (node 
+        (ref PCIe1) 
+        (pin B5))) 
+    (net 
+      (code 233) 
+      (name "Net-(PCIe1-PadA8)") 
+      (node 
+        (ref PCIe1) 
+        (pin A8))) 
+    (net 
+      (code 234) 
+      (name "Net-(D4-Pad1)") 
+      (node 
+        (ref D4) 
+        (pin 1)) 
+      (node 
+        (ref R18) 
+        (pin 1))) 
+    (net 
+      (code 235) 
+      (name "Net-(D5-Pad1)") 
+      (node 
+        (ref D5) 
+        (pin 1)) 
+      (node 
+        (ref R19) 
+        (pin 1))) 
+    (net 
+      (code 236) 
+      (name "Net-(D6-Pad1)") 
+      (node 
+        (ref D6) 
+        (pin 1)) 
+      (node 
+        (ref R20) 
+        (pin 1))) 
+    (net 
+      (code 237) 
+      (name "Net-(PCIe1-PadB17)") 
+      (node 
+        (ref PCIe1) 
+        (pin B17))) 
+    (net 
+      (code 238) 
+      (name "Net-(PCIe1-PadB15)") 
+      (node 
+        (ref PCIe1) 
+        (pin B15))) 
+    (net 
+      (code 239) 
+      (name "Net-(PCIe1-PadB14)") 
+      (node 
+        (ref PCIe1) 
+        (pin B14))) 
+    (net 
+      (code 240) 
+      (name "Net-(PCIe1-PadB9)") 
+      (node 
+        (ref PCIe1) 
+        (pin B9))) 
+    (net 
+      (code 241) 
+      (name "Net-(PCIe1-PadB11)") 
+      (node 
+        (ref PCIe1) 
+        (pin B11))) 
+    (net 
+      (code 242) 
+      (name "Net-(PCIe1-PadB59)") 
+      (node 
+        (ref PCIe1) 
+        (pin B59))) 
+    (net 
+      (code 243) 
+      (name "Net-(PCIe1-PadB51)") 
+      (node 
+        (ref PCIe1) 
+        (pin B51))) 
+    (net 
+      (code 244) 
+      (name "Net-(PCIe1-PadB52)") 
+      (node 
+        (ref PCIe1) 
+        (pin B52))) 
+    (net 
+      (code 245) 
+      (name "Net-(PCIe1-PadB53)") 
+      (node 
+        (ref PCIe1) 
+        (pin B53))) 
+    (net 
+      (code 246) 
+      (name "Net-(PCIe1-PadB54)") 
+      (node 
+        (ref PCIe1) 
+        (pin B54))) 
+    (net 
+      (code 247) 
+      (name "Net-(PCIe1-PadB55)") 
+      (node 
+        (ref PCIe1) 
+        (pin B55))) 
+    (net 
+      (code 248) 
+      (name "Net-(PCIe1-PadB56)") 
+      (node 
+        (ref PCIe1) 
+        (pin B56))) 
+    (net 
+      (code 249) 
+      (name "Net-(PCIe1-PadB57)") 
+      (node 
+        (ref PCIe1) 
+        (pin B57))) 
+    (net 
+      (code 250) 
+      (name "Net-(PCIe1-PadB58)") 
+      (node 
+        (ref PCIe1) 
+        (pin B58))) 
+    (net 
+      (code 251) 
+      (name "Net-(PCIe1-PadB50)") 
+      (node 
+        (ref PCIe1) 
+        (pin B50))) 
+    (net 
+      (code 252) 
+      (name "Net-(PCIe1-PadB60)") 
+      (node 
+        (ref PCIe1) 
+        (pin B60))) 
+    (net 
+      (code 253) 
+      (name "Net-(PCIe1-PadB61)") 
+      (node 
+        (ref PCIe1) 
+        (pin B61))) 
+    (net 
+      (code 254) 
+      (name "Net-(PCIe1-PadB62)") 
+      (node 
+        (ref PCIe1) 
+        (pin B62))) 
+    (net 
+      (code 255) 
+      (name "Net-(PCIe1-PadB63)") 
+      (node 
+        (ref PCIe1) 
+        (pin B63))) 
+    (net 
+      (code 256) 
+      (name "Net-(PCIe1-PadB64)") 
+      (node 
+        (ref PCIe1) 
+        (pin B64))) 
+    (net 
+      (code 257) 
+      (name "Net-(PCIe1-PadB65)") 
+      (node 
+        (ref PCIe1) 
+        (pin B65))) 
+    (net 
+      (code 258) 
+      (name "Net-(PCIe1-PadB43)") 
+      (node 
+        (ref PCIe1) 
+        (pin B43))) 
+    (net 
+      (code 259) 
+      (name "Net-(PCIe1-PadB36)") 
+      (node 
+        (ref PCIe1) 
+        (pin B36))) 
+    (net 
+      (code 260) 
+      (name "Net-(PCIe1-PadB37)") 
+      (node 
+        (ref PCIe1) 
+        (pin B37))) 
+    (net 
+      (code 261) 
+      (name "Net-(PCIe1-PadB38)") 
+      (node 
+        (ref PCIe1) 
+        (pin B38))) 
+    (net 
+      (code 262) 
+      (name "Net-(PCIe1-PadB39)") 
+      (node 
+        (ref PCIe1) 
+        (pin B39))) 
+    (net 
+      (code 263) 
+      (name "Net-(PCIe1-PadB40)") 
+      (node 
+        (ref PCIe1) 
+        (pin B40))) 
+    (net 
+      (code 264) 
+      (name "Net-(PCIe1-PadB41)") 
+      (node 
+        (ref PCIe1) 
+        (pin B41))) 
+    (net 
+      (code 265) 
+      (name "Net-(PCIe1-PadB42)") 
+      (node 
+        (ref PCIe1) 
+        (pin B42))) 
+    (net 
+      (code 266) 
+      (name "Net-(PCIe1-PadB66)") 
+      (node 
+        (ref PCIe1) 
+        (pin B66))) 
+    (net 
+      (code 267) 
+      (name "Net-(PCIe1-PadB44)") 
+      (node 
+        (ref PCIe1) 
+        (pin B44))) 
+    (net 
+      (code 268) 
+      (name "Net-(PCIe1-PadB45)") 
+      (node 
+        (ref PCIe1) 
+        (pin B45))) 
+    (net 
+      (code 269) 
+      (name "Net-(PCIe1-PadB46)") 
+      (node 
+        (ref PCIe1) 
+        (pin B46))) 
+    (net 
+      (code 270) 
+      (name "Net-(PCIe1-PadB47)") 
+      (node 
+        (ref PCIe1) 
+        (pin B47))) 
+    (net 
+      (code 271) 
+      (name "Net-(PCIe1-PadB48)") 
+      (node 
+        (ref PCIe1) 
+        (pin B48))) 
+    (net 
+      (code 272) 
+      (name "Net-(PCIe1-PadB49)") 
+      (node 
+        (ref PCIe1) 
+        (pin B49))) 
+    (net 
+      (code 273) 
+      (name "Net-(PCIe1-PadB81)") 
+      (node 
+        (ref PCIe1) 
+        (pin B81))) 
+    (net 
+      (code 274) 
+      (name "Net-(PCIe1-PadB82)") 
+      (node 
+        (ref PCIe1) 
+        (pin B82))) 
+    (net 
+      (code 275) 
+      (name "Net-(PCIe1-PadB80)") 
+      (node 
+        (ref PCIe1) 
+        (pin B80))) 
+    (net 
+      (code 276) 
+      (name "Net-(PCIe1-PadB79)") 
+      (node 
+        (ref PCIe1) 
+        (pin B79))) 
+    (net 
+      (code 277) 
+      (name "Net-(PCIe1-PadB78)") 
+      (node 
+        (ref PCIe1) 
+        (pin B78))) 
+    (net 
+      (code 278) 
+      (name "Net-(PCIe1-PadB77)") 
+      (node 
+        (ref PCIe1) 
+        (pin B77))) 
+    (net 
+      (code 279) 
+      (name "Net-(PCIe1-PadB76)") 
+      (node 
+        (ref PCIe1) 
+        (pin B76))) 
+    (net 
+      (code 280) 
+      (name "Net-(PCIe1-PadB75)") 
+      (node 
+        (ref PCIe1) 
+        (pin B75))) 
+    (net 
+      (code 281) 
+      (name "Net-(PCIe1-PadB74)") 
+      (node 
+        (ref PCIe1) 
+        (pin B74))) 
+    (net 
+      (code 282) 
+      (name "Net-(PCIe1-PadB73)") 
+      (node 
+        (ref PCIe1) 
+        (pin B73))) 
+    (net 
+      (code 283) 
+      (name "Net-(PCIe1-PadB72)") 
+      (node 
+        (ref PCIe1) 
+        (pin B72))) 
+    (net 
+      (code 284) 
+      (name "Net-(PCIe1-PadB71)") 
+      (node 
+        (ref PCIe1) 
+        (pin B71))) 
+    (net 
+      (code 285) 
+      (name "Net-(PCIe1-PadB70)") 
+      (node 
+        (ref PCIe1) 
+        (pin B70))) 
+    (net 
+      (code 286) 
+      (name "Net-(PCIe1-PadB69)") 
+      (node 
+        (ref PCIe1) 
+        (pin B69))) 
+    (net 
+      (code 287) 
+      (name "Net-(PCIe1-PadB68)") 
+      (node 
+        (ref PCIe1) 
+        (pin B68))) 
+    (net 
+      (code 288) 
+      (name "Net-(PCIe1-PadB67)") 
+      (node 
+        (ref PCIe1) 
+        (pin B67))) 
+    (net 
+      (code 289) 
+      (name "Net-(PCIe1-PadA71)") 
+      (node 
+        (ref PCIe1) 
+        (pin A71))) 
+    (net 
+      (code 290) 
+      (name "Net-(PCIe1-PadA64)") 
+      (node 
+        (ref PCIe1) 
+        (pin A64))) 
+    (net 
+      (code 291) 
+      (name "Net-(PCIe1-PadA65)") 
+      (node 
+        (ref PCIe1) 
+        (pin A65))) 
+    (net 
+      (code 292) 
+      (name "Net-(PCIe1-PadA66)") 
+      (node 
+        (ref PCIe1) 
+        (pin A66))) 
+    (net 
+      (code 293) 
+      (name "Net-(PCIe1-PadA67)") 
+      (node 
+        (ref PCIe1) 
+        (pin A67))) 
+    (net 
+      (code 294) 
+      (name "Net-(PCIe1-PadA68)") 
+      (node 
+        (ref PCIe1) 
+        (pin A68))) 
+    (net 
+      (code 295) 
+      (name "Net-(PCIe1-PadA69)") 
+      (node 
+        (ref PCIe1) 
+        (pin A69))) 
+    (net 
+      (code 296) 
+      (name "Net-(PCIe1-PadA70)") 
+      (node 
+        (ref PCIe1) 
+        (pin A70))) 
+    (net 
+      (code 297) 
+      (name "Net-(PCIe1-PadA63)") 
+      (node 
+        (ref PCIe1) 
+        (pin A63))) 
+    (net 
+      (code 298) 
+      (name "Net-(PCIe1-PadA72)") 
+      (node 
+        (ref PCIe1) 
+        (pin A72))) 
+    (net 
+      (code 299) 
+      (name "Net-(PCIe1-PadA73)") 
+      (node 
+        (ref PCIe1) 
+        (pin A73))) 
+    (net 
+      (code 300) 
+      (name "Net-(PCIe1-PadA74)") 
+      (node 
+        (ref PCIe1) 
+        (pin A74))) 
+    (net 
+      (code 301) 
+      (name "Net-(PCIe1-PadA75)") 
+      (node 
+        (ref PCIe1) 
+        (pin A75))) 
+    (net 
+      (code 302) 
+      (name "Net-(PCIe1-PadA76)") 
+      (node 
+        (ref PCIe1) 
+        (pin A76))) 
+    (net 
+      (code 303) 
+      (name "Net-(PCIe1-PadA77)") 
+      (node 
+        (ref PCIe1) 
+        (pin A77))) 
+    (net 
+      (code 304) 
+      (name "Net-(PCIe1-PadA79)") 
+      (node 
+        (ref PCIe1) 
+        (pin A79))) 
+    (net 
+      (code 305) 
+      (name "Net-(PCIe1-PadA56)") 
+      (node 
+        (ref PCIe1) 
+        (pin A56))) 
+    (net 
+      (code 306) 
+      (name "Net-(PCIe1-PadB35)") 
+      (node 
+        (ref PCIe1) 
+        (pin B35))) 
+    (net 
+      (code 307) 
+      (name "Net-(PCIe1-PadA49)") 
+      (node 
+        (ref PCIe1) 
+        (pin A49))) 
+    (net 
+      (code 308) 
+      (name "Net-(PCIe1-PadA50)") 
+      (node 
+        (ref PCIe1) 
+        (pin A50))) 
+    (net 
+      (code 309) 
+      (name "Net-(PCIe1-PadA51)") 
+      (node 
+        (ref PCIe1) 
+        (pin A51))) 
+    (net 
+      (code 310) 
+      (name "Net-(PCIe1-PadA52)") 
+      (node 
+        (ref PCIe1) 
+        (pin A52))) 
+    (net 
+      (code 311) 
+      (name "Net-(PCIe1-PadA53)") 
+      (node 
+        (ref PCIe1) 
+        (pin A53))) 
+    (net 
+      (code 312) 
+      (name "Net-(PCIe1-PadA54)") 
+      (node 
+        (ref PCIe1) 
+        (pin A54))) 
+    (net 
+      (code 313) 
+      (name "Net-(PCIe1-PadA55)") 
+      (node 
+        (ref PCIe1) 
+        (pin A55))) 
+    (net 
+      (code 314) 
+      (name "Net-(PCIe1-PadB34)") 
+      (node 
+        (ref PCIe1) 
+        (pin B34))) 
+    (net 
+      (code 315) 
+      (name "Net-(PCIe1-PadA57)") 
+      (node 
+        (ref PCIe1) 
+        (pin A57))) 
+    (net 
+      (code 316) 
+      (name "Net-(PCIe1-PadA58)") 
+      (node 
+        (ref PCIe1) 
+        (pin A58))) 
+    (net 
+      (code 317) 
+      (name "Net-(PCIe1-PadA59)") 
+      (node 
+        (ref PCIe1) 
+        (pin A59))) 
+    (net 
+      (code 318) 
+      (name "Net-(PCIe1-PadA60)") 
+      (node 
+        (ref PCIe1) 
+        (pin A60))) 
+    (net 
+      (code 319) 
+      (name "Net-(PCIe1-PadA61)") 
+      (node 
+        (ref PCIe1) 
+        (pin A61))) 
+    (net 
+      (code 320) 
+      (name "Net-(PCIe1-PadA62)") 
+      (node 
+        (ref PCIe1) 
+        (pin A62))) 
+    (net 
+      (code 321) 
+      (name "Net-(PCIe1-PadB28)") 
+      (node 
+        (ref PCIe1) 
+        (pin B28))) 
+    (net 
+      (code 322) 
+      (name "Net-(PCIe1-PadB20)") 
+      (node 
+        (ref PCIe1) 
+        (pin B20))) 
+    (net 
+      (code 323) 
+      (name "Net-(PCIe1-PadB21)") 
+      (node 
+        (ref PCIe1) 
+        (pin B21))) 
+    (net 
+      (code 324) 
+      (name "Net-(PCIe1-PadB22)") 
+      (node 
+        (ref PCIe1) 
+        (pin B22))) 
+    (net 
+      (code 325) 
+      (name "Net-(PCIe1-PadB23)") 
+      (node 
+        (ref PCIe1) 
+        (pin B23))) 
+    (net 
+      (code 326) 
+      (name "Net-(PCIe1-PadB24)") 
+      (node 
+        (ref PCIe1) 
+        (pin B24))) 
+    (net 
+      (code 327) 
+      (name "Net-(PCIe1-PadB25)") 
+      (node 
+        (ref PCIe1) 
+        (pin B25))) 
+    (net 
+      (code 328) 
+      (name "Net-(PCIe1-PadB26)") 
+      (node 
+        (ref PCIe1) 
+        (pin B26))) 
+    (net 
+      (code 329) 
+      (name "Net-(PCIe1-PadB27)") 
+      (node 
+        (ref PCIe1) 
+        (pin B27))) 
+    (net 
+      (code 330) 
+      (name "Net-(PCIe1-PadA80)") 
+      (node 
+        (ref PCIe1) 
+        (pin A80))) 
+    (net 
+      (code 331) 
+      (name "Net-(PCIe1-PadB29)") 
+      (node 
+        (ref PCIe1) 
+        (pin B29))) 
+    (net 
+      (code 332) 
+      (name "Net-(PCIe1-PadB30)") 
+      (node 
+        (ref PCIe1) 
+        (pin B30))) 
+    (net 
+      (code 333) 
+      (name "Net-(PCIe1-PadB31)") 
+      (node 
+        (ref PCIe1) 
+        (pin B31))) 
+    (net 
+      (code 334) 
+      (name "Net-(PCIe1-PadB32)") 
+      (node 
+        (ref PCIe1) 
+        (pin B32))) 
+    (net 
+      (code 335) 
+      (name "Net-(PCIe1-PadB33)") 
+      (node 
+        (ref PCIe1) 
+        (pin B33))) 
+    (net 
+      (code 336) 
+      (name "Net-(PCIe1-PadB19)") 
+      (node 
+        (ref PCIe1) 
+        (pin B19))) 
+    (net 
+      (code 337) 
+      (name "Net-(PCIe1-PadA81)") 
+      (node 
+        (ref PCIe1) 
+        (pin A81))) 
+    (net 
+      (code 338) 
+      (name "Net-(PCIe1-PadA82)") 
+      (node 
+        (ref PCIe1) 
+        (pin A82))) 
+    (net 
+      (code 339) 
+      (name "Net-(PCIe1-PadB12)") 
+      (node 
+        (ref PCIe1) 
+        (pin B12))) 
+    (net 
+      (code 340) 
+      (name "Net-(µC1-Pad94)") 
+      (node 
+        (ref µC1) 
+        (pin 94))) 
+    (net 
+      (code 341) 
+      (name "Net-(µC1-Pad58)") 
+      (node 
+        (ref µC1) 
+        (pin 58))) 
+    (net 
+      (code 342) 
+      (name I2C4_SCL) 
+      (node 
+        (ref R9) 
+        (pin 2)) 
+      (node 
+        (ref U5) 
+        (pin 5)) 
+      (node 
+        (ref U4) 
+        (pin 5)) 
+      (node 
+        (ref µC1) 
+        (pin 59))) 
+    (net 
+      (code 343) 
+      (name I2C4_SDA) 
+      (node 
+        (ref µC1) 
+        (pin 60)) 
+      (node 
+        (ref U4) 
+        (pin 4)) 
+      (node 
+        (ref U5) 
+        (pin 4)) 
+      (node 
+        (ref R8) 
+        (pin 1))) 
+    (net 
+      (code 344) 
+      (name "Net-(µC1-Pad61)") 
+      (node 
+        (ref µC1) 
+        (pin 61))) 
+    (net 
+      (code 345) 
+      (name "Net-(µC1-Pad62)") 
+      (node 
+        (ref µC1) 
+        (pin 62))) 
+    (net 
+      (code 346) 
+      (name "Net-(µC1-Pad12)") 
+      (node 
+        (ref µC1) 
+        (pin 12))) 
+    (net 
+      (code 347) 
+      (name "Net-(µC1-Pad84)") 
+      (node 
+        (ref µC1) 
+        (pin 84))) 
+    (net 
+      (code 348) 
+      (name "Net-(µC1-Pad13)") 
+      (node 
+        (ref µC1) 
+        (pin 13))) 
+    (net 
+      (code 349) 
+      (name ~RESET) 
+      (node 
+        (ref U9) 
+        (pin 15)) 
+      (node 
+        (ref µC1) 
+        (pin 14)) 
+      (node 
+        (ref J41) 
+        (pin 10))) 
+    (net 
+      (code 350) 
+      (name "Net-(µC1-Pad6)") 
+      (node 
+        (ref µC1) 
+        (pin 6))) 
+    (net 
+      (code 351) 
+      (name "Net-(µC1-Pad73)") 
+      (node 
+        (ref µC1) 
+        (pin 73))) 
+    (net 
+      (code 352) 
+      (name "Net-(µC1-Pad19)") 
+      (node 
+        (ref µC1) 
+        (pin 19))) 
+    (net 
+      (code 353) 
+      (name "Net-(µC1-Pad20)") 
+      (node 
+        (ref µC1) 
+        (pin 20))) 
+    (net 
+      (code 354) 
+      (name "Net-(µC1-Pad21)") 
+      (node 
+        (ref µC1) 
+        (pin 21))) 
+    (net 
+      (code 355) 
+      (name "Net-(µC1-Pad48)") 
+      (node 
+        (ref µC1) 
+        (pin 48))) 
+    (net 
+      (code 356) 
+      (name "Net-(µC1-Pad41)") 
+      (node 
+        (ref µC1) 
+        (pin 41))) 
+    (net 
+      (code 357) 
+      (name "Net-(µC1-Pad97)") 
+      (node 
+        (ref µC1) 
+        (pin 97))) 
+    (net 
+      (code 358) 
+      (name "Net-(µC1-Pad98)") 
+      (node 
+        (ref µC1) 
+        (pin 98))) 
+    (net 
+      (code 359) 
+      (name "Net-(µC1-Pad1)") 
+      (node 
+        (ref µC1) 
+        (pin 1))) 
+    (net 
+      (code 360) 
+      (name "Net-(µC1-Pad2)") 
+      (node 
+        (ref µC1) 
+        (pin 2))) 
+    (net 
+      (code 361) 
+      (name "Net-(µC1-Pad3)") 
+      (node 
+        (ref µC1) 
+        (pin 3))) 
+    (net 
+      (code 362) 
+      (name "Net-(µC1-Pad4)") 
+      (node 
+        (ref µC1) 
+        (pin 4))) 
+    (net 
+      (code 363) 
+      (name "Net-(µC1-Pad5)") 
+      (node 
+        (ref µC1) 
+        (pin 5))) 
+    (net 
+      (code 364) 
+      (name "Net-(µC1-Pad37)") 
+      (node 
+        (ref µC1) 
+        (pin 37))) 
+    (net 
+      (code 365) 
+      (name "Net-(µC1-Pad38)") 
+      (node 
+        (ref µC1) 
+        (pin 38))) 
+    (net 
+      (code 366) 
+      (name "Net-(µC1-Pad39)") 
+      (node 
+        (ref µC1) 
+        (pin 39))) 
+    (net 
+      (code 367) 
+      (name "Net-(µC1-Pad40)") 
+      (node 
+        (ref µC1) 
+        (pin 40))) 
+    (net 
+      (code 368) 
+      (name "Net-(µC1-Pad42)") 
+      (node 
+        (ref µC1) 
+        (pin 42))) 
+    (net 
+      (code 369) 
+      (name "Net-(µC1-Pad43)") 
+      (node 
+        (ref µC1) 
+        (pin 43))) 
+    (net 
+      (code 370) 
+      (name "Net-(µC1-Pad44)") 
+      (node 
+        (ref µC1) 
+        (pin 44))) 
+    (net 
+      (code 371) 
+      (name "Net-(µC1-Pad45)") 
+      (node 
+        (ref µC1) 
+        (pin 45))) 
+    (net 
+      (code 372) 
+      (name "Net-(µC1-Pad15)") 
+      (node 
+        (ref µC1) 
+        (pin 15))) 
+    (net 
+      (code 373) 
+      (name ETH_MDC) 
+      (node 
+        (ref µC1) 
+        (pin 16)) 
+      (node 
+        (ref U9) 
+        (pin 13))) 
+    (net 
+      (code 374) 
+      (name "Net-(µC1-Pad17)") 
+      (node 
+        (ref µC1) 
+        (pin 17))) 
+    (net 
+      (code 375) 
+      (name "Net-(µC1-Pad18)") 
+      (node 
+        (ref µC1) 
+        (pin 18))) 
+    (net 
+      (code 376) 
+      (name ETH_RXD0) 
+      (node 
+        (ref µC1) 
+        (pin 32)) 
+      (node 
+        (ref R24) 
+        (pin 1))) 
+    (net 
+      (code 377) 
+      (name ETH_RXD1) 
+      (node 
+        (ref R23) 
+        (pin 1)) 
+      (node 
+        (ref µC1) 
+        (pin 33))) 
+    (net 
+      (code 378) 
+      (name "Net-(µC1-Pad63)") 
+      (node 
+        (ref µC1) 
+        (pin 63))) 
+    (net 
+      (code 379) 
+      (name "Net-(µC1-Pad57)") 
+      (node 
+        (ref µC1) 
+        (pin 57))) 
+    (net 
+      (code 380) 
+      (name "Net-(J41-Pad6)") 
+      (node 
+        (ref J41) 
+        (pin 6))) 
+    (net 
+      (code 381) 
+      (name "Net-(J41-Pad7)") 
+      (node 
+        (ref J41) 
+        (pin 7))) 
+    (net 
+      (code 382) 
+      (name "Net-(J41-Pad8)") 
+      (node 
+        (ref J41) 
+        (pin 8))) 
+    (net 
+      (code 383) 
+      (name "Net-(J41-Pad9)") 
+      (node 
+        (ref J41) 
+        (pin 9))) 
+    (net 
+      (code 385) 
+      (name "Net-(µC1-Pad56)") 
+      (node 
+        (ref µC1) 
+        (pin 56))) 
+    (net 
+      (code 386) 
+      (name ETH_TXD1) 
+      (node 
+        (ref µC1) 
+        (pin 52)) 
+      (node 
+        (ref U9) 
+        (pin 18))) 
+    (net 
+      (code 387) 
+      (name "Net-(µC1-Pad35)") 
+      (node 
+        (ref µC1) 
+        (pin 35))) 
+    (net 
+      (code 388) 
+      (name "Net-(µC1-Pad36)") 
+      (node 
+        (ref µC1) 
+        (pin 36))) 
+    (net 
+      (code 389) 
+      (name "Net-(µC1-Pad89)") 
+      (node 
+        (ref µC1) 
+        (pin 89))) 
+    (net 
+      (code 390) 
+      (name "Net-(µC1-Pad90)") 
+      (node 
+        (ref µC1) 
+        (pin 90))) 
+    (net 
+      (code 391) 
+      (name "Net-(µC1-Pad91)") 
+      (node 
+        (ref µC1) 
+        (pin 91))) 
+    (net 
+      (code 392) 
+      (name I2C1_SCL) 
+      (node 
+        (ref µC1) 
+        (pin 92)) 
+      (node 
+        (ref U7) 
+        (pin 5)) 
+      (node 
+        (ref U8) 
+        (pin 5)) 
+      (node 
+        (ref U6) 
+        (pin 5)) 
+      (node 
+        (ref R14) 
+        (pin 2))) 
+    (net 
+      (code 393) 
+      (name I2C1_SDA) 
+      (node 
+        (ref R13) 
+        (pin 1)) 
+      (node 
+        (ref µC1) 
+        (pin 93)) 
+      (node 
+        (ref U8) 
+        (pin 4)) 
+      (node 
+        (ref U7) 
+        (pin 4)) 
+      (node 
+        (ref U6) 
+        (pin 4))) 
+    (net 
+      (code 394) 
+      (name "Net-(µC1-Pad95)") 
+      (node 
+        (ref µC1) 
+        (pin 95))) 
+    (net 
+      (code 395) 
+      (name "Net-(µC1-Pad96)") 
+      (node 
+        (ref µC1) 
+        (pin 96))) 
+    (net 
+      (code 396) 
+      (name "Net-(µC1-Pad46)") 
+      (node 
+        (ref µC1) 
+        (pin 46))) 
+    (net 
+      (code 397) 
+      (name ETH_TX_EN) 
+      (node 
+        (ref µC1) 
+        (pin 47)) 
+      (node 
+        (ref U9) 
+        (pin 16))) 
+    (net 
+      (code 398) 
+      (name ETH_TXD0) 
+      (node 
+        (ref U9) 
+        (pin 17)) 
+      (node 
+        (ref µC1) 
+        (pin 51))) 
+    (net 
+      (code 399) 
+      (name "Net-(µC1-Pad65)") 
+      (node 
+        (ref µC1) 
+        (pin 65))) 
+    (net 
+      (code 400) 
+      (name "Net-(µC1-Pad53)") 
+      (node 
+        (ref µC1) 
+        (pin 53))) 
+    (net 
+      (code 401) 
+      (name "Net-(µC1-Pad54)") 
+      (node 
+        (ref µC1) 
+        (pin 54))) 
+    (net 
+      (code 402) 
+      (name "Net-(µC1-Pad81)") 
+      (node 
+        (ref µC1) 
+        (pin 81))) 
+    (net 
+      (code 403) 
+      (name "Net-(µC1-Pad82)") 
+      (node 
+        (ref µC1) 
+        (pin 82))) 
+    (net 
+      (code 404) 
+      (name "Net-(µC1-Pad83)") 
+      (node 
+        (ref µC1) 
+        (pin 83))) 
+    (net 
+      (code 405) 
+      (name "Net-(µC1-Pad85)") 
+      (node 
+        (ref µC1) 
+        (pin 85))) 
+    (net 
+      (code 406) 
+      (name "Net-(µC1-Pad86)") 
+      (node 
+        (ref µC1) 
+        (pin 86))) 
+    (net 
+      (code 407) 
+      (name "Net-(µC1-Pad87)") 
+      (node 
+        (ref µC1) 
+        (pin 87))) 
+    (net 
+      (code 408) 
+      (name "Net-(µC1-Pad88)") 
+      (node 
+        (ref µC1) 
+        (pin 88))) 
+    (net 
+      (code 409) 
+      (name "Net-(µC1-Pad55)") 
+      (node 
+        (ref µC1) 
+        (pin 55))) 
+    (net 
+      (code 410) 
+      (name "Net-(µC1-Pad64)") 
+      (node 
+        (ref µC1) 
+        (pin 64))) 
+    (net 
+      (code 411) 
+      (name "Net-(µC1-Pad77)") 
+      (node 
+        (ref µC1) 
+        (pin 77))) 
+    (net 
+      (code 412) 
+      (name "Net-(µC1-Pad34)") 
+      (node 
+        (ref µC1) 
+        (pin 34))) 
+    (net 
+      (code 413) 
+      (name I2C3_SDA) 
+      (node 
+        (ref U3) 
+        (pin 4)) 
+      (node 
+        (ref µC1) 
+        (pin 66)) 
+      (node 
+        (ref U1) 
+        (pin 4)) 
+      (node 
+        (ref U2) 
+        (pin 4)) 
+      (node 
+        (ref R4) 
+        (pin 1))) 
+    (net 
+      (code 414) 
+      (name "Net-(µC1-Pad78)") 
+      (node 
+        (ref µC1) 
+        (pin 78))) 
+    (net 
+      (code 415) 
+      (name "Net-(µC1-Pad79)") 
+      (node 
+        (ref µC1) 
+        (pin 79))) 
+    (net 
+      (code 416) 
+      (name "Net-(µC1-Pad80)") 
+      (node 
+        (ref µC1) 
+        (pin 80))) 
+    (net 
+      (code 417) 
+      (name "Net-(µC1-Pad7)") 
+      (node 
+        (ref µC1) 
+        (pin 7))) 
+    (net 
+      (code 418) 
+      (name "Net-(µC1-Pad8)") 
+      (node 
+        (ref µC1) 
+        (pin 8))) 
+    (net 
+      (code 419) 
+      (name "Net-(µC1-Pad9)") 
+      (node 
+        (ref µC1) 
+        (pin 9))) 
+    (net 
+      (code 420) 
+      (name "Net-(µC1-Pad22)") 
+      (node 
+        (ref µC1) 
+        (pin 22))) 
+    (net 
+      (code 421) 
+      (name ETH_REF_CLK) 
+      (node 
+        (ref U9) 
+        (pin 14)) 
+      (node 
+        (ref µC1) 
+        (pin 23))) 
+    (net 
+      (code 422) 
+      (name ETH_MDIO) 
+      (node 
+        (ref µC1) 
+        (pin 24)) 
+      (node 
+        (ref U9) 
+        (pin 12)) 
+      (node 
+        (ref R29) 
+        (pin 2))) 
+    (net 
+      (code 423) 
+      (name "Net-(µC1-Pad25)") 
+      (node 
+        (ref µC1) 
+        (pin 25))) 
+    (net 
+      (code 424) 
+      (name "Net-(µC1-Pad29)") 
+      (node 
+        (ref µC1) 
+        (pin 29))) 
+    (net 
+      (code 425) 
+      (name "Net-(µC1-Pad28)") 
+      (node 
+        (ref µC1) 
+        (pin 28))) 
+    (net 
+      (code 426) 
+      (name SWDCLK) 
+      (node 
+        (ref J41) 
+        (pin 4)) 
+      (node 
+        (ref µC1) 
+        (pin 76))) 
+    (net 
+      (code 427) 
+      (name SWDIO) 
+      (node 
+        (ref J41) 
+        (pin 2)) 
+      (node 
+        (ref µC1) 
+        (pin 72))) 
+    (net 
+      (code 428) 
+      (name "Net-(µC1-Pad71)") 
+      (node 
+        (ref µC1) 
+        (pin 71))) 
+    (net 
+      (code 429) 
+      (name "Net-(µC1-Pad70)") 
+      (node 
+        (ref µC1) 
+        (pin 70))) 
+    (net 
+      (code 430) 
+      (name "Net-(µC1-Pad69)") 
+      (node 
+        (ref µC1) 
+        (pin 69))) 
+    (net 
+      (code 431) 
+      (name "Net-(µC1-Pad68)") 
+      (node 
+        (ref µC1) 
+        (pin 68))) 
+    (net 
+      (code 432) 
+      (name I2C3_SCL) 
+      (node 
+        (ref R5) 
+        (pin 2)) 
+      (node 
+        (ref U1) 
+        (pin 5)) 
+      (node 
+        (ref U3) 
+        (pin 5)) 
+      (node 
+        (ref U2) 
+        (pin 5)) 
+      (node 
+        (ref µC1) 
+        (pin 67))) 
+    (net 
+      (code 433) 
+      (name ETH_CRS_DV) 
+      (node 
+        (ref R25) 
+        (pin 1)) 
+      (node 
+        (ref µC1) 
+        (pin 31))) 
+    (net 
+      (code 434) 
+      (name "Net-(µC1-Pad30)") 
+      (node 
+        (ref µC1) 
+        (pin 30))) 
+    (net 
+      (code 435) 
+      (name RD-) 
+      (node 
+        (ref U10) 
+        (pin 6)) 
+      (node 
+        (ref T0) 
+        (pin 3)) 
+      (node 
+        (ref U9) 
+        (pin 22)) 
+      (node 
+        (ref R_T6) 
+        (pin 2))) 
+    (net 
+      (code 436) 
+      (name "Net-(C19-Pad1)") 
+      (node 
+        (ref U10) 
+        (pin 5)) 
+      (node 
+        (ref C19) 
+        (pin 1))) 
+    (net 
+      (code 437) 
+      (name "Net-(C21-Pad2)") 
+      (node 
+        (ref C22) 
+        (pin 1)) 
+      (node 
+        (ref U9) 
+        (pin 6)) 
+      (node 
+        (ref C21) 
+        (pin 2))) 
+    (net 
+      (code 438) 
+      (name "Net-(R25-Pad2)") 
+      (node 
+        (ref U9) 
+        (pin 11)) 
+      (node 
+        (ref R28) 
+        (pin 1)) 
+      (node 
+        (ref R25) 
+        (pin 2))) 
+    (net 
+      (code 439) 
+      (name "Net-(R23-Pad2)") 
+      (node 
+        (ref U9) 
+        (pin 7)) 
+      (node 
+        (ref R23) 
+        (pin 2)) 
+      (node 
+        (ref R26) 
+        (pin 1))) 
+    (net 
+      (code 440) 
+      (name "Net-(R24-Pad2)") 
+      (node 
+        (ref U9) 
+        (pin 8)) 
+      (node 
+        (ref R24) 
+        (pin 2)) 
+      (node 
+        (ref R27) 
+        (pin 1))) 
+    (net 
+      (code 441) 
+      (name "Net-(R_T1-Pad1)") 
+      (node 
+        (ref R_T1) 
+        (pin 1)) 
+      (node 
+        (ref T0) 
+        (pin 10))) 
+    (net 
+      (code 442) 
+      (name "Net-(R_T2-Pad1)") 
+      (node 
+        (ref T0) 
+        (pin 15)) 
+      (node 
+        (ref R_T2) 
+        (pin 1))) 
+    (net 
+      (code 443) 
+      (name "Net-(C15-Pad2)") 
+      (node 
+        (ref R_T8) 
+        (pin 1)) 
+      (node 
+        (ref R_T7) 
+        (pin 1)) 
+      (node 
+        (ref R_T6) 
+        (pin 1)) 
+      (node 
+        (ref C18) 
+        (pin 2)) 
+      (node 
+        (ref R_T5) 
+        (pin 1)) 
+      (node 
+        (ref U9) 
+        (pin 19)) 
+      (node 
+        (ref C15) 
+        (pin 2)) 
+      (node 
+        (ref L1) 
+        (pin 2)) 
+      (node 
+        (ref U9) 
+        (pin 1)) 
+      (node 
+        (ref C23) 
+        (pin 1)) 
+      (node 
+        (ref T0) 
+        (pin 2)) 
+      (node 
+        (ref T0) 
+        (pin 7)) 
+      (node 
+        (ref C20) 
+        (pin 2)) 
+      (node 
+        (ref C16) 
+        (pin 1))) 
+    (net 
+      (code 444) 
+      (name "Net-(C14-Pad1)") 
+      (node 
+        (ref R_T2) 
+        (pin 2)) 
+      (node 
+        (ref R_T1) 
+        (pin 2)) 
+      (node 
+        (ref R_T4) 
+        (pin 2)) 
+      (node 
+        (ref C14) 
+        (pin 1)) 
+      (node 
+        (ref R_T3) 
+        (pin 2))) 
+    (net 
+      (code 445) 
+      (name "Net-(R22-Pad1)") 
+      (node 
+        (ref U9) 
+        (pin 24)) 
+      (node 
+        (ref R22) 
+        (pin 1))) 
+    (net 
+      (code 446) 
+      (name "Net-(R21-Pad2)") 
+      (node 
+        (ref R21) 
+        (pin 2)) 
+      (node 
+        (ref U9) 
+        (pin 10))) 
+    (net 
+      (code 447) 
+      (name RD+) 
+      (node 
+        (ref U9) 
+        (pin 23)) 
+      (node 
+        (ref R_T5) 
+        (pin 2)) 
+      (node 
+        (ref T0) 
+        (pin 1)) 
+      (node 
+        (ref U10) 
+        (pin 1))) 
+    (net 
+      (code 448) 
+      (name TD+) 
+      (node 
+        (ref R_T7) 
+        (pin 2)) 
+      (node 
+        (ref T0) 
+        (pin 6)) 
+      (node 
+        (ref U10) 
+        (pin 3)) 
+      (node 
+        (ref U9) 
+        (pin 21))) 
+    (net 
+      (code 449) 
+      (name TD-) 
+      (node 
+        (ref U10) 
+        (pin 4)) 
+      (node 
+        (ref U9) 
+        (pin 20)) 
+      (node 
+        (ref R_T8) 
+        (pin 2)) 
+      (node 
+        (ref T0) 
+        (pin 8))) 
+    (net 
+      (code 450) 
+      (name "Net-(U9-Pad2)") 
+      (node 
+        (ref U9) 
+        (pin 2))) 
+    (net 
+      (code 451) 
+      (name "Net-(U9-Pad3)") 
+      (node 
+        (ref U9) 
+        (pin 3))) 
+    (net 
+      (code 452) 
+      (name "Net-(U9-Pad4)") 
+      (node 
+        (ref U9) 
+        (pin 4))) 
+    (net 
+      (code 453) 
+      (name "Net-(U9-Pad5)") 
+      (node 
+        (ref U9) 
+        (pin 5)))))

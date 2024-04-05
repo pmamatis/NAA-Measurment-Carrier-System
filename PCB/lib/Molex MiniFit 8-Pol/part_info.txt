@@ -1,0 +1,9 @@
+Manufacturer=ERNI
+PartNumber=284121
+PartCategory=Connector
+PackageCategory=Other
+PinCount=12
+Version=3.1
+Released=2019-10-03 14:17:54
+Downloaded=2021-11-08 13:31:28
+3D=Y

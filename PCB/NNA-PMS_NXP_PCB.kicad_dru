@@ -1,0 +1,7 @@
+(version 1)
+(rule "powerlayer"
+(layer Layer3)
+(layer B.Cu)
+(constraint track_width (min 0.2mm))
+(constraint clearance (min "0.2mm"))
+)
