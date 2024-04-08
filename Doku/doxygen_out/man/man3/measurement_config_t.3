@@ -1,0 +1,50 @@
+.TH "measurement_config_t" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+measurement_config_t
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pms_measurement_defines\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBuseCase\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBHighSpeedmode\fP"
+.br
+.ti -1c
+.RI "char \fBDUT_Names\fP [2][10]"
+.br
+.ti -1c
+.RI "float \fBmfrequency\fP"
+.br
+.ti -1c
+.RI "TickType_t \fBmTicks_PCIe\fP [\fBPCIe_SLOTS_AMT\fP]"
+.br
+.ti -1c
+.RI "TickType_t \fBmTicks_Supp\fP"
+.br
+.in -1c
+.SH "Field Documentation"
+.PP 
+.SS "char measurement_config_t::DUT_Names[2][10]"
+
+.SS "uint8_t measurement_config_t::HighSpeedmode"
+
+.SS "float measurement_config_t::mfrequency"
+
+.SS "TickType_t measurement_config_t::mTicks_PCIe[\fBPCIe_SLOTS_AMT\fP]"
+
+.SS "TickType_t measurement_config_t::mTicks_Supp"
+
+.SS "uint8_t measurement_config_t::useCase"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

@@ -1,0 +1,113 @@
+.TH "Config/pms_config.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Config/pms_config.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBETHERNET\fP   1"
+.br
+.RI "if defined activate the Ethernet Interface "
+.ti -1c
+.RI "#define \fBMQTT\fP   1"
+.br
+.RI "if defined activate the MQTT connection 
+.br
+ "
+.ti -1c
+.RI "#define \fBMEASUREMENT\fP   1"
+.br
+.RI "if defined the whole measurement is activated "
+.ti -1c
+.RI "#define \fBRTOS_I2C\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHighSpeed_I2C\fP   1"
+.br
+.ti -1c
+.RI "#define \fBCONSOLE_DEBUG\fP   1"
+.br
+.RI "define if you you want to have console debug printf meassages "
+.ti -1c
+.RI "#define \fBCONSOLE_TO_UART\fP   1"
+.br
+.RI "sends debug meassages also to mqtt "
+.ti -1c
+.RI "#define \fBINA226_DEBUG\fP   1"
+.br
+.RI "sends debug meassages also to UART "
+.ti -1c
+.RI "#define \fBCOLLECT_META_DATA\fP   1"
+.br
+.RI "meta data of acquired and sended bytes for timing debugging "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Paul Mamatis 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Jun 19, 2023
+.RE
+.PP
+.SH "TODO"
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define COLLECT_META_DATA   1"
+
+.PP
+meta data of acquired and sended bytes for timing debugging streambuffer debug output 
+.SS "#define CONSOLE_DEBUG   1"
+
+.PP
+define if you you want to have console debug printf meassages Datachunking for better MQTT performance 
+.SS "#define CONSOLE_TO_UART   1"
+
+.PP
+sends debug meassages also to mqtt 
+.SS "#define ETHERNET   1"
+
+.PP
+if defined activate the Ethernet Interface 
+.SS "#define HighSpeed_I2C   1"
+
+.SS "#define INA226_DEBUG   1"
+
+.PP
+sends debug meassages also to UART define if you want to debug semaphores via console
+.PP
+define if you want to print some i2c return and write data values via console
+.PP
+define if you want to get a better insight in the INA226 initialisation and measurment processes 
+.SS "#define MEASUREMENT   1"
+
+.PP
+if defined the whole measurement is activated 
+.SS "#define MQTT   1"
+
+.PP
+if defined activate the MQTT connection 
+.br
+ 
+.SS "#define RTOS_I2C   1"
+I2C Config 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

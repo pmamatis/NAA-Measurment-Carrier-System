@@ -1,0 +1,135 @@
+.TH "Measurement/pms_Timer.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/pms_Timer.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <Measurement/pms_measurement\&.h>\fP
+.br
+\fC#include <Measurement/pms_Timer\&.h>\fP
+.br
+\fC#include 'pms_HardwareCheck\&.h'\fP
+.br
+\fC#include 'I2C/pms_i2cWrapper_RTOS\&.h'\fP
+.br
+\fC#include 'fsl_rit\&.h'\fP
+.br
+\fC#include 'fsl_clock\&.h'\fP
+.br
+\fC#include 'pin_mux\&.h'\fP
+.br
+\fC#include 'board\&.h'\fP
+.br
+\fC#include 'fsl_debug_console\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmeasurementFromISR\fP ()"
+.br
+.ti -1c
+.RI "void \fBpms_timer_init\fP ()"
+.br
+.ti -1c
+.RI "void \fBMEASUREMENT_RIT_HANDLER\fP (void)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "measurement_data_t \fBdata\fP [3]"
+.br
+.ti -1c
+.RI "\fBpms_ina226_pcie\fP \fBina226_hardwareDataPCIE\fP [\fBI2C_HANDLER_AMT_PCIe\fP]"
+.br
+.RI "
+.IP "\(bu" 2
+
+.PP
+"
+.ti -1c
+.RI "\fBmeasurement_config_t\fP * \fBm_config\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void MEASUREMENT_RIT_HANDLER (void)"
+
+.SS "void measurementFromISR ()"
+Measurement includes Timer includes Peripheral includes Measurment Interrrupt variables
+.PP
+first handler, which is always beeing used
+.PP
+second handler, which is always beeing used
+.PP
+shuntresistance for current conversions
+.PP
+store variable for the i2c read
+.PP
+variable to store the read register bytes, in order to be converted to readable values
+.PP
+activates the adjustments in the I2C callback for ISR, this is mainly endian problem prevention
+.PP
+go through all power supply lanes
+.PP
+new attempt, convert the bytes to float and so to readable values and then send them to mqtt
+.PP
+start new i2c read
+.PP
+Bus volatge register is read, so values can be transformed to float
+.PP
+wait until the second read is finished
+.PP
+get shunt resistor values for current calculation
+.PP
+current calculation, converting register value to shuntvoltage and then devide it through the shunt resistance, I = U/R
+.PP
+power calculations
+.PP
+wait until the first read is finished
+.PP
+wait until the first read is finished
+.PP
+deactivates the flag, in case another i2c command is made outside the ISR
+.PP
+Sends the measurement data of all measured sensors for one timestamp intzo the buffer
+.SS "void pms_timer_init ()"
+Sets up the Timer-Interrrupt for the INA226-Measurement Set to enable the Counter register auto clear to zero when the counter value equals the set period\&.
+.PP
+Enable at the NVIC
+.SH "Variable Documentation"
+.PP 
+.SS "measurement_data_t data[\fBI2C_HANDLER_AMT_ALL\fP]\fC [extern]\fP"
+Timer Interrupt
+.PP
+memory where the measurement data is placed after the I2C read
+.PP
+Timer Interrupt 
+.SS "\fBpms_ina226_pcie\fP ina226_hardwareDataPCIE[\fBI2C_HANDLER_AMT_PCIe\fP]\fC [extern]\fP"
+
+.PP
+
+.IP "\(bu" 2
+
+.PP
+std-libs FreeROTS includes I2C includes Controlling I2C objects containing all neccessary information for I2C communication and measuring purposes 
+.SS "\fBmeasurement_config_t\fP* m_config\fC [extern]\fP"
+struct which contains all configuration related to the measurement
+.PP
+.RS 4
+flag for unlocking minor adjustments in the i2c callback 
+.RE
+.PP
+User Configuration struct which contains all configuration related to the 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

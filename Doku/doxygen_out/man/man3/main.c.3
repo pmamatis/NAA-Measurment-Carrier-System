@@ -1,0 +1,130 @@
+.TH "main.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+main.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <Measurement/pms_measurement\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'pms_config\&.h'\fP
+.br
+\fC#include 'Config/pms_priorities\&.h'\fP
+.br
+\fC#include 'FreeRTOS\&.h'\fP
+.br
+\fC#include 'task\&.h'\fP
+.br
+\fC#include 'queue\&.h'\fP
+.br
+\fC#include 'timers\&.h'\fP
+.br
+\fC#include 'semphr\&.h'\fP
+.br
+\fC#include 'pin_mux\&.h'\fP
+.br
+\fC#include 'peripherals\&.h'\fP
+.br
+\fC#include 'board\&.h'\fP
+.br
+\fC#include 'fsl_debug_console\&.h'\fP
+.br
+\fC#include 'fsl_i2c\&.h'\fP
+.br
+\fC#include 'fsl_i2c_freertos\&.h'\fP
+.br
+\fC#include 'Measurement/INA226_driver/ina226\&.h'\fP
+.br
+\fC#include 'Measurement/pms_HardwareCheck\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2cWrapper\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2cWrapper_RTOS\&.h'\fP
+.br
+\fC#include 'Measurement/INA226_driver/ina226_measurement_frequency_adjusting\&.h'\fP
+.br
+\fC#include 'init_task\&.h'\fP
+.br
+\fC#include 'Measurement/pms_Timer\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2c_init\&.h'\fP
+.br
+\fC#include 'Measurement/pms_timestamp\&.h'\fP
+.br
+\fC#include 'Ethernet/pushData_task\&.h'\fP
+.br
+\fC#include 'Ethernet/pms_mqtt_wrapper\&.h'\fP
+.br
+\fC#include 'Loging/pms_log\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBTest_task\fP (void *pvParameters)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "SemaphoreHandle_t \fBxMutex\fP"
+.br
+.ti -1c
+.RI "SemaphoreHandle_t \fBsem_init\fP"
+.br
+.ti -1c
+.RI "\fBmeasurement_config_t\fP * \fBm_config\fP"
+.br
+.ti -1c
+.RI "\fBpms_ina226_pcie\fP \fBina226_hardwareDataPCIE\fP [2]"
+.br
+.ti -1c
+.RI "bool \fBmqtt_connected\fP"
+.br
+.RI "Test-Task for development purposes\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (void)"
+Init functions for the µC hardware
+.PP
+Init functions for ethernet
+.PP
+Test task, can be acivated in the pms_config\&. Excludes all other tasks
+.PP
+default configurations
+.PP
+Init Task, this will do initilisation and then start the chosen task Entry point for FreeRTOS
+.SS "void Test_task (void * pvParameters)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBpms_ina226_pcie\fP ina226_hardwareDataPCIE[2]\fC [extern]\fP"
+std-libs FreeROTS includes I2C includes Controlling I2C objects containing all neccessary information for I2C communication and measuring purposes 
+.SS "\fBmeasurement_config_t\fP* m_config\fC [extern]\fP"
+struct which contains all configuration related to the
+.PP
+.RS 4
+flag for unlocking minor adjustments in the i2c callback 
+.RE
+.PP
+User Configuration struct which contains all configuration related to the 
+.SS "bool mqtt_connected\fC [extern]\fP"
+
+.PP
+Test-Task for development purposes\&. mqtt connection status 
+.SS "SemaphoreHandle_t sem_init\fC [extern]\fP"
+Binary semaphore to block thread until valid IPv4 address is obtained from DHCP 
+.SS "SemaphoreHandle_t xMutex"
+Standard C Included Files Config file FreeRTOS kernel includes\&. SDK Included Files Power-Measurement-System include Files MQTT Includes init Mutex 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

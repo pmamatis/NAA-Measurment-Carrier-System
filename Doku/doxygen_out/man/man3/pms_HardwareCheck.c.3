@@ -1,0 +1,132 @@
+.TH "Measurement/pms_HardwareCheck.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/pms_HardwareCheck.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <Measurement/pms_measurement\&.h>\fP
+.br
+\fC#include 'Config/pms_config\&.h'\fP
+.br
+\fC#include 'Measurement/pms_HardwareCheck\&.h'\fP
+.br
+\fC#include 'INA226_driver/ina226_measurement_frequency_adjusting\&.h'\fP
+.br
+\fC#include 'peripherals\&.h'\fP
+.br
+\fC#include 'board\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2c_init\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2cWrapper_RTOS\&.h'\fP
+.br
+\fC#include 'pms_Timer\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpms_init\fP ()"
+.br
+.RI "init function for filling the ina226_hardwareDataPCIE and the ina226_hardwareDataSUPP with data the data is a mixture of hardware information and handler from the code generation of the IDE "
+.ti -1c
+.RI "uint16_t \fBpms_I2Caddress_check\fP ()"
+.br
+.RI "checks all used I2C adresses availible for INA226 "
+.ti -1c
+.RI "void \fBpms_HardwareInit\fP (\fBboard_setup\fP setup, double measurement_frequency)"
+.br
+.ti -1c
+.RI "void \fBpms_highestI2CFrequency\fP ()"
+.br
+.RI "function was used to find the highst I2C Frequency "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBpms_ina226_pcie\fP \fBina226_hardwareDataPCIE\fP [\fBI2C_HANDLER_AMT_PCIe\fP]"
+.br
+.RI "
+.IP "\(bu" 2
+
+.PP
+"
+.ti -1c
+.RI "\fBina226_frequency_t\fP \fBfrequencies\fP [64]"
+.br
+.RI "initilization and testing of all I2C connections and INA226 "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void pms_HardwareInit (\fBboard_setup\fP setup, double measurement_frequency)"
+Check configurations
+.PP
+< number of test measurements for the shunt voltage
+.PP
+< bus-reconition-voltage threshhold
+.PP
+< rest-time between test measuremnt
+.PP
+< number of INA226 to be tested for each PCIe slot
+.PP
+set also the measurement interrupt frequency
+.PP
+in case the PCIe2 I2C bus contains the Supp INA226 the following if-clause needs to be activated TODO compiler ifdef implementing 
+.br
+.PP
+<
+.SS "void pms_highestI2CFrequency ()"
+
+.PP
+function was used to find the highst I2C Frequency 
+.SS "uint16_t pms_I2Caddress_check ()"
+
+.PP
+checks all used I2C adresses availible for INA226 
+.PP
+\fBReturns\fP
+.RS 4
+total number of slave adresses found for all checked I2C busses together 
+.RE
+.PP
+address check for each pcie lane
+.PP
+< go through all possible I2C addresses of INA226
+.SS "void pms_init ()"
+
+.PP
+init function for filling the ina226_hardwareDataPCIE and the ina226_hardwareDataSUPP with data the data is a mixture of hardware information and handler from the code generation of the IDE loop for hardware data which is same for every pcie lane
+.PP
+INA226 Addresses related to the Support 12V Voltage
+.PP
+generated code and writen code linking
+.PP
+I2C handler assigning deppending on I2C mode
+.SH "Variable Documentation"
+.PP 
+.SS "\fBina226_frequency_t\fP frequencies[64]\fC [extern]\fP"
+
+.PP
+initilization and testing of all I2C connections and INA226 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsetup\fP of the PCIe-PMS-Board 
+.RE
+.PP
+
+.SS "\fBpms_ina226_pcie\fP ina226_hardwareDataPCIE[\fBI2C_HANDLER_AMT_PCIe\fP]\fC [extern]\fP"
+
+.PP
+
+.IP "\(bu" 2
+
+.PP
+std-libs FreeROTS includes I2C includes Controlling I2C objects containing all neccessary information for I2C communication and measuring purposes 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

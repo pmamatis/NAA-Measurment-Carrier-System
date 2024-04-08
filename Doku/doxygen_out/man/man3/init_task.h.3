@@ -1,0 +1,68 @@
+.TH "init_task.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+init_task.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBINIT_THREAD_STACKSIZE\fP   (\fBconfigMINIMAL_STACK_SIZE\fP + 5*1024)"
+.br
+.RI "Stack size of the initialization thread\&. "
+.ti -1c
+.RI "#define \fBINIT_TASK_PRIO\fP   \fBconfigMAX_PRIORITIES\fP"
+.br
+.RI "Priority of the temporary lwIP initialization thread\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit_task\fP (void *pvParameters)"
+.br
+.RI "task to perform the initialization of all FreeRTOS parts "
+.ti -1c
+.RI "void \fBsetInterrruptPriorities\fP ()"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define INIT_TASK_PRIO   \fBconfigMAX_PRIORITIES\fP"
+
+.PP
+Priority of the temporary lwIP initialization thread\&. 
+.SS "#define INIT_THREAD_STACKSIZE   (\fBconfigMINIMAL_STACK_SIZE\fP + 5*1024)"
+
+.PP
+Stack size of the initialization thread\&. 
+.SH "Function Documentation"
+.PP 
+.SS "void init_task (void * pvParameters)"
+
+.PP
+task to perform the initialization of all FreeRTOS parts MQTT must be activated in the pms_config header to run the initialization
+.PP
+wait for semaphore which is given in the mqtt connection callback
+.PP
+initilize mqtt logging
+.PP
+starting logging Task
+.PP
+MQTT is deactivated but Ethernet is needed
+.PP
+initilize software controller
+.PP
+Measurement Init
+.PP
+LED2 indicates that init is ready
+.SS "void setInterrruptPriorities ()"
+Timer INterrrupt
+.PP
+I2C Interrupt Settings
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

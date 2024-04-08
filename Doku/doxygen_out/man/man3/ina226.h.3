@@ -1,0 +1,120 @@
+.TH "Measurement/INA226_driver/ina226.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/INA226_driver/ina226.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'fsl_i2c_freertos\&.h'\fP
+.br
+\fC#include 'Measurement/pms_measurement_defines\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint16_t \fBina226_calibrate\fP (double I_MAX, double R_SHUNT)"
+.br
+.ti -1c
+.RI "\fBINA226_ReturnVal\fP \fBina226_init\fP (i2c_rtos_handle_t *handle, i2c_master_transfer_t *transfer, uint16_t devAddress, double imax, double rshunt, char *name, \fBina226_config_data_t\fP conf)"
+.br
+.RI "Init and calibration of a INA226\&. "
+.ti -1c
+.RI "uint16_t \fBina226_GetBusVoltage\fP (i2c_rtos_handle_t *handle, i2c_master_transfer_t *transfer, uint16_t busAddress)"
+.br
+.ti -1c
+.RI "uint16_t \fBina226_GetShuntVoltage\fP (i2c_rtos_handle_t *handle, i2c_master_transfer_t *transfer, uint16_t busAddress)"
+.br
+.ti -1c
+.RI "float \fBina226_shuntToVoltage\fP (uint16_t shuntResult)"
+.br
+.RI "Result to Number\&. "
+.ti -1c
+.RI "float \fBina226_busToVoltage\fP (uint16_t shuntResult)"
+.br
+.ti -1c
+.RI "float \fBina226_currentToAmpere\fP (uint16_t currentResult)"
+.br
+.ti -1c
+.RI "float \fBina226_powerToWatt\fP (uint16_t powerResult)"
+.br
+.ti -1c
+.RI "void \fBina226_GetCurrent\fP (struct \fBina226_results_t\fP *result)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Paul Mamatis 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Jun 14, 2023
+.RE
+.PP
+.SH "TODO"
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "float ina226_busToVoltage (uint16_t shuntResult)"
+
+.SS "uint16_t ina226_calibrate (double I_MAX, double R_SHUNT)"
+CONFIGURATION REGISTER MASKS END 
+.SS "float ina226_currentToAmpere (uint16_t currentResult)"
+
+.SS "uint16_t ina226_GetBusVoltage (i2c_rtos_handle_t * handle, i2c_master_transfer_t * transfer, uint16_t busAddress)"
+
+.SS "void ina226_GetCurrent (struct \fBina226_results_t\fP * result)"
+
+.SS "uint16_t ina226_GetShuntVoltage (i2c_rtos_handle_t * handle, i2c_master_transfer_t * transfer, uint16_t busAddress)"
+
+.SS "\fBINA226_ReturnVal\fP ina226_init (i2c_rtos_handle_t * handle, i2c_master_transfer_t * transfer, uint16_t devAddress, double imax, double rshunt, char * name, \fBina226_config_data_t\fP conf)"
+
+.PP
+Init and calibration of a INA226\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlane,PCIe1,PCIe2\fP or SUPP 
+.br
+\fIdevAddress\fP 
+.br
+\fIimax\fP 
+.br
+\fIrshunt\fP 
+.br
+\fIname\fP 
+.br
+\fIconf\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "float ina226_powerToWatt (uint16_t powerResult)"
+
+.SS "float ina226_shuntToVoltage (uint16_t shuntResult)"
+
+.PP
+Result to Number\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

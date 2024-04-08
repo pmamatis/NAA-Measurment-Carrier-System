@@ -1,0 +1,66 @@
+.TH "Measurement/I2C/pms_i2c_callbacks.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/I2C/pms_i2c_callbacks.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'pms_i2c_callbacks\&.h'\fP
+.br
+\fC#include 'Measurement/pms_measurement_defines\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'Config/pms_config\&.h'\fP
+.br
+\fC#include 'semphr\&.h'\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgetI2CtrueFrequency\fP ()"
+.br
+.ti -1c
+.RI "uint16_t \fBreceivedByteToUint16Value\fP (uint8_t *g_rxBuff)"
+.br
+.RI "received data is big endian, so if the value is interpreted as uint16_t value the MSB needs to shifted "
+.ti -1c
+.RI "void \fBI2C_PCIE_clb\fP (I2C_Type *base, i2c_master_handle_t *handle, status_t completionStatus, void *userData)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "bool \fBi2c_from_isr\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void getI2CtrueFrequency ()"
+
+.SS "void I2C_PCIE_clb (I2C_Type * base, i2c_master_handle_t * handle, status_t completionStatus, void * userData)"
+
+.SS "static uint16_t receivedByteToUint16Value (uint8_t * g_rxBuff)"
+
+.PP
+received data is big endian, so if the value is interpreted as uint16_t value the MSB needs to shifted 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg_rxBuff\fP pointer to received data 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "bool i2c_from_isr\fC [extern]\fP"
+Measurment 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

@@ -1,0 +1,100 @@
+.TH "Measurement/pms_timestamp.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/pms_timestamp.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stdint\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtimestamp_t\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBtimestamp_t\fP \fBtimestamp_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtimestamp_init\fP (void)"
+.br
+.RI "starts the RTC clock, the count value of the RTC register increases every second "
+.ti -1c
+.RI "\fBtimestamp_t\fP \fBgetTimestamp\fP ()"
+.br
+.RI "gives a measurement a timestamp "
+.ti -1c
+.RI "double \fBgetTimestamp_DOUBLE\fP ()"
+.br
+.ti -1c
+.RI "int64_t \fBgetTimestamp_INT\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_initial_TIME\fP (uint32_t time)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBtimestamp_t\fP \fBtimestamp_t\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBtimestamp_t\fP getTimestamp ()"
+
+.PP
+gives a measurement a timestamp 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "double getTimestamp_DOUBLE ()"
+get seconds from RTC
+.PP
+if next second begins, set a new the mico second reference
+.PP
+Set counter value reference for measuring time in microseconds, resets every second
+.PP
+get microseconds from cycle clock
+.PP
+counter value to microseconds
+.SS "int64_t getTimestamp_INT ()"
+get seconds from RTC
+.PP
+if next second begins, set a new the mico second reference
+.PP
+Set counter value reference for measuring time in microseconds, resets every second
+.PP
+get microseconds from cycle clock
+.PP
+have to be uint, to igonre carry if the time_ref_for_milli is bigger tahn the actual value
+.PP
+rounding
+.PP
+zero based counting
+.PP
+prevent microseconds to exeed a whole second, can happen because of unsychronity of cycle counter and RTC
+.SS "void set_initial_TIME (uint32_t time)"
+
+.SS "void timestamp_init (void)"
+
+.PP
+starts the RTC clock, the count value of the RTC register increases every second INit cycle counter
+.PP
+< norm the clock value to the desired time resolution, in this case 100µs and bring in the true measured frequency of the Main Clock
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

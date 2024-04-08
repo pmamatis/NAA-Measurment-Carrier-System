@@ -1,0 +1,209 @@
+.TH "Measurement/INA226_driver/ina226.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/INA226_driver/ina226.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Config/pms_config\&.h'\fP
+.br
+\fC#include 'ina226\&.h'\fP
+.br
+\fC#include 'fsl_i2c_freertos\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2cWrapper\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2cWrapper_RTOS\&.h'\fP
+.br
+\fC#include 'math\&.h'\fP
+.br
+\fC#include 'board\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBINA226_ReturnVal\fP \fBina226_init\fP (i2c_rtos_handle_t *handle, i2c_master_transfer_t *transfer, uint16_t devAddress, double imax, double rshunt, char *name, \fBina226_config_data_t\fP conf)"
+.br
+.RI "Init and calibration of a INA226\&. "
+.ti -1c
+.RI "uint16_t \fBina226_calibrate\fP (double I_MAX, double R_SHUNT)"
+.br
+.ti -1c
+.RI "\fBwhile\fP ((!(\fBi2c_pending\fP)) &&(\fBtimeout\fP !=\fBtimeout_max\fP))"
+.br
+.ti -1c
+.RI "\fBif\fP (\fBtimeout\fP==\fBtimeout_max\fP)"
+.br
+.ti -1c
+.RI "\fBif\fP (\fBretVal\fP==kStatus_Success)"
+.br
+.ti -1c
+.RI "uint16_t \fBina226_setConvTime\fP (uint16_t measurement_frequecy)"
+.br
+.ti -1c
+.RI "uint16_t \fBina226_setAvg\fP (uint16_t measurement_frequecy)"
+.br
+.ti -1c
+.RI "uint16_t \fBina226_GetBusVoltage\fP (i2c_rtos_handle_t *handle, i2c_master_transfer_t *transfer, uint16_t busAddress)"
+.br
+.ti -1c
+.RI "uint16_t \fBina226_GetShuntVoltage\fP (i2c_rtos_handle_t *handle, i2c_master_transfer_t *transfer, uint16_t busAddress)"
+.br
+.ti -1c
+.RI "float \fBina226_shuntToVoltage\fP (uint16_t shuntResult)"
+.br
+.RI "Result to Number\&. "
+.ti -1c
+.RI "float \fBina226_busToVoltage\fP (uint16_t busResult)"
+.br
+.ti -1c
+.RI "float \fBina226_currentToAmpere\fP (uint16_t currentResult)"
+.br
+.ti -1c
+.RI "float \fBina226_powerToWatt\fP (uint16_t powerResult)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "status_t \fBi2c_status\fP"
+.br
+.RI "status variables "
+.ti -1c
+.RI "uint16_t \fBdetectErrorState\fP"
+.br
+.ti -1c
+.RI "status_t \fBretVal\fP = I2C_MasterStart(hi2c, devAddress,kI2C_Read )"
+.br
+.ti -1c
+.RI "uint32_t \fBmaster_state\fP =hi2c\->STAT"
+.br
+.ti -1c
+.RI "uint32_t \fBtimeout\fP =0"
+.br
+.ti -1c
+.RI "uint32_t \fBtimeout_max\fP = 1e5"
+.br
+.ti -1c
+.RI "bool \fBi2c_pending\fP = \fBmaster_state\fP&I2C_STAT_MSTPENDING_MASK"
+.br
+.ti -1c
+.RI "return \fBINA226_ERROR\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Paul Mamatis 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Jun 14, 2023
+.RE
+.PP
+.SH "TODO"
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "else if (\fBretVal\fP = \fC= kStatus_Success\fP)"
+
+.SS "if (\fBtimeout\fP = \fC= \fBtimeout_max\fP\fP)"
+
+.SS "float ina226_busToVoltage (uint16_t busResult)"
+
+.SS "uint16_t ina226_calibrate (double I_MAX, double R_SHUNT)"
+CONFIGURATION REGISTER MASKS END 
+.SS "float ina226_currentToAmpere (uint16_t currentResult)"
+
+.SS "uint16_t ina226_GetBusVoltage (i2c_rtos_handle_t * handle, i2c_master_transfer_t * transfer, uint16_t busAddress)"
+
+.SS "uint16_t ina226_GetShuntVoltage (i2c_rtos_handle_t * handle, i2c_master_transfer_t * transfer, uint16_t busAddress)"
+
+.SS "\fBINA226_ReturnVal\fP ina226_init (i2c_rtos_handle_t * handle, i2c_master_transfer_t * transfer, uint16_t devAddress, double imax, double rshunt, char * name, \fBina226_config_data_t\fP conf)"
+
+.PP
+Init and calibration of a INA226\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlane,PCIe1,PCIe2\fP or SUPP 
+.br
+\fIdevAddress\fP 
+.br
+\fIimax\fP 
+.br
+\fIrshunt\fP 
+.br
+\fIname\fP 
+.br
+\fIconf\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "float ina226_powerToWatt (uint16_t powerResult)"
+
+.SS "uint16_t ina226_setAvg (uint16_t measurement_frequecy)"
+
+.SS "uint16_t ina226_setConvTime (uint16_t measurement_frequecy)"
+< 1/8244us
+.PP
+< 1/2116us
+.PP
+< 1/1100us
+.PP
+< 1/588us
+.PP
+< 1/332us
+.PP
+< 1/204us
+.PP
+< 1/140us
+.SS "float ina226_shuntToVoltage (uint16_t shuntResult)"
+
+.PP
+Result to Number\&. 
+.SS "while ((!(\fBi2c_pending\fP)) &&(\fBtimeout\fP !=\fBtimeout_max\fP))"
+
+.SH "Variable Documentation"
+.PP 
+.SS "uint16_t detectErrorState"
+
+.SS "bool i2c_pending = \fBmaster_state\fP&I2C_STAT_MSTPENDING_MASK"
+
+.SS "status_t i2c_status\fC [extern]\fP"
+
+.PP
+status variables 
+.SS "return INA226_ERROR"
+
+.SS "uint32_t master_state =hi2c\->STAT"
+
+.SS "status_t retVal = I2C_MasterStart(hi2c, devAddress,kI2C_Read )"
+
+.SS "uint32_t timeout =0"
+
+.SS "uint32_t timeout_max = 1e5"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

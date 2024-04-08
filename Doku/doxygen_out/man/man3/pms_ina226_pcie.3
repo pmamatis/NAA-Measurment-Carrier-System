@@ -1,0 +1,51 @@
+.TH "pms_ina226_pcie" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+pms_ina226_pcie \- Struct für eine PCIe-Lane mit allen notwendigen Information um die Mess-Sensorik (INA226) ueber I2C anzusprechen\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pms_measurement_defines\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "i2c_master_transfer_t * \fBtransfer_struct\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBDevAddress\fP [\fBINA226_PCIe_AMT\fP+\fBINA226_SUPP_AMT\fP]"
+.br
+.ti -1c
+.RI "double \fBShunt_Res\fP [\fBINA226_PCIe_AMT\fP]"
+.br
+.ti -1c
+.RI "double \fBImax\fP [\fBINA226_PCIe_AMT\fP]"
+.br
+.ti -1c
+.RI "\fBina226_config_data_t\fP \fBconfig\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Struct für eine PCIe-Lane mit allen notwendigen Information um die Mess-Sensorik (INA226) ueber I2C anzusprechen\&. 
+.SH "Field Documentation"
+.PP 
+.SS "\fBina226_config_data_t\fP pms_ina226_pcie::config"
+config data for each group of INA226 
+.SS "uint16_t pms_ina226_pcie::DevAddress[\fBINA226_PCIe_AMT\fP+\fBINA226_SUPP_AMT\fP]"
+[0] = J4, [1] = J5 ; Referenz zu Jumpern auf dem PCB 
+.SS "double pms_ina226_pcie::Imax[\fBINA226_PCIe_AMT\fP]"
+Maximaler Strom der PCIe Slots , [0] = 12V, [1] =3V3 , [2] = 3V3_AUX 
+.br
+ 
+.SS "double pms_ina226_pcie::Shunt_Res[\fBINA226_PCIe_AMT\fP]"
+Shunt-Resistance for PCIe-Supp Stecker 
+.SS "i2c_master_transfer_t* pms_ina226_pcie::transfer_struct"
+structs for each lane which contains the transfer information, like slave address, register address and so on 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

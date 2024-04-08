@@ -1,0 +1,352 @@
+.TH "Config/FreeRTOSConfig.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Config/FreeRTOSConfig.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBconfigUSE_PREEMPTION\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_TICKLESS_IDLE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigCPU_CLOCK_HZ\fP   (SystemCoreClock)"
+.br
+.ti -1c
+.RI "#define \fBconfigTICK_RATE_HZ\fP   ((TickType_t)1000)"
+.br
+.ti -1c
+.RI "#define \fBconfigMAX_PRIORITIES\fP   10"
+.br
+.ti -1c
+.RI "#define \fBconfigMINIMAL_STACK_SIZE\fP   ((unsigned short)90)"
+.br
+.ti -1c
+.RI "#define \fBconfigMAX_TASK_NAME_LEN\fP   20"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_16_BIT_TICKS\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigIDLE_SHOULD_YIELD\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_TASK_NOTIFICATIONS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_MUTEXES\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_RECURSIVE_MUTEXES\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_COUNTING_SEMAPHORES\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_ALTERNATIVE_API\fP   0 /* Deprecated! */"
+.br
+.ti -1c
+.RI "#define \fBconfigQUEUE_REGISTRY_SIZE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_QUEUE_SETS\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_TIME_SLICING\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_NEWLIB_REENTRANT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigENABLE_BACKWARD_COMPATIBILITY\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigNUM_THREAD_LOCAL_STORAGE_POINTERS\fP   5"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_APPLICATION_TASK_TAG\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigSUPPORT_STATIC_ALLOCATION\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigSUPPORT_DYNAMIC_ALLOCATION\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigTOTAL_HEAP_SIZE\fP   ((size_t)(0x10000))"
+.br
+.ti -1c
+.RI "#define \fBconfigAPPLICATION_ALLOCATED_HEAP\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_IDLE_HOOK\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_TICK_HOOK\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigCHECK_FOR_STACK_OVERFLOW\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_MALLOC_FAILED_HOOK\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_DAEMON_TASK_STARTUP_HOOK\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigGENERATE_RUN_TIME_STATS\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_TRACE_FACILITY\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_STATS_FORMATTING_FUNCTIONS\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_CO_ROUTINES\fP   0"
+.br
+.ti -1c
+.RI "#define \fBconfigMAX_CO_ROUTINE_PRIORITIES\fP   2"
+.br
+.ti -1c
+.RI "#define \fBconfigUSE_TIMERS\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigTIMER_TASK_PRIORITY\fP   (\fBconfigMAX_PRIORITIES\fP \- 1)"
+.br
+.ti -1c
+.RI "#define \fBconfigTIMER_QUEUE_LENGTH\fP   10"
+.br
+.ti -1c
+.RI "#define \fBconfigTIMER_TASK_STACK_DEPTH\fP   (\fBconfigMINIMAL_STACK_SIZE\fP * 2)"
+.br
+.ti -1c
+.RI "#define \fBconfigASSERT\fP(x)   \fBif\fP((x) == 0) {taskDISABLE_INTERRUPTS(); for (;;);}"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_vTaskPrioritySet\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_uxTaskPriorityGet\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_vTaskDelete\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_vTaskSuspend\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_vTaskDelayUntil\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_vTaskDelay\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_xTaskGetSchedulerState\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_xTaskGetCurrentTaskHandle\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_uxTaskGetStackHighWaterMark\fP   0"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_xTaskGetIdleTaskHandle\fP   0"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_eTaskGetState\fP   0"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_xTimerPendFunctionCall\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_xTaskAbortDelay\fP   0"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_xTaskGetHandle\fP   0"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_xTaskResumeFromISR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBconfigPRIO_BITS\fP   3 /* 15 priority levels */"
+.br
+.ti -1c
+.RI "#define \fBconfigLIBRARY_LOWEST_INTERRUPT_PRIORITY\fP   ((1U << (\fBconfigPRIO_BITS\fP)) \- 1)"
+.br
+.ti -1c
+.RI "#define \fBconfigLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY\fP   2"
+.br
+.ti -1c
+.RI "#define \fBconfigKERNEL_INTERRUPT_PRIORITY\fP   (\fBconfigLIBRARY_LOWEST_INTERRUPT_PRIORITY\fP << (8 \- \fBconfigPRIO_BITS\fP))"
+.br
+.ti -1c
+.RI "#define \fBconfigMAX_SYSCALL_INTERRUPT_PRIORITY\fP   (\fBconfigLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY\fP << (8 \- \fBconfigPRIO_BITS\fP))"
+.br
+.ti -1c
+.RI "#define \fBvPortSVCHandler\fP   SVC_Handler"
+.br
+.ti -1c
+.RI "#define \fBxPortPendSVHandler\fP   PendSV_Handler"
+.br
+.ti -1c
+.RI "#define \fBxPortSysTickHandler\fP   SysTick_Handler"
+.br
+.ti -1c
+.RI "#define \fBconfigPRINTF\fP(x)   vLoggingPrintf x"
+.br
+.ti -1c
+.RI "#define \fBconfigPRINT_STRING\fP"
+.br
+.ti -1c
+.RI "#define \fBconfigLOGGING_MAX_MESSAGE_LENGTH\fP   256"
+.br
+.ti -1c
+.RI "#define \fBconfigLOGGING_INCLUDE_TIME_AND_TASK_NAME\fP   1"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define configAPPLICATION_ALLOCATED_HEAP   0"
+
+.SS "#define configASSERT(x)   \fBif\fP((x) == 0) {taskDISABLE_INTERRUPTS(); for (;;);}"
+
+.SS "#define configCHECK_FOR_STACK_OVERFLOW   0"
+
+.SS "#define configCPU_CLOCK_HZ   (SystemCoreClock)"
+
+.SS "#define configENABLE_BACKWARD_COMPATIBILITY   1"
+
+.SS "#define configGENERATE_RUN_TIME_STATS   0"
+
+.SS "#define configIDLE_SHOULD_YIELD   1"
+
+.SS "#define configKERNEL_INTERRUPT_PRIORITY   (\fBconfigLIBRARY_LOWEST_INTERRUPT_PRIORITY\fP << (8 \- \fBconfigPRIO_BITS\fP))"
+
+.SS "#define configLIBRARY_LOWEST_INTERRUPT_PRIORITY   ((1U << (\fBconfigPRIO_BITS\fP)) \- 1)"
+
+.SS "#define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY   2"
+
+.SS "#define configLOGGING_INCLUDE_TIME_AND_TASK_NAME   1"
+
+.SS "#define configLOGGING_MAX_MESSAGE_LENGTH   256"
+
+.SS "#define configMAX_CO_ROUTINE_PRIORITIES   2"
+
+.SS "#define configMAX_PRIORITIES   10"
+
+.SS "#define configMAX_SYSCALL_INTERRUPT_PRIORITY   (\fBconfigLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY\fP << (8 \- \fBconfigPRIO_BITS\fP))"
+
+.SS "#define configMAX_TASK_NAME_LEN   20"
+
+.SS "#define configMINIMAL_STACK_SIZE   ((unsigned short)90)"
+
+.SS "#define configNUM_THREAD_LOCAL_STORAGE_POINTERS   5"
+
+.SS "#define configPRINT_STRING"
+
+.SS "#define configPRINTF(x)   vLoggingPrintf x"
+
+.SS "#define configPRIO_BITS   3 /* 15 priority levels */"
+
+.SS "#define configQUEUE_REGISTRY_SIZE   8"
+
+.SS "#define configSUPPORT_DYNAMIC_ALLOCATION   1"
+
+.SS "#define configSUPPORT_STATIC_ALLOCATION   0"
+
+.SS "#define configTICK_RATE_HZ   ((TickType_t)1000)"
+
+.SS "#define configTIMER_QUEUE_LENGTH   10"
+
+.SS "#define configTIMER_TASK_PRIORITY   (\fBconfigMAX_PRIORITIES\fP \- 1)"
+
+.SS "#define configTIMER_TASK_STACK_DEPTH   (\fBconfigMINIMAL_STACK_SIZE\fP * 2)"
+
+.SS "#define configTOTAL_HEAP_SIZE   ((size_t)(0x10000))"
+
+.SS "#define configUSE_16_BIT_TICKS   0"
+
+.SS "#define configUSE_ALTERNATIVE_API   0 /* Deprecated! */"
+
+.SS "#define configUSE_APPLICATION_TASK_TAG   0"
+
+.SS "#define configUSE_CO_ROUTINES   0"
+
+.SS "#define configUSE_COUNTING_SEMAPHORES   1"
+
+.SS "#define configUSE_DAEMON_TASK_STARTUP_HOOK   0"
+
+.SS "#define configUSE_IDLE_HOOK   0"
+
+.SS "#define configUSE_MALLOC_FAILED_HOOK   0"
+
+.SS "#define configUSE_MUTEXES   1"
+
+.SS "#define configUSE_NEWLIB_REENTRANT   0"
+
+.SS "#define configUSE_PREEMPTION   1"
+
+.SS "#define configUSE_QUEUE_SETS   0"
+
+.SS "#define configUSE_RECURSIVE_MUTEXES   1"
+
+.SS "#define configUSE_STATS_FORMATTING_FUNCTIONS   0"
+
+.SS "#define configUSE_TASK_NOTIFICATIONS   1"
+
+.SS "#define configUSE_TICK_HOOK   0"
+
+.SS "#define configUSE_TICKLESS_IDLE   0"
+
+.SS "#define configUSE_TIME_SLICING   0"
+
+.SS "#define configUSE_TIMERS   1"
+
+.SS "#define configUSE_TRACE_FACILITY   1"
+
+.SS "#define INCLUDE_eTaskGetState   0"
+
+.SS "#define INCLUDE_uxTaskGetStackHighWaterMark   0"
+
+.SS "#define INCLUDE_uxTaskPriorityGet   1"
+
+.SS "#define INCLUDE_vTaskDelay   1"
+
+.SS "#define INCLUDE_vTaskDelayUntil   1"
+
+.SS "#define INCLUDE_vTaskDelete   1"
+
+.SS "#define INCLUDE_vTaskPrioritySet   1"
+
+.SS "#define INCLUDE_vTaskSuspend   1"
+
+.SS "#define INCLUDE_xTaskAbortDelay   0"
+
+.SS "#define INCLUDE_xTaskGetCurrentTaskHandle   1"
+
+.SS "#define INCLUDE_xTaskGetHandle   0"
+
+.SS "#define INCLUDE_xTaskGetIdleTaskHandle   0"
+
+.SS "#define INCLUDE_xTaskGetSchedulerState   1"
+
+.SS "#define INCLUDE_xTaskResumeFromISR   1"
+
+.SS "#define INCLUDE_xTimerPendFunctionCall   1"
+
+.SS "#define vPortSVCHandler   SVC_Handler"
+
+.SS "#define xPortPendSVHandler   PendSV_Handler"
+
+.SS "#define xPortSysTickHandler   SysTick_Handler"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

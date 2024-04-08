@@ -1,0 +1,64 @@
+.TH "Measurement/I2C/pms_i2c_init.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/I2C/pms_i2c_init.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Measurement/pms_measurement_defines\&.h'\fP
+.br
+\fC#include 'pms_i2c_init\&.h'\fP
+.br
+\fC#include 'Config/pms_config\&.h'\fP
+.br
+\fC#include 'pms_i2c_callbacks\&.h'\fP
+.br
+\fC#include 'peripherals\&.h'\fP
+.br
+\fC#include 'pin_mux\&.h'\fP
+.br
+\fC#include 'Measurement/pms_HardwareCheck\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBI2C_INIT\fP ()"
+.br
+.RI "initialisation function to bundle all i2c related initilasation stuff\&. Have to be called in the main function before starting tasks "
+.ti -1c
+.RI "void \fBi2c_set_BaudRateALL\fP (\fBi2c_bus_type\fP bus_type, uint32_t baudRate_Bps)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBpms_ina226_pcie\fP \fBina226_hardwareDataPCIE\fP [\fBI2C_HANDLER_AMT_PCIe\fP]"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void I2C_INIT (void)"
+
+.PP
+initialisation function to bundle all i2c related initilasation stuff\&. Have to be called in the main function before starting tasks Pin Init
+.PP
+Periphal Init
+.PP
+setup for most hardware information
+.PP
+redirecting I2C callbacks, to avoid the auto code generation section in the periphals\&.c
+.PP
+< prepares the masterX struct and enables the the IRQ's for each i2c bus
+.SS "void i2c_set_BaudRateALL (\fBi2c_bus_type\fP bus_type, uint32_t baudRate_Bps)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBpms_ina226_pcie\fP ina226_hardwareDataPCIE[\fBI2C_HANDLER_AMT_PCIe\fP]\fC [extern]\fP"
+std-libs FreeROTS includes I2C includes Controlling I2C objects containing all neccessary information for I2C communication and measuring purposes 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

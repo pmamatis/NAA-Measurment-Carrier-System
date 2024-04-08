@@ -1,0 +1,65 @@
+.TH "Controller/control_task.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Controller/control_task.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcontrol_parameters_t\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBswitch_status_t\fP { \fBOFF\fP, \fBON\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcontrol_task\fP (void *pvParameters)"
+.br
+.ti -1c
+.RI "void \fBcontrol_measurement_switch\fP (\fBswitch_status_t\fP status)"
+.br
+.ti -1c
+.RI "void \fBcontrol_init\fP (\fBcontrol_parameters_t\fP *\fBcontrol\fP)"
+.br
+.ti -1c
+.RI "void \fBprint_metadata\fP ()"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBswitch_status_t\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOFF \fP\fP
+.TP
+\fB\fION \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "void control_init (\fBcontrol_parameters_t\fP * control)"
+
+.SS "void control_measurement_switch (\fBswitch_status_t\fP status)"
+
+.SS "void control_task (void * pvParameters)"
+
+.SS "void print_metadata ()"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

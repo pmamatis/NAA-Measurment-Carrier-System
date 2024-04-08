@@ -1,0 +1,39 @@
+.TH "ina226_results_t" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ina226_results_t \- struct to store the measurement result, each object has as much entrys per result kind as much measurement ICs are on one voltage bus  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pms_measurement_defines\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "float \fBbusVoltage\fP [\fBINA226_PCIe_AMT\fP]"
+.br
+.ti -1c
+.RI "float \fBcurrent\fP [\fBINA226_PCIe_AMT\fP]"
+.br
+.ti -1c
+.RI "float \fBpower\fP [\fBINA226_PCIe_AMT\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+struct to store the measurement result, each object has as much entrys per result kind as much measurement ICs are on one voltage bus 
+.SH "Field Documentation"
+.PP 
+.SS "float ina226_results_t::busVoltage[\fBINA226_PCIe_AMT\fP]"
+
+.SS "float ina226_results_t::current[\fBINA226_PCIe_AMT\fP]"
+
+.SS "float ina226_results_t::power[\fBINA226_PCIe_AMT\fP]"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

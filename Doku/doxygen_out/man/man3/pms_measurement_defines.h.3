@@ -1,0 +1,473 @@
+.TH "Measurement/pms_measurement_defines.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/pms_measurement_defines.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include 'fsl_i2c_freertos\&.h'\fP
+.br
+\fC#include 'Config/pms_config\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBina226_config_data_t\fP"
+.br
+.ti -1c
+.RI "struct \fBpms_ina226_pcie\fP"
+.br
+.RI "Struct für eine PCIe-Lane mit allen notwendigen Information um die Mess-Sensorik (INA226) ueber I2C anzusprechen\&. "
+.ti -1c
+.RI "struct \fBina226_results_t\fP"
+.br
+.RI "struct to store the measurement result, each object has as much entrys per result kind as much measurement ICs are on one voltage bus "
+.ti -1c
+.RI "struct \fBmeasurement_config_t\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPCIe_SLOTS_AMT\fP   2"
+.br
+.ti -1c
+.RI "#define \fBI2C_DEVICE_AMT\fP   8"
+.br
+.ti -1c
+.RI "#define \fBINA226_PCIe_AMT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSUPP_AMT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINA226_SUPP_AMT\fP   2"
+.br
+.ti -1c
+.RI "#define \fBRSHUNT_12V_SUPP\fP   4e\-3"
+.br
+.ti -1c
+.RI "#define \fBRSHUNT_12V\fP   10e\-3"
+.br
+.ti -1c
+.RI "#define \fBRSHUNT_3V3\fP   25e\-3"
+.br
+.ti -1c
+.RI "#define \fBIMAX_PCIE_SLOT_12V\fP   5\&.5"
+.br
+.ti -1c
+.RI "#define \fBIMAX_PCIE_SLOT_3V3\fP   3"
+.br
+.ti -1c
+.RI "#define \fBIMAX_PCIE_SUPP\fP   12\&.5"
+.br
+.ti -1c
+.RI "#define \fBINA226_ADDRES_12V\fP   0x40"
+.br
+.RI "Device Adresses, TODO müssen angepasst werden\&. "
+.ti -1c
+.RI "#define \fBINA226_ADDRES_3V\fP   0x44"
+.br
+.ti -1c
+.RI "#define \fBINA226_ADDRES_3V_AUX\fP   0x45"
+.br
+.ti -1c
+.RI "#define \fBINA226_ADDRES_SUPP_1\fP   0x41"
+.br
+.ti -1c
+.RI "#define \fBINA226_ADDRES_SUPP_2\fP   0x42"
+.br
+.ti -1c
+.RI "#define \fBIMAX_12V\fP   8\&.192"
+.br
+.RI "Maximal Current\&. "
+.ti -1c
+.RI "#define \fBIMAX_3V\fP   3\&.27"
+.br
+.ti -1c
+.RI "#define \fBIMAX_3V_AUX\fP   0\&.409"
+.br
+.ti -1c
+.RI "#define \fBINA226_REG_CONFIG\fP   0x00"
+.br
+.RI "Register Adresses, R = read only, R/W = read/write\&. "
+.ti -1c
+.RI "#define \fBINA226_REG_SHUNT_VOLT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBINA226_REG_BUS_VOLT\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBINA226_REG_POWER\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBINA226_REG_CURRENT\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBINA226_REG_CALIBRATION\fP   0x05"
+.br
+.ti -1c
+.RI "#define \fBINA226_REG_MASK_ENABLE\fP   0x06"
+.br
+.ti -1c
+.RI "#define \fBINA226_REG_ALERT_LIMIT\fP   0x07"
+.br
+.ti -1c
+.RI "#define \fBINA226_REG_MANUFAC_ID\fP   0xFE"
+.br
+.ti -1c
+.RI "#define \fBINA226_REG_ID\fP   0xFF"
+.br
+.ti -1c
+.RI "#define \fBSHUNTVOLT_LSB\fP   25e\-7"
+.br
+.RI "LSB for Shunt- and Bus-Voltage register\&. "
+.ti -1c
+.RI "#define \fBBUSVOLT_LSB\fP   1\&.25e\-3"
+.br
+.ti -1c
+.RI "#define \fBINA226_MASK_RESET\fP   (uint16_t) 0b10000000000000000"
+.br
+.RI "Mask for for RESET command in the configuration Register, written to the bit 15\&. "
+.ti -1c
+.RI "#define \fBI2C_HANDLER_AMT_PCIe\fP   2"
+.br
+.ti -1c
+.RI "#define \fBI2C_HANDLER_AMT_SUPP\fP   1"
+.br
+.ti -1c
+.RI "#define \fBI2C_HANDLER_AMT_ALL\fP   (\fBI2C_HANDLER_AMT_PCIe\fP + \fBI2C_HANDLER_AMT_SUPP\fP)"
+.br
+.ti -1c
+.RI "#define \fBI2C_DATA_LENGTH\fP   2"
+.br
+.ti -1c
+.RI "#define \fBI2C_READ_REGISTER_AMT\fP   2"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBina226_config_data_t\fP \fBina226_config_data_t\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBpms_ina226_pcie\fP \fBpms_ina226_pcie\fP"
+.br
+.RI "Struct für eine PCIe-Lane mit allen notwendigen Information um die Mess-Sensorik (INA226) ueber I2C anzusprechen\&. "
+.ti -1c
+.RI "typedef struct \fBina226_results_t\fP \fBina226_results_t\fP"
+.br
+.RI "struct to store the measurement result, each object has as much entrys per result kind as much measurement ICs are on one voltage bus "
+.ti -1c
+.RI "typedef struct \fBmeasurement_config_t\fP \fBmeasurement_config_t\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBINA226_ReturnVal\fP { \fBINA226_OK\fP = 0, \fBINA226_ERROR\fP =1 }"
+.br
+.RI "INA226 Status return values\&. "
+.ti -1c
+.RI "enum \fBINA226_NoA_t\fP { \fBAVG_1\fP = 0b0000000000000000, \fBAVG_4\fP = 0b0000001000000000, \fBAVG_16\fP = 0b0000010000000000, \fBAVG_64\fP = 0b0000011000000000, \fBAVG_128\fP = 0b0000100000000000, \fBAVG_256\fP = 0b0000101000000000, \fBAVG_512\fP = 0b0000110000000000, \fBAVG_1024\fP = 0b0000111000000000 }"
+.br
+.RI "Mask for numbers of averages in the configuration Register, written to the bits 9 to 11\&. "
+.ti -1c
+.RI "enum \fBINA226_VBUSCT_t\fP { \fBVBUSCT_140us\fP = 0b0000000000000000, \fBVBUSCT_204us\fP = 0b0000000000100000, \fBVBUSCT_332us\fP = 0b0000000001000000, \fBVBUSCT_588us\fP = 0b0000000001100000, \fBVBUSCT_1100us\fP = 0b0000000010000000, \fBVBUSCT_2116us\fP = 0b0000000010100000, \fBVBUSCT_4156us\fP = 0b0000000011000000, \fBVBUSCT_8244us\fP = 0b0000000011100000 }"
+.br
+.RI "Mask for Bus Voltage Conversion Time in the configuration Register, written to the bits 6 to 8\&. "
+.ti -1c
+.RI "enum \fBINA226_VSHCT_t\fP { \fBVSHCT_140us\fP = 0b0000000000000000, \fBVSHCT_204us\fP = 0b0000000000000100, \fBVSHCT_332us\fP = 0b0000000000001000, \fBVSHCT_588us\fP = 0b0000000000001100, \fBVSHCT_1100us\fP = 0b0000000000010000, \fBVSHCT_2116us\fP = 0b0000000000010100, \fBVSHCT_4156us\fP = 0b0000000000011000, \fBVSHCT_8244us\fP = 0b0000000000011100 }"
+.br
+.RI "Mask for Shunt Voltage Conversion Time in the configuration Register, written to the bits 3 to 5\&. "
+.ti -1c
+.RI "enum \fBINA226_OM_t\fP { \fBPWDO\fP = 0b0000000000000000, \fBSVT\fP = 0b0000000000000001, \fBBVT\fP = 0b0000000000000010, \fBSBVT\fP = 0b0000000000000011, \fBPWDO2\fP = 0b0000000000000100, \fBSVC\fP = 0b0000000000000101, \fBBVC\fP = 0b0000000000000110, \fBSBVC\fP = 0b0000000000000111 }"
+.br
+.RI "Mask for Operating Mode in the configuration Register, written to the bits 0 to 2\&. "
+.ti -1c
+.RI "enum \fBboard_setup\fP { \fBFULL\fP = 0, \fBLESS\fP }"
+.br
+.ti -1c
+.RI "enum \fBlane_t\fP { \fBPCIe1\fP = 0, \fBPCIe2\fP, \fBSUPP\fP }"
+.br
+.ti -1c
+.RI "enum \fBpms_measurement_config_t\fP { \fBSINGLE_SLOT\fP = 0, \fBDOUBLE_SINGLE_SLOT\fP, \fBDUAL_SLOT\fP, \fBPCIe_SUPP\fP }"
+.br
+.ti -1c
+.RI "enum \fBi2c_bus_type\fP { \fBHIGH_FREQUNECY\fP = 0, \fBNORMAL_FREQUENCY\fP }"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BUSVOLT_LSB   1\&.25e\-3"
+
+.SS "#define I2C_DATA_LENGTH   2"
+
+.SS "#define I2C_DEVICE_AMT   8"
+amount of all INA226 Devices on PCB 
+.SS "#define I2C_HANDLER_AMT_ALL   (\fBI2C_HANDLER_AMT_PCIe\fP + \fBI2C_HANDLER_AMT_SUPP\fP)"
+amount of all I2C Handler 
+.SS "#define I2C_HANDLER_AMT_PCIe   2"
+amount of I2C Handler assingned to a PCIe slot 
+.SS "#define I2C_HANDLER_AMT_SUPP   1"
+amount of I2C Handler assigned to Support Voltage 
+.SS "#define I2C_READ_REGISTER_AMT   2"
+asmount of register to read 
+.SS "#define IMAX_12V   8\&.192"
+
+.PP
+Maximal Current\&. 
+.SS "#define IMAX_3V   3\&.27"
+
+.SS "#define IMAX_3V_AUX   0\&.409"
+
+.SS "#define INA226_ADDRES_12V   0x40"
+
+.PP
+Device Adresses, TODO müssen angepasst werden\&. 
+.SS "#define INA226_ADDRES_3V   0x44"
+
+.SS "#define INA226_ADDRES_3V_AUX   0x45"
+
+.SS "#define INA226_ADDRES_SUPP_1   0x41"
+
+.SS "#define INA226_ADDRES_SUPP_2   0x42"
+
+.SS "#define INA226_MASK_RESET   (uint16_t) 0b10000000000000000"
+
+.PP
+Mask for for RESET command in the configuration Register, written to the bit 15\&. CONFIGURATION REGISTER MASKS BEGIN 
+.SS "#define INA226_PCIe_AMT   3"
+amount of ina226 devices for each PCIe slot 
+.SS "#define INA226_REG_ALERT_LIMIT   0x07"
+
+.SS "#define INA226_REG_BUS_VOLT   0x02"
+
+.SS "#define INA226_REG_CALIBRATION   0x05"
+
+.SS "#define INA226_REG_CONFIG   0x00"
+
+.PP
+Register Adresses, R = read only, R/W = read/write\&. 
+.SS "#define INA226_REG_CURRENT   0x04"
+
+.SS "#define INA226_REG_ID   0xFF"
+
+.SS "#define INA226_REG_MANUFAC_ID   0xFE"
+
+.SS "#define INA226_REG_MASK_ENABLE   0x06"
+
+.SS "#define INA226_REG_POWER   0x03"
+
+.SS "#define INA226_REG_SHUNT_VOLT   0x01"
+
+.SS "#define INA226_SUPP_AMT   2"
+amount of ina226 devies for ATX SUPP 
+.SS "#define PCIe_SLOTS_AMT   2"
+amount of PCIe Slots on one PCB 
+.SS "#define RSHUNT_12V   10e\-3"
+Shunt-Widerstand für 12V (PCIe) 
+.SS "#define RSHUNT_12V_SUPP   4e\-3"
+Shunt Resistances for the voltage measurement Shunt-Widerstand for 12V Support (PCIe) 
+.SS "#define RSHUNT_3V3   25e\-3"
+Shunt-Widerstand 3V3 (3V3 und 3V3_AUX) 
+.SS "#define SHUNTVOLT_LSB   25e\-7"
+
+.PP
+LSB for Shunt- and Bus-Voltage register\&. 
+.SS "#define SUPP_AMT   1"
+amount of ATX-Support-Pairs (12V) on one PCB 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBina226_config_data_t\fP \fBina226_config_data_t\fP"
+struct to store the configuration data for ina226, this is used in the initilaisation process 
+.SS "typedef struct \fBina226_results_t\fP \fBina226_results_t\fP"
+
+.PP
+struct to store the measurement result, each object has as much entrys per result kind as much measurement ICs are on one voltage bus 
+.SS "typedef struct \fBmeasurement_config_t\fP \fBmeasurement_config_t\fP"
+
+.SS "typedef struct \fBpms_ina226_pcie\fP \fBpms_ina226_pcie\fP"
+
+.PP
+Struct für eine PCIe-Lane mit allen notwendigen Information um die Mess-Sensorik (INA226) ueber I2C anzusprechen\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBboard_setup\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIFULL \fP\fP
+.TP
+\fB\fILESS \fP\fP
+.SS "enum \fBi2c_bus_type\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIHIGH_FREQUNECY \fP\fP
+.TP
+\fB\fINORMAL_FREQUENCY \fP\fP
+.SS "enum \fBINA226_NoA_t\fP"
+
+.PP
+Mask for numbers of averages in the configuration Register, written to the bits 9 to 11\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIAVG_1 \fP\fP
+.TP
+\fB\fIAVG_4 \fP\fP
+.TP
+\fB\fIAVG_16 \fP\fP
+.TP
+\fB\fIAVG_64 \fP\fP
+.TP
+\fB\fIAVG_128 \fP\fP
+.TP
+\fB\fIAVG_256 \fP\fP
+.TP
+\fB\fIAVG_512 \fP\fP
+.TP
+\fB\fIAVG_1024 \fP\fP
+.SS "enum \fBINA226_OM_t\fP"
+
+.PP
+Mask for Operating Mode in the configuration Register, written to the bits 0 to 2\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPWDO \fP\fP
+Power-Down 
+.TP
+\fB\fISVT \fP\fP
+Shunt Voltage Triggered 
+.TP
+\fB\fIBVT \fP\fP
+Bus Voltage Triggered 
+.TP
+\fB\fISBVT \fP\fP
+Bus and Shunt Voltage Triggered 
+.TP
+\fB\fIPWDO2 \fP\fP
+Power-Down 
+.TP
+\fB\fISVC \fP\fP
+Shunt Voltage Continious 
+.TP
+\fB\fIBVC \fP\fP
+Bus Voltage Continious 
+.TP
+\fB\fISBVC \fP\fP
+Bus and Shunt Voltage Continious 
+.SS "enum \fBINA226_ReturnVal\fP"
+
+.PP
+INA226 Status return values\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIINA226_OK \fP\fP
+.TP
+\fB\fIINA226_ERROR \fP\fP
+.SS "enum \fBINA226_VBUSCT_t\fP"
+
+.PP
+Mask for Bus Voltage Conversion Time in the configuration Register, written to the bits 6 to 8\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fP time in micro seconds 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIVBUSCT_140us \fP\fP
+.TP
+\fB\fIVBUSCT_204us \fP\fP
+.TP
+\fB\fIVBUSCT_332us \fP\fP
+.TP
+\fB\fIVBUSCT_588us \fP\fP
+.TP
+\fB\fIVBUSCT_1100us \fP\fP
+.TP
+\fB\fIVBUSCT_2116us \fP\fP
+.TP
+\fB\fIVBUSCT_4156us \fP\fP
+.TP
+\fB\fIVBUSCT_8244us \fP\fP
+.SS "enum \fBINA226_VSHCT_t\fP"
+
+.PP
+Mask for Shunt Voltage Conversion Time in the configuration Register, written to the bits 3 to 5\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fP time in micro seconds 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIVSHCT_140us \fP\fP
+.TP
+\fB\fIVSHCT_204us \fP\fP
+.TP
+\fB\fIVSHCT_332us \fP\fP
+.TP
+\fB\fIVSHCT_588us \fP\fP
+.TP
+\fB\fIVSHCT_1100us \fP\fP
+.TP
+\fB\fIVSHCT_2116us \fP\fP
+.TP
+\fB\fIVSHCT_4156us \fP\fP
+.TP
+\fB\fIVSHCT_8244us \fP\fP
+.SS "enum \fBlane_t\fP"
+enum for easy handling the three different lanes which should be measured 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPCIe1 \fP\fP
+.TP
+\fB\fIPCIe2 \fP\fP
+.TP
+\fB\fISUPP \fP\fP
+.SS "enum \fBpms_measurement_config_t\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISINGLE_SLOT \fP\fP
+.TP
+\fB\fIDOUBLE_SINGLE_SLOT \fP\fP
+.TP
+\fB\fIDUAL_SLOT \fP\fP
+.TP
+\fB\fIPCIe_SUPP \fP\fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

@@ -1,0 +1,210 @@
+.TH "Measurement/pms_measurement.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/pms_measurement.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Config/pms_config\&.h'\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <Measurement/pms_HardwareCheck\&.h>\fP
+.br
+\fC#include <Measurement/pms_measurement\&.h>\fP
+.br
+\fC#include 'FreeRTOS\&.h'\fP
+.br
+\fC#include 'queue\&.h'\fP
+.br
+\fC#include 'stream_buffer\&.h'\fP
+.br
+\fC#include 'Measurement/INA226_driver/ina226\&.h'\fP
+.br
+\fC#include 'peripherals\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2cWrapper\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2cWrapper_RTOS\&.h'\fP
+.br
+\fC#include 'pms_Timer\&.h'\fP
+.br
+\fC#include 'Measurement/I2C/pms_i2c_init\&.h'\fP
+.br
+\fC#include 'Controller/control_task\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddToStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddToStreamISR\fP ()"
+.br
+.RI "adds measurement values to the Queue "
+.ti -1c
+.RI "void \fBinitStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBmeasurement_init\fP ()"
+.br
+.ti -1c
+.RI "void \fBmeasurementFromISR\fP ()"
+.br
+.ti -1c
+.RI "void \fBprintMeasurementData\fP (measurement_data_t \fBdata\fP, char *name)"
+.br
+.RI "function to print a data measurement object, for better overview "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBpms_ina226_pcie\fP \fBina226_hardwareDataPCIE\fP [\fBI2C_HANDLER_AMT_PCIe\fP]"
+.br
+.RI "
+.IP "\(bu" 2
+
+.PP
+"
+.ti -1c
+.RI "measurement_data_t \fBdata\fP [\fBI2C_HANDLER_AMT_ALL\fP]"
+.br
+.ti -1c
+.RI "SemaphoreHandle_t \fBsem_init\fP"
+.br
+.ti -1c
+.RI "StreamBufferHandle_t \fBxStreamBufferPCIe1\fP"
+.br
+.ti -1c
+.RI "StreamBufferHandle_t \fBxStreamBufferPCIe2\fP"
+.br
+.ti -1c
+.RI "bool \fBi2c_from_isr\fP = false"
+.br
+.ti -1c
+.RI "\fBmeasurement_config_t\fP * \fBm_config\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBmeasurement_data_amt\fP = 0"
+.br
+.RI "variable to count the measurement data "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void addToStream ()"
+
+.SS "void addToStreamISR ()"
+
+.PP
+adds measurement values to the Queue 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP measurment result 
+.RE
+.PP
+sends measurement data of PCIe1 into stream buffer
+.PP
+detects if the there are less writen bytes into the strreambvuffer tahn a whole measurement data package, so something went wrong
+.PP
+sends measurement data of PCIe1 into stream buffer
+.PP
+detects if the there are less writen bytes into the strreambvuffer tahn a whole measurement data package, so something went wrong
+.SS "void initStream ()"
+Streambuffer for PCIe1
+.PP
+STreambuffer for PCIe2
+.SS "void measurement_init ()"
+wrapper for all initialisation functions for the measurment process < initilisation and configuration of the INA226
+.SS "void measurementFromISR ()"
+Measurement includes Timer includes Peripheral includes Measurment Interrrupt variables
+.PP
+first handler, which is always beeing used
+.PP
+second handler, which is always beeing used
+.PP
+shuntresistance for current conversions
+.PP
+store variable for the i2c read
+.PP
+variable to store the read register bytes, in order to be converted to readable values
+.PP
+activates the adjustments in the I2C callback for ISR, this is mainly endian problem prevention
+.PP
+go through all power supply lanes
+.PP
+new attempt, convert the bytes to float and so to readable values and then send them to mqtt
+.PP
+start new i2c read
+.PP
+Bus volatge register is read, so values can be transformed to float
+.PP
+wait until the second read is finished
+.PP
+get shunt resistor values for current calculation
+.PP
+current calculation, converting register value to shuntvoltage and then devide it through the shunt resistance, I = U/R
+.PP
+power calculations
+.PP
+wait until the first read is finished
+.PP
+wait until the first read is finished
+.PP
+deactivates the flag, in case another i2c command is made outside the ISR
+.PP
+Sends the measurement data of all measured sensors for one timestamp intzo the buffer
+.SS "void printMeasurementData (measurement_data_t data, char * name)"
+
+.PP
+function to print a data measurement object, for better overview 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP measurement object 
+.br
+\fIname\fP name of the lane where the measurement took place 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "measurement_data_t data"
+memory where the measurement data is placed after the I2C read
+.PP
+Timer Interrupt 
+.SS "bool i2c_from_isr = false"
+Measurment 
+.SS "\fBpms_ina226_pcie\fP ina226_hardwareDataPCIE[\fBI2C_HANDLER_AMT_PCIe\fP]"
+
+.PP
+
+.IP "\(bu" 2
+
+.PP
+std-libs FreeROTS includes I2C includes Controlling I2C objects containing all neccessary information for I2C communication and measuring purposes 
+.SS "\fBmeasurement_config_t\fP* m_config"
+
+.PP
+.RS 4
+flag for unlocking minor adjustments in the i2c callback 
+.RE
+.PP
+User Configuration struct which contains all configuration related to the 
+.SS "unsigned int measurement_data_amt = 0"
+
+.PP
+variable to count the measurement data 
+.SS "SemaphoreHandle_t sem_init\fC [extern]\fP"
+Semaphores handles initilisation process 
+.SS "StreamBufferHandle_t xStreamBufferPCIe1"
+Streambuffer, buffers the measurement data in order to send them to a MQTT broker 
+.SS "StreamBufferHandle_t xStreamBufferPCIe2"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

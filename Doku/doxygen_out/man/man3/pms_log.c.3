@@ -1,0 +1,130 @@
+.TH "Loging/pms_log.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Loging/pms_log.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Config/pms_config\&.h'\fP
+.br
+\fC#include 'Config/pms_priorities\&.h'\fP
+.br
+\fC#include 'Ethernet/pms_mqtt_wrapper\&.h'\fP
+.br
+\fC#include 'fsl_debug_console\&.h'\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include 'FreeRTOS\&.h'\fP
+.br
+\fC#include 'message_buffer\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPMS_LOG_C_\fP"
+.br
+.ti -1c
+.RI "#define \fBMSG_BUFF_SIZE_BYTE\fP   1000"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBlog_task\fP (void *pvParameters)"
+.br
+.RI "Task to handle MQTT logging\&. The Task reads a meassage buffer and then invoke a mqtt publish request to the tcpip task\&. "
+.ti -1c
+.RI "void \fBlog_init\fP ()"
+.br
+.RI "logging init, starts the log task and creates the meassage buffer, where all outputs are saved "
+.ti -1c
+.RI "int \fB__sys_write\fP (int handle, char *buffer, int size)"
+.br
+.RI "printf overload to choose weather the output is to UART or to MQTT "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "bool \fBmqtt_connected\fP"
+.br
+.ti -1c
+.RI "bool \fBlog_init_complete\fP = false"
+.br
+.ti -1c
+.RI "MessageBufferHandle_t \fBlog_buffer\fP"
+.br
+.ti -1c
+.RI "SemaphoreHandle_t \fBsem_log\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MSG_BUFF_SIZE_BYTE   1000"
+
+.SS "#define PMS_LOG_C_"
+
+.SH "Function Documentation"
+.PP 
+.SS "int __sys_write (int handle, char * buffer, int size)"
+
+.PP
+printf overload to choose weather the output is to UART or to MQTT 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP 
+.br
+\fIbuffer\fP 
+.br
+\fIsize\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void log_init ()"
+
+.PP
+logging init, starts the log task and creates the meassage buffer, where all outputs are saved 
+.SS "void log_task (void * pvParameters)"
+
+.PP
+Task to handle MQTT logging\&. The Task reads a meassage buffer and then invoke a mqtt publish request to the tcpip task\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpvParameters\fP 
+.RE
+.PP
+Receive the next message from the message buffer\&. Wait in the Blocked state (so not using any CPU processing time) for a message to become available\&.
+.PP
+adds up all received measagges to decrease the number of invoked mqtt publish request\&. So one meassage has is bigger, instead of a lot of small meassages
+.PP
+publish meassage to log topic
+.SH "Variable Documentation"
+.PP 
+.SS "MessageBufferHandle_t log_buffer"
+
+.SS "bool log_init_complete = false"
+
+.SS "bool mqtt_connected\fC [extern]\fP"
+mqtt connection flag for parsing the debug measages to an MQTT broker
+.PP
+mqtt connection status 
+.SS "SemaphoreHandle_t sem_log"
+handles initilisation process 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

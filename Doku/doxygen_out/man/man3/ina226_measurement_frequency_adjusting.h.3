@@ -1,0 +1,87 @@
+.TH "Measurement/INA226_driver/ina226_measurement_frequency_adjusting.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/INA226_driver/ina226_measurement_frequency_adjusting.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ina226\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBina226_frequency_t\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_FREQ\fP   7142 		/** maximal availible frequency given through ina226 configuration*/"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBina226_getAllavailibleFreqs\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBina226_getClosestFreq\fP (float measurement_frequency)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Paul Mamatis 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Jun 14, 2023
+.RE
+.PP
+.SH "TODO"
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MAX_FREQ   7142 		/** maximal availible frequency given through ina226 configuration*/"
+
+.SH "Function Documentation"
+.PP 
+.SS "void ina226_getAllavailibleFreqs ()"
+fills the \fBina226_frequency_t\fP frequencies[] with all available frequency calculated from conversion time in combination with avaraging 
+.SS "uint8_t ina226_getClosestFreq (float measurement_frequency)"
+Get the closest possible frequency to the desired one\&. 
+.PP
+\fBAttention\fP
+.RS 4
+getAllavailibleFreqs must have called before, otherwise the \fBina226_frequency_t\fP frequencies is not filled\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fImeasurement_frequency,desired\fP frequency 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+index of the closest frequency which is bigger than the desired one 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

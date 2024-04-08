@@ -1,0 +1,179 @@
+.TH "Measurement/INA226_driver/ina226_measurement_frequency_adjusting.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/INA226_driver/ina226_measurement_frequency_adjusting.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+\fC#include 'ina226_measurement_frequency_adjusting\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCONV_TIME_AMT\fP   8"
+.br
+.ti -1c
+.RI "#define \fBAVG_VALUES_AMT\fP   8"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBina226_getClosestFreq\fP (float measurement_frequency)"
+.br
+.ti -1c
+.RI "void \fBina226_getAllavailibleFreqs\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "double \fBconvTimefreq\fP [] ={7142, 4901, 3012, 1700, 909, 472, 240, 121}"
+.br
+.ti -1c
+.RI "double \fBavg\fP [] = {1, 4, 16, 64, 128, 256, 512, 1024}"
+.br
+.ti -1c
+.RI "\fBINA226_VBUSCT_t\fP \fBvbusctArray\fP []"
+.br
+.ti -1c
+.RI "\fBINA226_VSHCT_t\fP \fBvshctArray\fP []"
+.br
+.ti -1c
+.RI "\fBINA226_NoA_t\fP \fBnoaArray\fP []"
+.br
+.ti -1c
+.RI "\fBina226_frequency_t\fP \fBfrequencies\fP [64]"
+.br
+.RI "initilization and testing of all I2C connections and INA226 "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Paul Mamatis 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Jun 14, 2023
+.RE
+.PP
+.SH "TODO"
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define AVG_VALUES_AMT   8"
+number of values for average configuration 
+.SS "#define CONV_TIME_AMT   8"
+number of values for bus and shunt voltage conversion time 
+.SH "Function Documentation"
+.PP 
+.SS "void ina226_getAllavailibleFreqs ()"
+fills the \fBina226_frequency_t\fP frequencies[] with all available frequency calculated from conversion time in combination with avaraging 
+.SS "uint8_t ina226_getClosestFreq (float measurement_frequency)"
+Get the closest possible frequency to the desired one\&. 
+.PP
+\fBAttention\fP
+.RS 4
+getAllavailibleFreqs must have called before, otherwise the \fBina226_frequency_t\fP frequencies is not filled\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fImeasurement_frequency,desired\fP frequency 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+index of the closest frequency which is bigger than the desired one 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "double avg[] = {1, 4, 16, 64, 128, 256, 512, 1024}"
+
+.SS "double convTimefreq[] ={7142, 4901, 3012, 1700, 909, 472, 240, 121}"
+conversion time as frequency 
+.SS "\fBina226_frequency_t\fP frequencies[64]"
+
+.PP
+initilization and testing of all I2C connections and INA226 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsetup\fP of the PCIe-PMS-Board 
+.RE
+.PP
+
+.SS "\fBINA226_NoA_t\fP noaArray[]"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+      AVG_1,
+      AVG_4,
+      AVG_16,
+      AVG_64,
+      AVG_128,
+      AVG_256,
+      AVG_512,
+      AVG_1024
+  }
+.fi
+.SS "\fBINA226_VBUSCT_t\fP vbusctArray[]"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+       VBUSCT_140us,
+       VBUSCT_204us,
+       VBUSCT_332us,
+       VBUSCT_588us,
+       VBUSCT_1100us,
+       VBUSCT_2116us,
+       VBUSCT_4156us,
+       VBUSCT_8244us
+   }
+.fi
+average numbers as double 
+.SS "\fBINA226_VSHCT_t\fP vshctArray[]"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+        VSHCT_140us,
+        VSHCT_204us,
+        VSHCT_332us,
+        VSHCT_588us,
+        VSHCT_1100us,
+        VSHCT_2116us,
+        VSHCT_4156us,
+        VSHCT_8244us
+    }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

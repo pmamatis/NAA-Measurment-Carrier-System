@@ -1,0 +1,230 @@
+.TH "Measurement/pms_timestamp.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/pms_timestamp.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Config/pms_config\&.h'\fP
+.br
+\fC#include 'pms_timestamp\&.h'\fP
+.br
+\fC#include 'fsl_debug_console\&.h'\fP
+.br
+\fC#include 'pin_mux\&.h'\fP
+.br
+\fC#include 'board\&.h'\fP
+.br
+\fC#include 'fsl_rtc\&.h'\fP
+.br
+\fC#include 'fsl_clock\&.h'\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'Controller/control_task\&.h'\fP
+.br
+\fC#include 'lwip/apps/sntp\&.h'\fP
+.br
+\fC#include 'pms_Timer\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBKIN1_DWT_CONTROL\fP   (*((volatile uint32_t*)0xE0001000))"
+.br
+.ti -1c
+.RI "#define \fBKIN1_DWT_CYCCNTENA_BIT\fP   (1UL<<0)"
+.br
+.ti -1c
+.RI "#define \fBKIN1_DWT_CYCCNT\fP   (*((volatile uint32_t*)0xE0001004))"
+.br
+.ti -1c
+.RI "#define \fBKIN1_DEMCR\fP   (*((volatile uint32_t*)0xE000EDFC))"
+.br
+.ti -1c
+.RI "#define \fBKIN1_TRCENA_BIT\fP   (1UL<<24)"
+.br
+.ti -1c
+.RI "#define \fBKIN1_InitCycleCounter\fP()     \fBKIN1_DEMCR\fP |= \fBKIN1_TRCENA_BIT\fP"
+.br
+.ti -1c
+.RI "#define \fBKIN1_ResetCycleCounter\fP()     \fBKIN1_DWT_CYCCNT\fP = 0"
+.br
+.ti -1c
+.RI "#define \fBKIN1_EnableCycleCounter\fP()     \fBKIN1_DWT_CONTROL\fP |= \fBKIN1_DWT_CYCCNTENA_BIT\fP"
+.br
+.ti -1c
+.RI "#define \fBKIN1_DisableCycleCounter\fP()     \fBKIN1_DWT_CONTROL\fP &= ~\fBKIN1_DWT_CYCCNTENA_BIT\fP"
+.br
+.ti -1c
+.RI "#define \fBKIN1_GetCycleCounter\fP()     \fBKIN1_DWT_CYCCNT\fP"
+.br
+.ti -1c
+.RI "#define \fBTIMESTAMP_RES\fP   (1000000UL)"
+.br
+.ti -1c
+.RI "#define \fBCYCLE_COUNTER_MAX_VAL\fP   4294967296"
+.br
+.ti -1c
+.RI "#define \fBCYCLE_CLOCK_TRUE_FREQUENCY\fP   179650000 /** measured frequency */"
+.br
+.ti -1c
+.RI "#define \fBCYCLE_CLOCK_FREQUENCY\fP   CLOCK_GetFreq(kCLOCK_CoreSysClk)"
+.br
+.ti -1c
+.RI "#define \fBSNTP_SERVER_NAME\fP   'fritz\&.box'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBRTC_IRQHandler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBset_initial_TIME\fP (uint32_t time)"
+.br
+.ti -1c
+.RI "void \fBtimestamp_init\fP (void)"
+.br
+.RI "starts the RTC clock, the count value of the RTC register increases every second "
+.ti -1c
+.RI "int64_t \fBgetTimestamp_INT\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetTimestamp_DOUBLE\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "volatile bool \fBbusyWait\fP"
+.br
+.ti -1c
+.RI "double \fBtimestamp_dividend\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBtime_ref_for_milli\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBstarttime\fP"
+.br
+.ti -1c
+.RI "\fBcontrol_parameters_t\fP * \fBcontrol\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBmqtt_send\fP"
+.br
+.RI "ISR for Alarm interrupt\&. "
+.ti -1c
+.RI "int \fBcount\fP = 0"
+.br
+.ti -1c
+.RI "\fBtimestamp_t\fP \fBtimestamp_before\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CYCLE_CLOCK_FREQUENCY   CLOCK_GetFreq(kCLOCK_CoreSysClk)"
+vendor given frequency 
+.SS "#define CYCLE_CLOCK_TRUE_FREQUENCY   179650000 /** measured frequency */"
+
+.SS "#define CYCLE_COUNTER_MAX_VAL   4294967296"
+cycle counter max value resulting from 32 bit 
+.SS "#define KIN1_DEMCR   (*((volatile uint32_t*)0xE000EDFC))"
+DEMCR: Debug Exception and Monitor Control Register 
+.SS "#define KIN1_DisableCycleCounter()     \fBKIN1_DWT_CONTROL\fP &= ~\fBKIN1_DWT_CYCCNTENA_BIT\fP"
+Disable cycle counter 
+.SS "#define KIN1_DWT_CONTROL   (*((volatile uint32_t*)0xE0001000))"
+DWT (Data Watchpoint and Trace) registers, only exists on ARM Cortex with a DWT unit DWT Control register 
+.SS "#define KIN1_DWT_CYCCNT   (*((volatile uint32_t*)0xE0001004))"
+DWT Cycle Counter register 
+.SS "#define KIN1_DWT_CYCCNTENA_BIT   (1UL<<0)"
+CYCCNTENA bit in DWT_CONTROL register 
+.SS "#define KIN1_EnableCycleCounter()     \fBKIN1_DWT_CONTROL\fP |= \fBKIN1_DWT_CYCCNTENA_BIT\fP"
+Enable cycle counter 
+.SS "#define KIN1_GetCycleCounter()     \fBKIN1_DWT_CYCCNT\fP"
+Read cycle counter register 
+.SS "#define KIN1_InitCycleCounter()     \fBKIN1_DEMCR\fP |= \fBKIN1_TRCENA_BIT\fP"
+TRCENA: Enable trace and debug block DEMCR (Debug Exception and Monitor Control Register 
+.SS "#define KIN1_ResetCycleCounter()     \fBKIN1_DWT_CYCCNT\fP = 0"
+Reset cycle counter 
+.SS "#define KIN1_TRCENA_BIT   (1UL<<24)"
+Trace enable bit in DEMCR register 
+.SS "#define SNTP_SERVER_NAME   'fritz\&.box'"
+SNTP 
+.SS "#define TIMESTAMP_RES   (1000000UL)"
+resolution of the timestamp, 1000 = milli seconds, 10000 = 100µs, 1000000 = µs etc\&. 
+.br
+ 
+.SH "Function Documentation"
+.PP 
+.SS "double getTimestamp_DOUBLE ()"
+get seconds from RTC
+.PP
+if next second begins, set a new the mico second reference
+.PP
+Set counter value reference for measuring time in microseconds, resets every second
+.PP
+get microseconds from cycle clock
+.PP
+counter value to microseconds
+.SS "int64_t getTimestamp_INT ()"
+get seconds from RTC
+.PP
+if next second begins, set a new the mico second reference
+.PP
+Set counter value reference for measuring time in microseconds, resets every second
+.PP
+get microseconds from cycle clock
+.PP
+have to be uint, to igonre carry if the time_ref_for_milli is bigger tahn the actual value
+.PP
+rounding
+.PP
+zero based counting
+.PP
+prevent microseconds to exeed a whole second, can happen because of unsychronity of cycle counter and RTC
+.SS "void RTC_IRQHandler (void)"
+
+.SS "void set_initial_TIME (uint32_t time)"
+
+.SS "void timestamp_init (void)"
+
+.PP
+starts the RTC clock, the count value of the RTC register increases every second INit cycle counter
+.PP
+< norm the clock value to the desired time resolution, in this case 100µs and bring in the true measured frequency of the Main Clock
+.SH "Variable Documentation"
+.PP 
+.SS "volatile bool busyWait"
+
+.SS "\fBcontrol_parameters_t\fP* control\fC [extern]\fP"
+
+.SS "int count = 0"
+
+.SS "unsigned int mqtt_send\fC [extern]\fP"
+
+.PP
+ISR for Alarm interrupt\&. This function changes the state of busyWait\&. 
+.SS "uint32_t starttime"
+
+.SS "uint32_t time_ref_for_milli"
+
+.SS "\fBtimestamp_t\fP timestamp_before"
+
+.SS "double timestamp_dividend"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

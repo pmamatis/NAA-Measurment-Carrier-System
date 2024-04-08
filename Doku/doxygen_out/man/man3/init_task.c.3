@@ -1,0 +1,113 @@
+.TH "init_task.c" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+init_task.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <Measurement/pms_measurement\&.h>\fP
+.br
+\fC#include 'pms_config\&.h'\fP
+.br
+\fC#include 'init_task\&.h'\fP
+.br
+\fC#include 'Config/pms_priorities\&.h'\fP
+.br
+\fC#include 'Controller/control_task\&.h'\fP
+.br
+\fC#include 'board\&.h'\fP
+.br
+\fC#include 'peripherals\&.h'\fP
+.br
+\fC#include 'lwipopts\&.h'\fP
+.br
+\fC#include 'Ethernet/pushData_task\&.h'\fP
+.br
+\fC#include 'Ethernet/pms_mqtt_wrapper\&.h'\fP
+.br
+\fC#include 'Loging/pms_log\&.h'\fP
+.br
+\fC#include 'Measurement/pms_timestamp\&.h'\fP
+.br
+\fC#include 'Measurement/pms_Timer\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit_task\fP (void *pvParameters)"
+.br
+.RI "task to perform the initialization of all FreeRTOS parts "
+.ti -1c
+.RI "void \fBsetInterrruptPriorities\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "SemaphoreHandle_t \fBsem_pub\fP"
+.br
+.ti -1c
+.RI "\fBmeasurement_config_t\fP * \fBm_config\fP"
+.br
+.ti -1c
+.RI "bool \fBmqtt_connected\fP = false"
+.br
+.RI "Test-Task for development purposes\&. "
+.ti -1c
+.RI "mqtt_client_t * \fBmqtt_client\fP"
+.br
+.ti -1c
+.RI "\fBcontrol_parameters_t\fP * \fBcontrol\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void init_task (void * pvParameters)"
+
+.PP
+task to perform the initialization of all FreeRTOS parts MQTT must be activated in the pms_config header to run the initialization
+.PP
+wait for semaphore which is given in the mqtt connection callback
+.PP
+initilize mqtt logging
+.PP
+starting logging Task
+.PP
+MQTT is deactivated but Ethernet is needed
+.PP
+initilize software controller
+.PP
+Measurement Init
+.PP
+LED2 indicates that init is ready
+.SS "void setInterrruptPriorities ()"
+Timer INterrrupt
+.PP
+I2C Interrupt Settings
+.SH "Variable Documentation"
+.PP 
+.SS "\fBcontrol_parameters_t\fP* control\fC [extern]\fP"
+
+.SS "\fBmeasurement_config_t\fP* m_config\fC [extern]\fP"
+struct which contains all configuration related to the
+.PP
+.RS 4
+flag for unlocking minor adjustments in the i2c callback 
+.RE
+.PP
+User Configuration struct which contains all configuration related to the 
+.SS "mqtt_client_t* mqtt_client\fC [extern]\fP"
+
+.SS "bool mqtt_connected = false"
+
+.PP
+Test-Task for development purposes\&. mqtt connection status 
+.SS "SemaphoreHandle_t sem_pub\fC [extern]\fP"
+Semaphore to handle the publish process 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

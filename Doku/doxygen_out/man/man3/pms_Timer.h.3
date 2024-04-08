@@ -1,0 +1,63 @@
+.TH "Measurement/pms_Timer.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/pms_Timer.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRIT_IRQ_ID\fP   RIT_IRQn"
+.br
+.ti -1c
+.RI "#define \fBRIT_SOURCE_CLOCK\fP   CLOCK_GetFreq(kCLOCK_CoreSysClk)"
+.br
+.ti -1c
+.RI "#define \fBMEASUREMENT_RIT_HANDLER\fP   \fBRIT_IRQHandler\fP"
+.br
+.ti -1c
+.RI "#define \fBRIT_DEVIDER\fP   (1500)"
+.br
+.ti -1c
+.RI "#define \fBRIT_TICKS_PER_MINUTE\fP   (\fBRIT_SOURCE_CLOCK\fP/\fBRIT_DEVIDER\fP)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpms_timer_init\fP ()"
+.br
+.ti -1c
+.RI "void \fBRIT_IRQHandler\fP (void)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MEASUREMENT_RIT_HANDLER(void)   \fBRIT_IRQHandler\fP"
+
+.SS "#define RIT_DEVIDER   (1500)"
+
+.SS "#define RIT_IRQ_ID   RIT_IRQn"
+
+.SS "#define RIT_SOURCE_CLOCK   CLOCK_GetFreq(kCLOCK_CoreSysClk)"
+
+.SS "#define RIT_TICKS_PER_MINUTE   (\fBRIT_SOURCE_CLOCK\fP/\fBRIT_DEVIDER\fP)"
+
+.SH "Function Documentation"
+.PP 
+.SS "void pms_timer_init ()"
+Sets up the Timer-Interrrupt for the INA226-Measurement Set to enable the Counter register auto clear to zero when the counter value equals the set period\&.
+.PP
+Enable at the NVIC
+.SS "void RIT_IRQHandler (void)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

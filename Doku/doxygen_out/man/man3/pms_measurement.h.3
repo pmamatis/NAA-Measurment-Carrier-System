@@ -1,0 +1,54 @@
+.TH "Measurement/pms_measurement.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Measurement/pms_measurement.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Measurement/INA226_driver/ina226\&.h'\fP
+.br
+\fC#include 'pms_HardwareCheck\&.h'\fP
+.br
+\fC#include 'pms_timestamp\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSTREAM_BUFF_DATA_LEN\fP   sizeof(measurement_data_t)"
+.br
+.ti -1c
+.RI "#define \fBSTREAM_BUFF_TRIG_LVL\fP   1 /**> amount of \fBdata\fP objects being read in one readcycle */"
+.br
+.ti -1c
+.RI "#define \fBSTREAM_BUFF_TRIG_LVL_BYTE\fP   (\fBSTREAM_BUFF_TRIG_LVL\fP * \fBSTREAM_BUFF_DATA_LEN\fP)	/**> limit of \fBdata\fP amount until the Streambuffer is read */"
+.br
+.ti -1c
+.RI "#define \fBSTREAM_BUFF_LEN\fP   (20*\fBSTREAM_BUFF_TRIG_LVL\fP)"
+.br
+.ti -1c
+.RI "#define \fBSTREAM_BUFF_SIZE\fP   (\fBSTREAM_BUFF_DATA_LEN\fP * \fBSTREAM_BUFF_LEN\fP)	/**> max amount of \fBdata\fP inside the streambuffer */"
+.br
+.ti -1c
+.RI "#define \fBSTREAM_BUFF_READ_MAX_LEN\fP   (\fBSTREAM_BUFF_DATA_LEN\fP * \fBSTREAM_BUFF_TRIG_LVL\fP )"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define STREAM_BUFF_DATA_LEN   sizeof(measurement_data_t)"
+Task Prio definend in pms_priorities #define MEASUREMENT_TASK_PRIO (configMAX_PRIORITIES - 3) 
+.SS "#define STREAM_BUFF_LEN   (20*\fBSTREAM_BUFF_TRIG_LVL\fP)"
+
+.SS "#define STREAM_BUFF_READ_MAX_LEN   (\fBSTREAM_BUFF_DATA_LEN\fP * \fBSTREAM_BUFF_TRIG_LVL\fP )"
+
+.SS "#define STREAM_BUFF_SIZE   (\fBSTREAM_BUFF_DATA_LEN\fP * \fBSTREAM_BUFF_LEN\fP)	/**> max amount of \fBdata\fP inside the streambuffer */"
+
+.SS "#define STREAM_BUFF_TRIG_LVL   1 /**> amount of \fBdata\fP objects being read in one readcycle */"
+
+.SS "#define STREAM_BUFF_TRIG_LVL_BYTE   (\fBSTREAM_BUFF_TRIG_LVL\fP * \fBSTREAM_BUFF_DATA_LEN\fP)	/**> limit of \fBdata\fP amount until the Streambuffer is read */"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

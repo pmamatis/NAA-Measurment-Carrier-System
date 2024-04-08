@@ -1,0 +1,38 @@
+.TH "ina226_config_data_t" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ina226_config_data_t
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pms_measurement_defines\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBINA226_NoA_t\fP \fBavg\fP"
+.br
+.ti -1c
+.RI "\fBINA226_VBUSCT_t\fP \fBbus_time\fP"
+.br
+.ti -1c
+.RI "\fBINA226_VSHCT_t\fP \fBshunt_time\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+struct to store the configuration data for ina226, this is used in the initilaisation process 
+.SH "Field Documentation"
+.PP 
+.SS "\fBINA226_NoA_t\fP ina226_config_data_t::avg"
+number of averages for each measurement 
+.SS "\fBINA226_VBUSCT_t\fP ina226_config_data_t::bus_time"
+Bus voltage measurement conversion time 
+.SS "\fBINA226_VSHCT_t\fP ina226_config_data_t::shunt_time"
+Shunt Voltage measurement conversion time 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

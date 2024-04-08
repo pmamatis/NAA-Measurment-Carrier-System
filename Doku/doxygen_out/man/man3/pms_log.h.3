@@ -1,0 +1,81 @@
+.TH "Loging/pms_log.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Loging/pms_log.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG_TASK_STACKSIZE\fP   (\fBconfigMINIMAL_STACK_SIZE\fP + 2048)"
+.br
+.RI "Stack size of the temporary lwIP initialization thread\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fB__sys_write\fP (int handle, char *buffer, int size)"
+.br
+.RI "printf overload to choose weather the output is to UART or to MQTT "
+.ti -1c
+.RI "void \fBlog_task\fP (void *pvParameters)"
+.br
+.RI "Task to handle MQTT logging\&. The Task reads a meassage buffer and then invoke a mqtt publish request to the tcpip task\&. "
+.ti -1c
+.RI "void \fBlog_init\fP ()"
+.br
+.RI "logging init, starts the log task and creates the meassage buffer, where all outputs are saved "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG_TASK_STACKSIZE   (\fBconfigMINIMAL_STACK_SIZE\fP + 2048)"
+
+.PP
+Stack size of the temporary lwIP initialization thread\&. 
+.SH "Function Documentation"
+.PP 
+.SS "int __sys_write (int handle, char * buffer, int size)"
+
+.PP
+printf overload to choose weather the output is to UART or to MQTT 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP 
+.br
+\fIbuffer\fP 
+.br
+\fIsize\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void log_init ()"
+
+.PP
+logging init, starts the log task and creates the meassage buffer, where all outputs are saved 
+.SS "void log_task (void * pvParameters)"
+
+.PP
+Task to handle MQTT logging\&. The Task reads a meassage buffer and then invoke a mqtt publish request to the tcpip task\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpvParameters\fP 
+.RE
+.PP
+Receive the next message from the message buffer\&. Wait in the Blocked state (so not using any CPU processing time) for a message to become available\&.
+.PP
+adds up all received measagges to decrease the number of invoked mqtt publish request\&. So one meassage has is bigger, instead of a lot of small meassages
+.PP
+publish meassage to log topic
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.

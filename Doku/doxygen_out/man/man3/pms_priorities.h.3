@@ -1,0 +1,68 @@
+.TH "Config/pms_priorities.h" 3 "Wed Apr 3 2024" "NAA-Measurement-Carrier-System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Config/pms_priorities.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'FreeRTOSConfig\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBI2C_INT_PRIO_High\fP   (\fBconfigLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY\fP + 1)"
+.br
+.RI "must have highest priority "
+.ti -1c
+.RI "#define \fBI2C_INT_PRIO_middle\fP   (\fBI2C_INT_PRIO_High\fP + 1)"
+.br
+.ti -1c
+.RI "#define \fBI2C_INT_PRIO_low\fP   (\fBI2C_INT_PRIO_middle\fP + 1)"
+.br
+.ti -1c
+.RI "#define \fBTIMER_PRIO\fP   (\fBI2C_INT_PRIO_low\fP +1)"
+.br
+.ti -1c
+.RI "#define \fBINIT_TASK_PRIO\fP   \fBconfigMAX_PRIORITIES\fP"
+.br
+.ti -1c
+.RI "#define \fBMEASUREMENT_TASK_PRIO\fP   (\fBconfigMAX_PRIORITIES\fP \- 3)"
+.br
+.ti -1c
+.RI "#define \fBPUSH_TASK_PRIO\fP   (\fBMEASUREMENT_TASK_PRIO\fP\-1)"
+.br
+.ti -1c
+.RI "#define \fBLOG_TASK_PRIO\fP   (\fBPUSH_TASK_PRIO\fP \-1)"
+.br
+.ti -1c
+.RI "#define \fBCONTROL_TASK_PRIO\fP   ((\fBPUSH_TASK_PRIO\fP \-1))"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CONTROL_TASK_PRIO   ((\fBPUSH_TASK_PRIO\fP \-1))"
+
+.SS "#define I2C_INT_PRIO_High   (\fBconfigLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY\fP + 1)"
+
+.PP
+must have highest priority 
+.SS "#define I2C_INT_PRIO_low   (\fBI2C_INT_PRIO_middle\fP + 1)"
+
+.SS "#define I2C_INT_PRIO_middle   (\fBI2C_INT_PRIO_High\fP + 1)"
+
+.SS "#define INIT_TASK_PRIO   \fBconfigMAX_PRIORITIES\fP"
+
+.SS "#define LOG_TASK_PRIO   (\fBPUSH_TASK_PRIO\fP \-1)"
+
+.SS "#define MEASUREMENT_TASK_PRIO   (\fBconfigMAX_PRIORITIES\fP \- 3)"
+
+.SS "#define PUSH_TASK_PRIO   (\fBMEASUREMENT_TASK_PRIO\fP\-1)"
+
+.SS "#define TIMER_PRIO   (\fBI2C_INT_PRIO_low\fP +1)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NAA-Measurement-Carrier-System from the source code\&.
