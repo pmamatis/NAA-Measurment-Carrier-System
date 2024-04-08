@@ -1,6 +1,0 @@
-#! /bin/bash
-source config.sh
-gnome-terminal --title="PCIe1" -- mosquitto_sub -h localhost -t "FPGA_1/#" -F %X
-gnome-terminal --title="PCIe2" -- mosquitto_sub -h localhost -t "FPGA_2/#" -F %X
-gnome-terminal --title="Config" -- mosquitto_sub -h localhost -t "Config/54.27.8d.128.33.39/#" 
-
