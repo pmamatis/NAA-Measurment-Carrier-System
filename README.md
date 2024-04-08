@@ -12,7 +12,7 @@ This project includes the hardware and software solution of a carrier system for
 
 ## Overview
 
-Brief overview of the project and its goals.
+This project focuses on making the use of NAAs more energy efficient and to measure their application-specific power consumption during operation. For this purpose, a system was designed and realized which consists of several PCBs and the implementation of microcontroller software. 
 
 ## Installation
 
