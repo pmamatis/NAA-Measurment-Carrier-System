@@ -11,7 +11,7 @@ This project focuses on making the use of NAAs more energy efficient and to meas
 
 
 ## Code
-The code section contains all the C code for the microcontroller including third party libraries, the code I wrote is [here](Code/C/source). A [documentation of the C source code](Doku/doxygen_out/html/index.html) has been created using Doxygen. The Python code was written to evaluate the measurement system and its deviation. The bash scripts are implemented for a remote access to the system over network. 
+The code section contains all the C code for the microcontroller including third party libraries, the code I wrote is [here](Code/C/source). The Python code was written to evaluate the measurement system and its deviation. The bash scripts are implemented for a remote access to the system over network. 
 
 ## PCB
 Contains the KiCad files for the PCB designs of the carrier module.
