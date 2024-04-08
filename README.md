@@ -9,10 +9,10 @@ This project focuses on making the use of NAAs more energy efficient and to meas
 . A further [documentation of the source code](Doku/doxygen_out/html/index.html) has been created with the help of Doxygen.
 ![Overview](Doku/images/Gesamt_uebersicht.png)
 
-#Code 
+## Code 
 The Code section conatains the C-Code for the microcontroller, the python code forthe measurement evaluation and some bash-scripts for implmenting a remote. 
 
-#PCB
+## PCB
 contains the KiCad files for the pcb designs of the carrier modul.
 
 ## Usage
